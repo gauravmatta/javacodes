@@ -46,24 +46,16 @@ public class zeroCricket
     public static void main(String args[])
     {
         zeroCricket zc=new zeroCricket();
-        int run=0;
-        do
+        int run=zc.score();
+        if(run!=0 && run!=5)
         {
-            run=zc.score();
             runs=runs+run;
+            System.out.println("You'r total score: "+runs);
         }
-        while(run!=0 && run!=5);
-        System.out.println("You'r total score: "+runs);
-//        int run=zc.score();
-//        if(run!=0 && run!=5)
-//        {
-//            runs=runs+run;
-//            System.out.println("You'r total score: "+runs);
-//        }
-//        else
-//        {
-//            System.out.println("You'r total score: "+runs);
-//            runs=0;
-//        }
+        else
+        {
+            System.out.println("You'r total score: "+runs);
+            runs=0;
+        }
     }
 }
