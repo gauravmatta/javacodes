@@ -1,4 +1,3 @@
-import java.util.stream.IntStream;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,6 +11,18 @@ import java.util.stream.IntStream;
 public class arrCricket 
 {
     private static int runs=0;
+    
+    public String commentry()
+    {
+        String [][] comments=new String[5][];
+        String [] wickets={"Bowled Him That's a big wicket"};
+        comments[0]=wickets;
+        return null; 
+    }
+    
+    
+    
+    
     public int score()
     {
         int run=(int)(6*Math.random());
