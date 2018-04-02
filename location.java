@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -28,6 +30,14 @@ public class location {
         int longMin=-180;
         int longmax=180;
         int [][] locations=new int [10][2];
+        String [][][] vistor_list=new String [locations.length][locations.length][];
+        String [] country = new String[locations.length];
+        String [] adminsitrative_area1 = new String [locations.length];
+        int nextCountryindex=0;
+        int nextaal1index=1;
+        int aa1Index=0;
+        int countryIndex=0;
+        Object admin_area_name=null;
         for (int[] location : locations) {
             Random r = new Random();
             int randLat=r.nextInt(latmax - latMin + 1) + latMin;
@@ -50,7 +60,7 @@ public class location {
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setRequestProperty("Accept", "application/json");
-                if (conn.getResponseCode() != 200) 
+                if (conn.getResponseCode() != 200)
                 {
                     throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
                 }
@@ -62,7 +72,7 @@ public class location {
                     str.append(output).append("\n");
                 }
                 conn.disconnect();
-                 
+                
                 String result;
                 result=str.toString();
                 JSONParser parser = new JSONParser();
@@ -81,11 +91,46 @@ public class location {
                             {
                                JSONObject obj5=(JSONObject) obj4;
                                JSONArray types=(JSONArray)obj5.get("types");
+                               if(types.contains("administrative_area_level_1"))
+                               {
+                                   Object long_name=obj5.get("long_name");
+                                   List<String> list = Arrays.asList(adminsitrative_area1);
+                                   if(list.contains((String)long_name))
+                                   {
+                                       aa1Index=list.indexOf(long_name);
+                                   }
+                                   else
+                                   {
+                                       adminsitrative_area1[nextaal1index++]=(String)long_name;
+                                   }
+                               }
                                if(types.contains("country"))
                                {
                                    Object long_name=obj5.get("long_name");
-                                   System.out.println("You are in "+long_name);
+                                   System.out.println("Country : "+long_name);
+                                   List<String> list = Arrays.asList(country);
+                                   if(list.contains((String)long_name))
+                                   {
+                                       countryIndex=list.indexOf(long_name);
+                                   }
+                                   else
+                                   {
+                                       countryIndex=nextCountryindex++;
+                                       country[countryIndex]=(String)long_name;
+                                   }
+//                                 Object long_name=obj5.get("long_name");
+//                                 System.out.println("You are in "+long_name);
                                }
+                               if(types.contains("administrative_area_level_2"))
+                               {
+                                   admin_area_name=obj5.get("long_name");
+                               }
+                            }
+                            List<String> list = Arrays.asList(vistor_list[countryIndex][aa1Index]);
+                            if ((admin_area_name!=null) && !list.contains((String)admin_area_name))
+                            {
+                                int index=list.size()-1;
+                                vistor_list[countryIndex][aa1Index][index]=(String)admin_area_name;
                             }
                         }
                     }
@@ -93,7 +138,6 @@ public class location {
                     {
                         System.out.println("You are in Water");
                     }
-                    
                 }
                 catch(ParseException e)
                 {
@@ -105,6 +149,18 @@ public class location {
                 System.out.println("Error"+e);
             }
             
+        }
+        
+        for(int i = 0; i<vistor_list.length; i++)
+        {
+            for(int j=0;j<vistor_list[i].length;j++)
+            {
+                for(int k=0;k<vistor_list[i][j].length;k++)
+                {
+                    System.out.println(i+" "+j+" "+k);
+                    System.out.println(vistor_list[i][j][k]);
+                }
+            }
         }
     }
 }
