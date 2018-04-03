@@ -48,9 +48,10 @@ public class location {
         for(int i = 0; i<locations.length; i++) 
         {
             int aa1Index=0;
+            System.out.println("At Longitude and Latitude :");
             for(int j=0;j<locations[i].length;j++)
             {
-                System.out.println("At Longitude and Latitude "+locations[i][j]);
+                System.out.println(locations[i][j]);
             }
             
             try
