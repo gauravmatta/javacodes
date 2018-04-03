@@ -29,7 +29,7 @@ public class location {
         int latmax=85;
         int longMin=-180;
         int longmax=180;
-        int [][] locations=new int [10][2];
+        int [][] locations=new int [50][2];
         String [][][] vistor_list=new String [locations.length][locations.length][locations.length];
         String [] country = new String[locations.length];
         String [] adminsitrative_area1 = new String [locations.length];
@@ -48,11 +48,11 @@ public class location {
         for(int i = 0; i<locations.length; i++) 
         {
             int aa1Index=0;
-            System.out.println("At Longitude and Latitude :");
-            for(int j=0;j<locations[i].length;j++)
-            {
-                System.out.println(locations[i][j]);
-            }
+//            System.out.println("At Longitude and Latitude :");
+//            for(int j=0;j<locations[i].length;j++)
+//            {
+//                System.out.println(locations[i][j]);
+//            }
             
             try
             {
@@ -108,7 +108,7 @@ public class location {
                                if(types.contains("country"))
                                {
                                    Object long_name=obj5.get("long_name");
-                                   System.out.println("Country : "+long_name);
+//                                   System.out.println("Country : "+long_name);
                                    List<String> list = Arrays.asList(country);
                                    if(list.contains((String)long_name))
                                    {
@@ -157,7 +157,7 @@ public class location {
                     }
                     else
                     {
-                        System.out.println("You are in Water");
+//                        System.out.println("You are in Water");
                     }
                 }
                 catch(ParseException e)
@@ -176,8 +176,8 @@ public class location {
         {
             if(country[i]!=null)
             {
-                System.out.println("Searching in Country : "+country[i]);
-                System.out.println("============================================");
+//                System.out.println("Searching in Country : "+country[i]);
+//                System.out.println("============================================");
             }
             else
             {
@@ -187,8 +187,8 @@ public class location {
             {
                 if(adminsitrative_area1[j]!=null)
                 {
-                    System.out.println("Searching in Area : "+adminsitrative_area1[j]);
-                    System.out.println("****************************************************");
+//                    System.out.println("Searching in Area : "+adminsitrative_area1[j]);
+//                    System.out.println("****************************************************");
                 }
                 else
                 {
