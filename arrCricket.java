@@ -1,3 +1,6 @@
+
+import java.util.stream.IntStream;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,8 +18,10 @@ public class arrCricket
     public String commentry()
     {
         String [][] comments=new String[5][];
-        String [] wickets={"Bowled Him That's a big wicket"};
-        comments[0]=wickets;
+        comments[0]=new String[]{   "Bowled Him That's a big wicket",
+                                    "That's in the air and Taken"};
+//        String [] wickets={"Bowled Him That's a big wicket","That's in the air and Taken"};
+//        comments[0]=wickets;
         return null; 
     }
     
