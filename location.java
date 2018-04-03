@@ -30,12 +30,11 @@ public class location {
         int longMin=-180;
         int longmax=180;
         int [][] locations=new int [10][2];
-        String [][][] vistor_list=new String [locations.length][locations.length][];
+        String [][][] vistor_list=new String [locations.length][locations.length][locations.length];
         String [] country = new String[locations.length];
         String [] adminsitrative_area1 = new String [locations.length];
         int nextCountryindex=0;
         int nextaal1index=1;
-        int aa1Index=0;
         int countryIndex=0;
         Object admin_area_name=null;
         for (int[] location : locations) {
@@ -48,10 +47,10 @@ public class location {
         
         for(int i = 0; i<locations.length; i++) 
         {
-            System.out.println("At Longitude and Latitude");
+            int aa1Index=0;
             for(int j=0;j<locations[i].length;j++)
             {
-                System.out.println(locations[i][j]);
+                System.out.println("At Longitude and Latitude "+locations[i][j]);
             }
             
             try
@@ -101,7 +100,8 @@ public class location {
                                    }
                                    else
                                    {
-                                       adminsitrative_area1[nextaal1index++]=(String)long_name;
+                                       aa1Index=nextaal1index++;
+                                       adminsitrative_area1[aa1Index]=(String)long_name;
                                    }
                                }
                                if(types.contains("country"))
@@ -126,12 +126,32 @@ public class location {
                                    admin_area_name=obj5.get("long_name");
                                }
                             }
-                            List<String> list = Arrays.asList(vistor_list[countryIndex][aa1Index]);
-                            if ((admin_area_name!=null) && !list.contains((String)admin_area_name))
+                            if(vistor_list[countryIndex][aa1Index]!=null)
                             {
-                                int index=list.size()-1;
-                                vistor_list[countryIndex][aa1Index][index]=(String)admin_area_name;
+                                List<String> list = Arrays.asList(vistor_list[countryIndex][aa1Index]);
+                                if(!list.contains((String)admin_area_name))
+                                {
+                                    int index=list.size()-1;
+                                    if(admin_area_name!=null)
+                                    {
+                                        vistor_list[countryIndex][aa1Index][index]=(String)admin_area_name;
+                                    }
+                                }
                             }
+                            else
+                            {
+                                if(admin_area_name!=null)
+                                {
+                                    String [] myarea=new String[]{(String)admin_area_name};
+                                    vistor_list[countryIndex][aa1Index]=myarea;
+                                }
+                            }
+
+//                            if ((admin_area_name!=null) && !list.contains((String)admin_area_name))
+//                            {
+//                                int index=list.size()-1;
+//                                vistor_list[countryIndex][aa1Index][index]=(String)admin_area_name;
+//                            }
                         }
                     }
                     else
@@ -153,12 +173,36 @@ public class location {
         
         for(int i = 0; i<vistor_list.length; i++)
         {
+            if(country[i]!=null)
+            {
+                System.out.println("Searching in Country : "+country[i]);
+                System.out.println("============================================");
+            }
+            else
+            {
+                continue;
+            }
             for(int j=0;j<vistor_list[i].length;j++)
             {
+                if(adminsitrative_area1[j]!=null)
+                {
+                    System.out.println("Searching in Area : "+adminsitrative_area1[j]);
+                    System.out.println("****************************************************");
+                }
+                else
+                {
+                    continue;
+                }
                 for(int k=0;k<vistor_list[i][j].length;k++)
                 {
-                    System.out.println(i+" "+j+" "+k);
-                    System.out.println(vistor_list[i][j][k]);
+                    if(vistor_list[i][j][k]!=null)
+                    {
+                        System.out.println("--------------Found Location ::-------------");
+                        System.out.println("Country : "+country[i]);
+                        System.out.println("Area : "+adminsitrative_area1[j]);
+                        System.out.println("Area 2: "+vistor_list[i][j][k]);
+                        System.out.println("--------------Found Location ::-------------");
+                    }
                 }
             }
         }
