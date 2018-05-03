@@ -111,5 +111,11 @@ public class stringOps
 		//check Character Occurance
 		int inl=s1.checkCharacterOccurance(myString,'i');
 		System.out.println("Occurance of character is "+inl);
+		
+		String name="Java Implant";
+		String substr1=name.substring(5);
+		System.out.println(substr1);
+		String substr=myString.substring(10,16);
+		System.out.println(substr);
 	}
 }
