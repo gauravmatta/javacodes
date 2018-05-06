@@ -169,5 +169,17 @@ public class stringOps
 			System.out.println(b1);
 		}
 		
+		//StringBuffer
+		StringBuffer buffStr=new StringBuffer("Golden Eggs");
+		int len=buffStr.length();
+		int cap=buffStr.capacity();
+		System.out.println(len+" is length amd capacity is adding 16 to it i.e. "+cap);
+		
+		//Increasing length of StringBuffer.
+		buffStr.setLength(40);
+		len=buffStr.length();
+		cap=buffStr.capacity();
+		System.out.println(len+" is length amd capacity is adding 16 to it i.e. "+cap);
+		
 	}
 }
