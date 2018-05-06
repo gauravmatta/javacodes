@@ -130,5 +130,44 @@ public class stringOps
 		{
 			System.out.println(str);
 		}
+		
+		//Replacing characters
+		String text="There are a boy";
+		System.out.println(text);
+		text=text.replace("are","is");
+		System.out.println(text);
+		
+		//Trim
+		String text1="    These whitespaces in a sentence needs to be removed     ";
+		System.out.println(text1);
+		text1=text1.trim();
+		System.out.println(text1);
+		
+		//Character Array
+		char [] textArray=new char[30];
+		textArray=text1.toCharArray();
+		for(char ch1:textArray)
+		{
+			System.out.println(ch1);
+		}
+		System.out.println("=================>");
+		char [] textArray1=new char[12];
+		text1.getChars(6,17,textArray1,0);
+		for(char ch1:textArray1)
+		{
+			System.out.println(ch1);
+		}
+		
+		//String from array of chars
+		String halfString=new String(textArray1);	
+		System.out.println(halfString);
+		
+		//Array of Bytes from String
+		byte[] byteArray=halfString.getBytes();
+		for(byte b1:byteArray)
+		{
+			System.out.println(b1);
+		}
+		
 	}
 }
