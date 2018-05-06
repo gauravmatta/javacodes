@@ -112,10 +112,23 @@ public class stringOps
 		int inl=s1.checkCharacterOccurance(myString,'i');
 		System.out.println("Occurance of character is "+inl);
 		
+		//Substring
 		String name="Java Implant";
 		String substr1=name.substring(5);
 		System.out.println(substr1);
 		String substr=myString.substring(10,16);
 		System.out.println(substr);
+		
+		//Tokenizing a String
+		String [] nameArr=name.split(" ");
+		for(String str:nameArr)
+		{
+			System.out.println(str);
+		}
+		nameArr=myString.split(" ",3);
+		for(String str:nameArr)
+		{
+			System.out.println(str);
+		}
 	}
 }
