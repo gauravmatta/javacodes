@@ -9,7 +9,7 @@ package java8.lambda;
  *
  * @author Gaurav Matta
  */
-public class Basics {
+public class Basics { 
     public void greet(Greeting greet)
     {
         greet.perform();
@@ -23,5 +23,7 @@ public class Basics {
         basics.greet(hello);
         System.out.println("We just saw how we can greet a person using Java Behaviours.");
         basics.greet(finish);
+        Greeting greetingFunction = () -> System.out.println("Hello Lambda");
+        
     }
 }
