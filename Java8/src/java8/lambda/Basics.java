@@ -18,12 +18,17 @@ public class Basics {
     public static void main(String[] args)
     {
         Basics basics=new Basics();
-        Hello hello =new Hello();
-        Finish finish=new Finish();
+        Greeting hello =new Hello();
+        Greeting finish=new Finish();
+        Greeting greetingFunction = () -> System.out.println("Hello from Lambda");
+        Greeting innerClass = new Greeting(){
+            @Override
+            public void perform() {
+                System.out.println("Hello from Inner Class");
+            }
+        };
         basics.greet(hello);
-        System.out.println("We just saw how we can greet a person using Java Behaviours.");
-        basics.greet(finish);
-        Greeting greetingFunction = () -> System.out.println("Hello Lambda");
-        
+        basics.greet(greetingFunction);
+        basics.greet(innerClass);
     }
 }
