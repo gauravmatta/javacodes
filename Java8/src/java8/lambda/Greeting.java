@@ -9,8 +9,8 @@ package java8.lambda;
  *
  * @author Gaurav Matta
  */
+@FunctionalInterface
 public interface Greeting {
     
     public void perform();
-
 }
