@@ -34,22 +34,42 @@ public class EmployeesRepository {
             }   
         });
         
+        Collections.sort(employees,(e1,e2)->e1.getFirst_name().compareTo(e2.getFirst_name()));
+        
+        
         //A method that prints all Employees in List
         System.out.println("Printing All Employees :");
         printall(employees);
         
+        System.out.println();
+        System.out.println("Printing All Employees using Lambda Expression :");
+        printConditionally(employees,e->true);
+        
+        
         //A method with all the people which have first name beginning with "G"
+        System.out.println();
         System.out.println("Printing All Employees First Name Beginning with G:");
         printFirstNameBeginningWithG(employees);
         
+        
+        
         //Print with Self Condition(First Name beginning with M)
+        System.out.println();
         System.out.println("Printing Conditionally:");
+        System.out.println("Printing first name with M:");
         printConditionally(employees,new Condition(){
             @Override
             public boolean test(Employee e) {
                 return e.getFirst_name().startsWith("M");
             }    
         });
+        
+        System.out.println();
+        System.out.println("Printing Conditionally using Lambda Expression:");
+        System.out.println("Printing first name with M using Lambda:");
+        printConditionally(employees,e->e.getFirst_name().startsWith("G"));
+        System.out.println("Printing first name with M using Lambda:");
+        printConditionally(employees,e->e.getFirst_name().startsWith("M"));
         
     }
 
