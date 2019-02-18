@@ -66,7 +66,7 @@ public class EmployeesRepository {
         
         System.out.println();
         System.out.println("Printing Conditionally using Lambda Expression:");
-        System.out.println("Printing first name with M using Lambda:");
+        System.out.println("Printing first name with G using Lambda:");
         printConditionally(employees,e->e.getFirst_name().startsWith("G"));
         System.out.println("Printing first name with M using Lambda:");
         printConditionally(employees,e->e.getFirst_name().startsWith("M"));
