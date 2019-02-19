@@ -41,9 +41,7 @@ public class FunctionalRepository {
         performConditionally(employees,e->true,e->System.out.println(e.getFirst_name()));
         System.out.println("Printing all have first name with S using Streams:");
         List<Employee> el = employees.stream().filter(e-> e.getFirst_name().startsWith("S")).collect(Collectors.toList());
-        printConditionally(el,e->true);    
-        
-        
+        printConditionally(el,e->true);
     }
     
     private static void performConditionally(List<Employee> employees,Predicate<Employee> condition,Consumer<Employee> consumer)
