@@ -39,8 +39,9 @@ public class FunctionalRepository {
         performConditionally(employees,e->e.getFirst_name().startsWith("S"),e->System.out.println(e));
         System.out.println("Printing first name using Lambda:");
         performConditionally(employees,e->true,e->System.out.println(e.getFirst_name()));
-//        List<Employee> el = employees.stream().filter(e-> e.getFirst_name().startsWith("S")).collect(Collectors.toList());
-//        printConditionally(el,e->true);       
+        System.out.println("Printing all have first name with S using Streams:");
+        List<Employee> el = employees.stream().filter(e-> e.getFirst_name().startsWith("S")).collect(Collectors.toList());
+        printConditionally(el,e->true);    
         
         
     }
