@@ -47,21 +47,28 @@ public class FunctionalRepository {
         //Exceptions in Lambda Functions
         System.out.println("==============Using Exceptions============");
         int[] arrayNumbers={1,2,3,4,0,5,6};
-        int key=2;
-        
-        System.out.println("Division using Using BiFunction");
-        for(int a : arrayNumbers)
-        {
-            System.out.print(a+"=>");
-            Integer i = operateReturnInt(a,key,(a1,a2)->(a1/a2));
-            System.out.println(i);
-        }
+        int key=0;
         
         System.out.println("Division using Using BiConsumer");
         operateNoReturn(arrayNumbers,key,(a1,a2)->{
             System.out.print(a1+"=>");
             System.out.println(a1/a2);
         });
+        
+        System.out.println("Division using Using BiFunction");
+        for(int a : arrayNumbers)
+        {
+            System.out.print(a+"=>");
+            try
+            {
+                int i = operateReturnInt(a,key,(a1,a2)->(a1/a2));
+                System.out.println(i);
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.println("Arithmetic Exception cought in Main Method");
+            }
+        }
         //Exceptions in Lambda Functions
         
     }
@@ -70,7 +77,15 @@ public class FunctionalRepository {
     {
         for(int a:array)
         {
-            consumer.accept(a,key);
+            try
+            {
+                consumer.accept(a,key);
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.println("Arithmetic Exception cought in Class Method");
+            }
+                    
         }
     }
     
