@@ -7,6 +7,8 @@ package java8.lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -27,10 +29,9 @@ public class FunctionalRepository {
                 new Employee("Greg","Right",35),
                 new Employee("Sachin","Kumble",32)
         );
-        
+                
         System.out.println("Printing All Employees:");
         printConditionally(employees,e->true);
-        
         System.out.println("Printing first name with G using Lambda:");
         printConditionally(employees,e->e.getFirst_name().startsWith("G"));
         System.out.println("Printing first name with M using Lambda:");
@@ -42,6 +43,40 @@ public class FunctionalRepository {
         System.out.println("Printing all have first name with S using Streams:");
         List<Employee> el = employees.stream().filter(e-> e.getFirst_name().startsWith("S")).collect(Collectors.toList());
         printConditionally(el,e->true);
+        
+        //Exceptions in Lambda Functions
+        System.out.println("==============Using Exceptions============");
+        int[] arrayNumbers={1,2,3,4,0,5,6};
+        int key=2;
+        
+        System.out.println("Division using Using BiFunction");
+        for(int a : arrayNumbers)
+        {
+            System.out.print(a+"=>");
+            Integer i = operateReturnInt(a,key,(a1,a2)->(a1/a2));
+            System.out.println(i);
+        }
+        
+        System.out.println("Division using Using BiConsumer");
+        operateNoReturn(arrayNumbers,key,(a1,a2)->{
+            System.out.print(a1+"=>");
+            System.out.println(a1/a2);
+        });
+        //Exceptions in Lambda Functions
+        
+    }
+    
+    private static void operateNoReturn(int[] array,int key,BiConsumer<Integer,Integer> consumer)
+    {
+        for(int a:array)
+        {
+            consumer.accept(a,key);
+        }
+    }
+    
+    private static Integer operateReturnInt(int number,int key,BiFunction<Integer,Integer,Integer> function)
+    {
+        return function.apply(number, key);
     }
     
     private static void performConditionally(List<Employee> employees,Predicate<Employee> condition,Consumer<Employee> consumer)
