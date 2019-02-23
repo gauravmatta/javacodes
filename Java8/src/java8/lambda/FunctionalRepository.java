@@ -46,8 +46,8 @@ public class FunctionalRepository {
         
         //Exceptions in Lambda Functions
         System.out.println("==============Using Exceptions============");
-        int[] arrayNumbers={1,2,3,4,0,5,6};
-        int key=0;
+        int[] arrayNumbers={1,2,3,4,5,6,7,8,9,10};
+        int key=2;
         
         System.out.println("Division using Using BiConsumer");
         operateNoReturn(arrayNumbers,key,(a1,a2)->{
@@ -55,6 +55,7 @@ public class FunctionalRepository {
             System.out.println(a1/a2);
         });
         
+        //Calling Exceptions during function implementation 
         System.out.println("Division using Using BiFunction");
         for(int a : arrayNumbers)
         {
@@ -72,8 +73,34 @@ public class FunctionalRepository {
                         });
             System.out.println(i);
         }
+        
+        //Calling Exceptions in a Wrapper Function
+        System.out.println("Calling Exceptions in a Wrapper Function");
+        for(int a : arrayNumbers)
+        {
+            System.out.print(a+"=>");
+            int i = operateReturnInt(a, key, wrapperLambda((a1,a2)->(a1/a2)));
+            System.out.println(i);
+        }
+        
         //Exceptions in Lambda Functions
         
+    }
+    
+    private static BiFunction<Integer,Integer,Integer> wrapperLambda(BiFunction<Integer,Integer,Integer> function)
+    {
+//        return function;
+//        return (a1,a2)->(a1+a2);
+        System.out.println("Inside Wrapper Lambda");
+        try
+        {
+            return (a1,a2)->function.apply(a1,a2);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Exception caught in Wrapper Lambda Function");
+        }
+        return null;
     }
     
     private static void operateNoReturn(int[] array,int key,BiConsumer<Integer,Integer> consumer)
