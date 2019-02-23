@@ -59,15 +59,18 @@ public class FunctionalRepository {
         for(int a : arrayNumbers)
         {
             System.out.print(a+"=>");
-            try
-            {
-                int i = operateReturnInt(a,key,(a1,a2)->(a1/a2));
-                System.out.println(i);
-            }
-            catch(ArithmeticException e)
-            {
-                System.out.println("Arithmetic Exception cought in Main Method");
-            }
+            int i = operateReturnInt(a,key,(a1,a2)->{
+                            try
+                            {
+                                return (a1/a2);
+                            }
+                            catch(ArithmeticException e)
+                            {
+                                System.out.println("Arithmetic Exception cought in Main Method");
+                                return 0;
+                            }
+                        });
+            System.out.println(i);
         }
         //Exceptions in Lambda Functions
         
