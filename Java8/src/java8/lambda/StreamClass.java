@@ -7,6 +7,7 @@ package java8.lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  *
@@ -50,5 +51,13 @@ public class StreamClass {
                     return e.getFirst_name().startsWith("G");
                         })
                 .forEach(e->System.out.println(e.getFirst_name()));
+        
+        Stream<Employee> emp=employees.stream().filter(e->e.getFirst_name().startsWith("G"));
+        long empCount=employees.stream().filter(e->e.getFirst_name().startsWith("G")).count();
+        System.out.println(empCount);
+        
+        //Parallel Processing
+        empCount=employees.parallelStream().filter(e->e.getFirst_name().startsWith("G")).count();
+        System.out.println("By Parallel Stream "+empCount);
     }
 }
