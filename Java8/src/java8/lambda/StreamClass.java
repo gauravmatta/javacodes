@@ -44,6 +44,11 @@ public class StreamClass {
         System.out.println("Using Lambda For Each Loop using Method Reference");
         employees.forEach(System.out::println);
         
-        
+        employees.stream()
+                .filter(e->{
+                    System.out.print(e.getLast_name()+" ");
+                    return e.getFirst_name().startsWith("G");
+                        })
+                .forEach(e->System.out.println(e.getFirst_name()));
     }
 }
