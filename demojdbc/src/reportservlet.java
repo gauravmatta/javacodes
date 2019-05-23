@@ -49,7 +49,7 @@ public class reportservlet extends HttpServlet {
 			try
 			{
 				Class.forName("com.mysql.jdbc.Driver");
-				String jdbcUrl="jdbc:mysql://localhost:3306/emp";
+				String jdbcUrl="jdbc:mysql://localhost:3306/jdbc_test";
 				String uname="root";
 				String pwd="";
 				Connection connection=null;
