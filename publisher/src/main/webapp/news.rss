@@ -1,0 +1,17 @@
+<rss version="2.0">
+<channel>
+<title>My News</title>
+<description>This is my news</description>
+<language>en-us</language>
+<item>
+<title>Hello</title>
+<link>http://csusb.edu/</link>
+<description>Hello there.</description>
+</item>
+<item>
+<title>Bye</title>
+<link>http://cse.csusb.edu/</link>
+<description>Come here, go any where.</description>
+</item>
+</channel>
+</rss>
