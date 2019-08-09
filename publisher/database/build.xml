@@ -17,4 +17,9 @@
 <arg line="${mysql.params}" />
 </exec>
 </target>
+<target name="alterdb">
+<exec executable="C:\wamp64\bin\mysql\mysql5.7.14\bin\mysql" input="alterdb.sql">
+<arg line="${mysql.params}" />
+</exec>
+</target>
 </project>
