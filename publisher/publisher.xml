@@ -1,0 +1,12 @@
+<Context path="/publisher" docBase="${WORKSPACE}/publisher/src/main/webapp">
+<Resource name="datasource"
+type="javax.sql.DataSource"
+auth="Container"
+maxActive="10"
+maxIdle="3"
+maxWait="10000"
+username="gaurav"
+password="gaurav"
+driverClassName="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/publisher?autoReconnect=true" />
+</Context>
