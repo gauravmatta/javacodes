@@ -1,3 +1,5 @@
+package firstapp;
+
 import javax.swing.JApplet;
 import java.awt.Graphics;
 
