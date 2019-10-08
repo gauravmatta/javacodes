@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.activation.DataSource;
+import javax.sql.DataSource;
 import javax.transaction.xa.Xid;
 
 /**

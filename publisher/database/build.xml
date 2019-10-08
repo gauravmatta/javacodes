@@ -3,22 +3,22 @@
 <property name="mysql.params" value="-u gaurav -pgaurav -D publisher" />
 <target name="all" depends="cleandb, createdb, insertdb"></target>
 <target name="cleandb">
-<exec executable="C:\wamp64\bin\mysql\mysql5.7.14\bin\mysql" input="cleandb.sql">
+<exec executable="C:\wamp64\bin\mysql\mysql5.7.26\bin\mysql" input="cleandb.sql">
 <arg line="${mysql.params}" />
 </exec>
 </target>
 <target name="createdb">
-<exec executable="C:\wamp64\bin\mysql\mysql5.7.14\bin\mysql" input="createdb.sql">
+<exec executable="C:\wamp64\bin\mysql\mysql5.7.26\bin\mysql" input="createdb.sql">
 <arg line="${mysql.params}" />
 </exec>
 </target>
 <target name="insertdb">
-<exec executable="C:\wamp64\bin\mysql\mysql5.7.14\bin\mysql" input="insertdb.sql">
+<exec executable="C:\wamp64\bin\mysql\mysql5.7.26\bin\mysql" input="insertdb.sql">
 <arg line="${mysql.params}" />
 </exec>
 </target>
 <target name="alterdb">
-<exec executable="C:\wamp64\bin\mysql\mysql5.7.14\bin\mysql" input="alterdb.sql">
+<exec executable="C:\wamp64\bin\mysql\mysql5.7.26\bin\mysql" input="alterdb.sql">
 <arg line="${mysql.params}" />
 </exec>
 </target>
