@@ -39,13 +39,14 @@ public class CompareAndSkipDateTextFiles
 			Matcher matcher2 = pattern.matcher(line2);				
 			if(matcher1 != null || matcher2 != null)
 			{		
-				reader1.skip(0);
-				reader2.skip(0);
-				System.out.println(matcher1);
+				reader1.skip(lineNum);
+				reader2.skip(lineNum);
 				line1 = reader1.readLine();			
 				line2 = reader2.readLine();			
 				lineNum++;
+				
 			}
+			
 			
 		}
 		
