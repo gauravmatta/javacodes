@@ -1,0 +1,2 @@
+insert into page (name, content) values ('', '<h1>Nameless Page</h1><a href="hello">hello page</a><br /><a href="nowhere">nowhere page</a>');
+insert into page (name, content) values ('hello', '<h1>Hello Page</h1><a href=".">nameless page</a>');
