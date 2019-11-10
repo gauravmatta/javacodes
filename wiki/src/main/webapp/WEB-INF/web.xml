@@ -3,5 +3,16 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  	<display-name>Wiki Application</display-name>
+  	<listener>
+  		<listener-class>wiki.web.Init</listener-class>
+  	</listener>
+  	<servlet>
+		<servlet-name>view-page</servlet-name>
+		<servlet-class>wiki.web.ViewPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>view-page</servlet-name>
+		<url-pattern>/view/*</url-pattern>
+	</servlet-mapping>
 </web-app>
