@@ -15,6 +15,14 @@
 		<servlet-name>edit-page</servlet-name>
 		<servlet-class>wiki.web.EditPageServlet</servlet-class>
 	</servlet>
+ 	<servlet>
+		<servlet-name>publish-page</servlet-name>
+		<servlet-class>wiki.web.PublishPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>publish-page</servlet-name>
+		<url-pattern>/publish/*</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>edit-page</servlet-name>
 		<url-pattern>/edit/*</url-pattern>
