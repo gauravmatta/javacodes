@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    isELIgnored="false"
+%>
 <jsp:useBean id="wikipage" scope="request" type="wiki.data.Page" />
 <p>
 Are you sure you want to publish this page?
