@@ -19,6 +19,14 @@
 		<servlet-name>publish-page</servlet-name>
 		<servlet-class>wiki.web.PublishPageServlet</servlet-class>
 	</servlet>
+ 	<servlet>
+		<servlet-name>unpublish-page</servlet-name>
+		<servlet-class>wiki.web.UnpublishPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>unpublish-page</servlet-name>
+		<url-pattern>/unpublish/*</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>publish-page</servlet-name>
 		<url-pattern>/publish/*</url-pattern>
