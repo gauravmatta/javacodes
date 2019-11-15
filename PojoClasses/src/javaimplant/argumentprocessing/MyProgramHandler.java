@@ -82,6 +82,22 @@ public class MyProgramHandler extends ToolBase {
 			// main program operation
 			System.out.println(String.format("port: %d; dir: %s",myShell.getPort(), myShell.getDir()));
 		}
+		boolean feelMe = false;
+		boolean seeMe = false;
+		int index;
+		loop: for (index = 0; index < args.length; index++) {
+		String opt = args[index];
+		switch (opt) {
+		case "-c":
+			seeMe = true;
+			break;
+		case "-f":
+			feelMe = true;
+			break;
+		default:
+			break loop;
+		}
+		}
 		System.exit(1);
 	}
 }
