@@ -15,13 +15,14 @@ import org.apache.log4j.Logger;
 import wiki.data.Page;
 import wiki.data.PageDAO;
 
-public class PublishPageServlet extends HttpServlet {
+public class UnpublishPageServlet extends HttpServlet {
 	private Logger logger = Logger.getLogger(this.getClass());
 	private RequestDispatcher jsp;
+	
 	public void init(ServletConfig config) throws ServletException 
 	{
 		ServletContext context = config.getServletContext();
-		jsp = context.getRequestDispatcher("/WEB-INF/jsp/publish-page.jsp");
+		jsp = context.getRequestDispatcher("/WEB-INF/jsp/unpublish-page.jsp");
 	}
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
@@ -29,15 +30,13 @@ public class PublishPageServlet extends HttpServlet {
 		logger.debug("doGet()");
 		String pathInfo = req.getPathInfo();
 		String name = pathInfo.substring(1);
-		logger.debug("Page requested: " + name);
 		Page page = new PageDAO().find(name);
+		
+		// Don't allow users to publish empty pages.
 		if (page == null) 
 		{
-			logger.debug("page doesn't exist; creating empty page");
-			page = new Page();
-			page.setName(name);
-			page.setContent("");
-			page.setPublished(false);
+			resp.sendRedirect("../view/" + name);
+			return;
 		}
 		req.setAttribute("wikipage", page);
 		jsp.forward(req, resp);
@@ -50,7 +49,7 @@ public class PublishPageServlet extends HttpServlet {
 		String pageName = req.getParameter("name");
 		// Check for cancel button.
 		String cancelButton = req.getParameter("cancel-button");
-		if (cancelButton != null)
+		if (cancelButton != null) 
 		{
 			String msg="You cancelled the operation";
 			req.getSession().setAttribute("msg",msg);
@@ -59,35 +58,22 @@ public class PublishPageServlet extends HttpServlet {
 		}
 		PageDAO pageDAO = new PageDAO();
 		Page page = pageDAO.find(pageName);
-		
-		// Don't do anything if page doesn't exist or is already published.
-		if (page == null || page.isPublished())
+		// Don't do anything if page doesn't exist or is already unpublished.
+		if (page == null || !page.isPublished()) 
 		{
 			resp.sendRedirect("../view/" + pageName);
 			return;
 		}
-		
-		// Invoke remote web service to publish page.
+		// Invoke remote web service to unpublish page.
 		logger.debug("invoking web service");
-		try
-		{
-			String publishedId = publish(page);
-			page.setPublishedId(publishedId);
-			page.setPublished(true);
-		}
-		catch (Exception e)
-		{
-			logger.error(e);
-			throw new RuntimeException(e);
-		}
-		
+		unpublish(page);
 		// Update page.
+		page.setPublished(false);
 		pageDAO.update(page);
 		resp.sendRedirect("../view/" + page.getName());
 	}
-	
-	private String publish(Page page) throws IOException
+	private void unpublish(Page page)
 	{
-		return "3"; // Pretend that publish service returned an id of 3.
+		// Implement later.
 	}
 }

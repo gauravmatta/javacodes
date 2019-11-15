@@ -5,12 +5,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 <jsp:useBean id="wikipage" scope="request" type="wiki.data.Page" />
+<jsp:useBean id="msg" scope="request" type="java.lang.String" class="java.lang.String" />
 <html>
 <head>
 <title>Wiki</title>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/styles.css" />
 </head>
 <body>
+<%
+String INF=(String)session.getAttribute("msg");
+if (INF != null) 
+{
+	out.println(INF);
+}
+%>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td><img src="<%=request.getContextPath()%>/images/logo.gif"></td>
