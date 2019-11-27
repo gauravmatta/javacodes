@@ -10,8 +10,7 @@ public class StrCmp {
 		String secondString = "TAKI";
 		System.out.println(firstString.equalsIgnoreCase(secondString)); //prints true
 		Locale locale = Locale.forLanguageTag("tr-TR");
-		System.out.println(firstString.toLowerCase(locale).equals(
-		secondString.toLowerCase(locale))); //prints false
+		System.out.println(firstString.toLowerCase(locale).equals(secondString.toLowerCase(locale))); //prints false
 		
 		
 		String stringToSwitch = "A";
