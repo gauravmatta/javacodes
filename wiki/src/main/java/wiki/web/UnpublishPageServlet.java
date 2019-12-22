@@ -1,6 +1,11 @@
 package wiki.web;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.Socket;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -72,8 +77,30 @@ public class UnpublishPageServlet extends HttpServlet {
 		pageDAO.update(page);
 		resp.sendRedirect("../view/" + page.getName());
 	}
-	private void unpublish(Page page)
+	
+	private void unpublish(Page page) throws IOException
 	{
-		// Implement later.
+		logger.debug("unpublish()");
+		// Construct HTTP headers.
+		String requestLine = "GET /newsfeed/unpublish?id=" + page.getPublishedId() + " HTTP/1.1\r\n";
+		String hostHeader = "Host: localhost\r\n";
+		String connectionHeader = "Connection: close\r\n";
+		// Send HTTP headers.
+		Socket socket = new Socket("localhost", 8080);
+		OutputStream os = socket.getOutputStream();
+		os.write(requestLine.getBytes("US-ASCII"));
+		os.write(hostHeader.getBytes("US-ASCII"));
+		os.write(connectionHeader.getBytes("US-ASCII"));
+		os.write("\r\n".getBytes("US-ASCII"));
+		os.flush();
+		// Read HTTP response.
+		InputStream is = socket.getInputStream();
+		InputStreamReader isr = new InputStreamReader(is);
+		BufferedReader br = new BufferedReader(isr);
+		while (true)
+		{
+			String headerLine = br.readLine();
+			if (headerLine.length() == 0) break;
+		}
 	}
 }
