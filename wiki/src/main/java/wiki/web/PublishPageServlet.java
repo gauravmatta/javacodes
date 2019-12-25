@@ -8,6 +8,8 @@ import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.Socket;
 
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLSocketFactory;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -78,7 +80,9 @@ public class PublishPageServlet extends HttpServlet {
 		String hostHeader = "Host: localhost\r\n";
 		String connectionHeader = "Connection: close\r\n";
 		String requestLine = "POST /newsfeed/publish HTTP/1.1\r\n";
-		Socket socket = new Socket("localhost", 8080);
+//		Socket socket = new Socket("localhost", 8080);
+		SocketFactory socketFactory = SSLSocketFactory.getDefault();
+		Socket socket = socketFactory.createSocket("localhost", 8443);
 		OutputStream os = socket.getOutputStream();
 		os.write(requestLine.getBytes("US-ASCII"));
 		os.write(hostHeader.getBytes("US-ASCII"));
