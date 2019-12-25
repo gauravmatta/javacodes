@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLSocketFactory;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -82,11 +84,13 @@ public class UnpublishPageServlet extends HttpServlet {
 	{
 		logger.debug("unpublish()");
 		// Construct HTTP headers.
-		String requestLine = "GET /newsfeed/unpublish?id=" + page.getPublishedId() + " HTTP/1.1\r\n";
+		String requestLine = "GET /newsfeed/unpublish?id=" + page.getPublishedId() + "&accessKey=1234 HTTP/1.1\r\n";
 		String hostHeader = "Host: localhost\r\n";
 		String connectionHeader = "Connection: close\r\n";
 		// Send HTTP headers.
-		Socket socket = new Socket("localhost", 8080);
+//		Socket socket = new Socket("localhost", 8080);
+		SocketFactory socketFactory = SSLSocketFactory.getDefault();
+		Socket socket = socketFactory.createSocket("localhost", 8443);
 		OutputStream os = socket.getOutputStream();
 		os.write(requestLine.getBytes("US-ASCII"));
 		os.write(hostHeader.getBytes("US-ASCII"));
