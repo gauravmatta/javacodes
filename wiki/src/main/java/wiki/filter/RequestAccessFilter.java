@@ -22,9 +22,12 @@ public class RequestAccessFilter implements Filter {
 			throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		Context context = Context.newInstance((HttpServletRequest) request,(HttpServletResponse) response);  
-        try {  
+        try 
+        {  
           chain.doFilter(request, response);  
-        } finally {  
+        } 
+        finally 
+        {  
           context.release();  
         }  
 
