@@ -35,6 +35,9 @@ public class Init implements ServletContextListener {
 			Context compContext = (Context) enc.lookup("java:comp/env");
 			DataSource dataSource = (DataSource) compContext.lookup("wikidatasource");
 			DataAccessObject.setDataSource(dataSource);
+			String trustStorePath = servletContext.getRealPath("WEB-INF/truststore");
+//			System.out.println(trustStorePath);
+			System.setProperty("javax.net.ssl.trustStore", trustStorePath);
 	}
 
 	public void contextDestroyed(ServletContextEvent sce) {
