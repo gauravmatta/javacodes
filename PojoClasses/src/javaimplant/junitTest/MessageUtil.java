@@ -10,6 +10,7 @@ public class MessageUtil {
 
 	public String printMessage() {
 		// TODO Auto-generated method stub
+		System.out.println(msg);
 		return msg;
 	}
 
