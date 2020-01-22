@@ -12,7 +12,16 @@ import org.junit.runners.Suite.SuiteClasses;
 public class TestRunner {
 	public static void main(String[] args) {
 	      Result result = JUnitCore.runClasses(TestJunit.class);
-			
+	      
+	      Result resultEmp = JUnitCore.runClasses(TestEmployeeDetails.class);
+	      
+	      
+	      for (Failure failure : resultEmp.getFailures()) {
+		         System.out.println(failure.toString());
+		      }
+				
+	      System.out.println(resultEmp.wasSuccessful());
+	      
 	      for (Failure failure : result.getFailures()) {
 	         System.out.println(failure.toString());
 	      }
