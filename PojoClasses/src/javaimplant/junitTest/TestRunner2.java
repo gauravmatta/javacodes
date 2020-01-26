@@ -13,6 +13,14 @@ public class TestRunner2 {
 	      {
 	         System.out.println(failure.toString());
 	      }
+	      
+	      Result result1 = JUnitCore.runClasses(TestAssertions.class);
+	      for (Failure failure : result1.getFailures()) 
+	      {
+	         System.out.println(failure.toString());
+	      }
+	      
+	      System.out.println(result.wasSuccessful());
 			
 	      System.out.println(result.wasSuccessful());
 	}
