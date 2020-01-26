@@ -11,10 +11,9 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({TestJunit.class})
 public class TestRunner {
 	public static void main(String[] args) {
-	      Result result = JUnitCore.runClasses(TestJunit.class);
-	      
+	      Result result = JUnitCore.runClasses(TestJunit.class);  
 	      Result resultEmp = JUnitCore.runClasses(TestEmployeeDetails.class);
-	      
+	      Result resultTestSuit = JUnitCore.runClasses(JunitTestSuite.class);
 	      
 	      for (Failure failure : resultEmp.getFailures()) {
 		         System.out.println(failure.toString());
@@ -23,6 +22,12 @@ public class TestRunner {
 	      System.out.println(resultEmp.wasSuccessful());
 	      
 	      for (Failure failure : result.getFailures()) {
+	         System.out.println(failure.toString());
+	      }
+			
+	      System.out.println(result.wasSuccessful());
+
+	      for (Failure failure : resultTestSuit.getFailures()) {
 	         System.out.println(failure.toString());
 	      }
 			
