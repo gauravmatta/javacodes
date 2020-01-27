@@ -1,17 +1,19 @@
 package javaimplant.junitTest;
 
 import static org.junit.Assert.assertEquals;
+import static java.time.Duration.ofMillis;
+import static java.time.Duration.ofSeconds;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
 
 import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 
-@Ignore
 public class TestJunit {
 
 	String message="Test String";
 	MessageUtil msgutil = new MessageUtil(message);
 	
-	@Ignore
+	
 	@Test
 	public void printTestMessage()
 	{
@@ -19,6 +21,16 @@ public class TestJunit {
 		assertEquals(message,msgutil.printMessage());
 	}
 	
+	@Test
+	public void checkTime()
+	{
+		assertTimeout(ofMillis(1000), () -> {
+	        //Thread.sleep(100);
+			msgutil.printMessage();
+	    });
+	}
+	
+	@Ignore
 	@Test
 	public void testSalutationMessage() 
 	{
@@ -28,7 +40,6 @@ public class TestJunit {
 	      assertEquals(message,msgutil.salutationMessage());
 	}
 	
-	@Ignore
 	@Test
 	public void failTestMessage()
 	{

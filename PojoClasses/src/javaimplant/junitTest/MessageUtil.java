@@ -16,6 +16,8 @@ public class MessageUtil {
 
 	public String salutationMessage() {
 		// TODO Auto-generated method stub
+		msg = "Hi!" + msg;
+	    System.out.println(msg);
 		return "Hi!" + msg;
 	}
 }
