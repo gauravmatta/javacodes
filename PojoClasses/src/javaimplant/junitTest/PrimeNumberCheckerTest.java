@@ -36,7 +36,8 @@ public class PrimeNumberCheckerTest {
 	         { 6, false },
 	         { 19, true },
 	         { 22, false },
-	         { 23, true }
+	         { 23, true },
+	         { 25, true }
 	      });
 	 }
 
