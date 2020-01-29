@@ -6,6 +6,7 @@ import static java.time.Duration.ofSeconds;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
 import org.junit.Ignore;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestJunit {
@@ -20,6 +21,17 @@ public class TestJunit {
 		System.out.println("Inside testPrintMessage()");
 		assertEquals(message,msgutil.printMessage());
 	}
+	
+	@Test
+	public void testArthameticMessage() 
+	{	
+	   System.out.println("Inside testArthematicMessage()");    
+	   Assertions.assertThrows(ArithmeticException.class,() -> {
+		   msgutil.printArthametic();
+	   });
+
+	}
+	
 	
 	@Test
 	public void checkTime()

@@ -20,4 +20,13 @@ public class MessageUtil {
 	    System.out.println(msg);
 		return "Hi!" + msg;
 	}
+	
+	// prints the message
+   public void printArthametic(){
+	      System.out.println("Arthematic "+msg);
+	      int a = 0;
+	      int b = 1/a;
+	   }   
+	
+	
 }
