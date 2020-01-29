@@ -15,6 +15,14 @@ public class TestRunner {
 	      Result resultEmp = JUnitCore.runClasses(TestEmployeeDetails.class);
 	      Result resultTestSuit = JUnitCore.runClasses(JunitTestSuite.class);
 	      
+	      Result resultParams = JUnitCore.runClasses(PrimeNumberCheckerTest.class);
+
+	      for (Failure failure : resultParams.getFailures()) {
+	         System.out.println(failure.toString());
+	      }
+			
+	      System.out.println(result.wasSuccessful());
+	      
 	      for (Failure failure : resultEmp.getFailures()) {
 		         System.out.println(failure.toString());
 		      }
