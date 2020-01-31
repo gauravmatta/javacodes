@@ -1,12 +1,13 @@
 <project name = "JunitTest" default = "test" basedir = ".">
-   <property name = "testdir" location = "/test" />
-   <property name = "srcdir" location = "src/javaimplant/junitTest" />
+   <property name = "testdir" location = "../test" />
+   <property name = "srcdir" location = "../src/javaimplant/junitTest" />
    <property name = "full-compile" value = "true" />
 	
    <path id = "classpath.base"/>
 	
    <path id = "classpath.test">
-      <pathelement location = "lib/junit-4.13.jar" />
+      <pathelement location = "../lib/junit-4.13.jar" />
+      <pathelement location = "../lib/junit-jupiter-api-5.6.0.jar" />
       <pathelement location = "${testdir}" />
       <pathelement location = "${srcdir}" />
       <path refid = "classpath.base" />
