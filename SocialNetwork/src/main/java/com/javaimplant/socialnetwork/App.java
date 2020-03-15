@@ -1,4 +1,4 @@
-package com.javaimplant.SocialNetwork;
+package com.javaimplant.socialnetwork;
 
 /**
  * Hello world!
