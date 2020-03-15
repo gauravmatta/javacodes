@@ -4,7 +4,7 @@
    "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 		<package name="AccountSystem" extends="struts-default">
-			<action name="login" class="com.javaimplant.socialnetwork.action.LoginAction">
+			<action name="Login" class="com.javaimplant.socialnetwork.action.LoginAction">
 				<result name="success">/loginSuccess.jsp</result>
 			</action>
 		</package>
