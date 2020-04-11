@@ -50,7 +50,7 @@ public class NewsFeedServlet extends HttpServlet {
 		feed.setDescription("This feed was created using ROME.");
 		List<SyndEntry> entries=new ArrayList<SyndEntry>();
 		try {
-			Connection connection=DriverManager.getConnection("jdbc:mysql://localhost/publisher","gaurav","gaurav");
+			Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3308/publisher","root","");
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery("select * from news_item;");
 			while(resultSet.next())
