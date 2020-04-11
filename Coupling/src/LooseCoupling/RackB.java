@@ -24,7 +24,6 @@ public class RackB implements Rack {
         this.shelf = shelf;
     }
     
-    @Override
     public void addBooks(String book) {
         if(this.books[shelf]==null)
         {
@@ -33,13 +32,13 @@ public class RackB implements Rack {
         this.books[shelf].add(book);
     }
 
-    @Override
+
     public void getBooksByShelf(int shelf)
     {
          System.out.println(this.books[shelf]);
     }
 
-    @Override
+
     public void getBooksInRack() 
     {
         for(ArrayList s:books)

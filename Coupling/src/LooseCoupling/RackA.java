@@ -20,33 +20,28 @@ public class RackA implements Rack {
         return shelf;
     }
 
-    @Override
-    public void setShelf(int shelf) {
-        this.shelf = shelf;
-    }
-    
-    @Override
-    public void addBooks(String book) {
-        if(this.books[shelf]==null)
-        {
-            this.books[shelf]=new ArrayList();
-        }
-        this.books[shelf].add(book);
-    }
+	public void getBooksByShelf(int shelf) {
+		System.out.println(this.books[shelf]);
+	}
 
-    @Override
-    public void getBooksByShelf(int shelf)
-    {
-         System.out.println(this.books[shelf]);
-    }
+	public void getBooksInRack() {
+      for(ArrayList s:books)
+      {
+          System.out.println(s);
+      }
+	}
 
-    @Override
-    public void getBooksInRack() 
-    {
-        for(ArrayList s:books)
-        {
-            System.out.println(s);
-        }
-    }
+	public void addBooks(String book) 
+	{
+	      if(this.books[shelf]==null)
+	      {
+	          this.books[shelf]=new ArrayList();
+	      }
+	      this.books[shelf].add(book);			
+	}
+
+	public void setShelf(int shelf) {
+		 this.shelf = shelf;
+	}
     
 }
