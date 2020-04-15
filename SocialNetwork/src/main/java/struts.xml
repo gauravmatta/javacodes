@@ -6,6 +6,14 @@
 		<package name="AccountSystem" extends="struts-default">
 			<action name="login" class="com.javaimplant.socialnetwork.action.LoginAction">
 				<result name="success">/loginSuccess.jsp</result>
+				<result name="input">/index.jsp</result>
 			</action>
+<!-- 		<action name="add-user" class="com.javaimplant.socialnetwork.action.LoginAction" method="addUser">
+				<result name="success">/add-user.jsp</result>
+			</action>
+			
+			<action name="insert-user" class="com.javaimplant.socialnetwork.action.LoginAction" method="insertUser">
+				<result name="success">/success.jsp</result>
+			</action> -->
 		</package>
 </struts>

@@ -1,8 +1,11 @@
 package com.javaimplant.socialnetwork.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import com.javaimplant.socialnetwork.model.User;
 
@@ -22,6 +25,12 @@ public class UserDAO {
 		session.beginTransaction();
 		session.save(user);
 		session.getTransaction().commit();
+	}
+	
+	public List<User> getUserByName(String name)
+	{
+		Query<User> users=session.createQuery("from User where userName = :name").setParameter("name",name);
+		return users.list();	
 	}
 	
 	public void close()
