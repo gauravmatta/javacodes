@@ -1,5 +1,6 @@
 package com.javaimplant.socialnetwork.action;
 
+import com.javaimplant.socialnetwork.dao.UserDAO;
 import com.javaimplant.socialnetwork.model.User;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -18,6 +19,8 @@ public class LoginAction extends ActionSupport {
 		System.out.println("We are executing login action!");
 		System.out.println(user.getUserName());
 		System.out.println(user.getPassword());
+		UserDAO dao=new UserDAO();
+		dao.insertUser(user);
 		return SUCCESS;
 	}
 
