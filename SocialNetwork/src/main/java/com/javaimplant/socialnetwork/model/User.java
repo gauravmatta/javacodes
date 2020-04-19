@@ -1,9 +1,15 @@
 package com.javaimplant.socialnetwork.model;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -23,6 +29,17 @@ public class User {
 	
 	@Column(name="password")
 	private String password;
+	
+	@OneToMany(fetch=FetchType.EAGER)
+	private List<User> friends= new ArrayList<>();
+
+	public List<User> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<User> friends) {
+		this.friends = friends;
+	}
 
 	public Integer getId() {
 		return id;

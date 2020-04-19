@@ -8,12 +8,15 @@
 				<result name="success">/loginSuccess.jsp</result>
 				<result name="input">/index.jsp</result>
 			</action>
-<!-- 		<action name="add-user" class="com.javaimplant.socialnetwork.action.LoginAction" method="addUser">
-				<result name="success">/add-user.jsp</result>
+ 			<action name="register" class="com.javaimplant.socialnetwork.action.RegisterAction">
+				<result name="success">/index.jsp</result>
+				<result name="input">/register.jsp</result>
 			</action>
-			
-			<action name="insert-user" class="com.javaimplant.socialnetwork.action.LoginAction" method="insertUser">
-				<result name="success">/success.jsp</result>
-			</action> -->
+		</package>
+		<package name="FriendSystem" extends="struts-default">
+			<action name="addFriend" class="com.javaimplant.socialnetwork.action.AddFriendAction">
+				<result name="success">/loginSuccess.jsp</result>
+				<result name="input">/loginSuccess.jsp</result>
+			</action>
 		</package>
 </struts>

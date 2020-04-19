@@ -33,6 +33,14 @@ public class UserDAO {
 		return users.list();	
 	}
 	
+	public void update(User user)
+	{
+		session.beginTransaction();
+		session.update(user);
+		session.getTransaction().commit();
+	}
+	
+	
 	public void close()
 	{
 		session.close();

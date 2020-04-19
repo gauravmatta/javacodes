@@ -8,11 +8,15 @@
 <title>Welcome to our Social Network</title>
 </head>
 <body>
-Welcome to our Social Network
+<h1>Login</h1>
 <s:form action="login">
 	<s:textfield key="user.userName" label="User Name"></s:textfield>
 	<s:password key="user.password" label="Password"></s:password>
 	<s:submit/>
 </s:form>
+
+<form action="/SocialNetwork/register.jsp">
+	<input type="submit" value="Register">
+</form>
 </body>
 </html>
