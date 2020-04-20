@@ -44,7 +44,6 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			addFieldError("user.password","Password mismatch");
 			return;			
 		}
-		System.out.println("sadafdsfdss");
 		this.user=users.get(0);
 		userSession.put("currentUser",this.user);
 		dao.close();

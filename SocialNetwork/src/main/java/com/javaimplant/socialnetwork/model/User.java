@@ -1,14 +1,18 @@
 package com.javaimplant.socialnetwork.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -30,14 +34,32 @@ public class User {
 	@Column(name="password")
 	private String password;
 	
-	@OneToMany(fetch=FetchType.EAGER)
-	private List<User> friends= new ArrayList<>();
+//	@ManyToOne(cascade={CascadeType.ALL})
+//	@JoinColumn(name="friends_id")
+//	private User currentUser;
+	
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER,mappedBy="id")
+	private Set<User> friends= new HashSet<User>();
 
-	public List<User> getFriends() {
+	public User(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+
+//	public User getCurrentUser() {
+//		return currentUser;
+//	}
+//
+//	public void setCurrentUser(User currentUser) {
+//		this.currentUser = currentUser;
+//	}
+
+	public Set<User> getFriends() {
 		return friends;
 	}
 
-	public void setFriends(List<User> friends) {
+	public void setFriends(Set<User> friends) {
 		this.friends = friends;
 	}
 

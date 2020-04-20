@@ -29,8 +29,8 @@ public class UserDAO {
 	
 	public List<User> getUserByName(String name)
 	{
-		Query<User> users=session.createQuery("from User where userName = :name").setParameter("name",name);
-		return users.list();	
+		List<User> users=session.createQuery("from User where userName = :name").setParameter("name",name).list();
+		return users;	
 	}
 	
 	public void update(User user)

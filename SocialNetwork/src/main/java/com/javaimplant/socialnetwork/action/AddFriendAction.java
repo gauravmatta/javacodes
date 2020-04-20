@@ -20,11 +20,11 @@ public class AddFriendAction  extends ActionSupport implements SessionAware{
 	@Override
 	public String execute() throws Exception {
 		UserDAO dao=new UserDAO();
-//		List<User> users=dao.getUserByName(name);
+		List<User> users=dao.getUserByName(name);
 		User currentUser=(User)userSession.get("currentUser");
-//		Set<User> friends=currentUser.getFriends();
-//		friends.add(users.get(0));
-//		currentUser.setFriends(friends);
+		Set<User> friends=currentUser.getFriends();
+		friends.add(users.get(0));
+		currentUser.setFriends(friends);
 		dao.update(currentUser);
 		dao.close();
 		return SUCCESS;
