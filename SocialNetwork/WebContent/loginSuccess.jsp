@@ -13,5 +13,9 @@
 <s:textfield key="name" label="User Name"/>
 <s:submit/>
 </s:form>
+<h1>Your Friends:</h1>
+<s:iterator value="#session.currentUser.friends" var="user">
+<li><s:property value="#user.userName"/></li>
+</s:iterator>
 </body>
 </html>

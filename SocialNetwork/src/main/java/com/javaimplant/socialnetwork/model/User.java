@@ -12,6 +12,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -34,26 +35,18 @@ public class User {
 	@Column(name="password")
 	private String password;
 	
-//	@ManyToOne(cascade={CascadeType.ALL})
-//	@JoinColumn(name="friends_id")
-//	private User currentUser;
-	
-	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER,mappedBy="id")
-	private Set<User> friends= new HashSet<User>();
+	public User() {
+		super();
+	}
+
+	@OneToMany(fetch=FetchType.EAGER)
+	private Set<User> friends;
 
 	public User(String userName, String password) {
 		super();
 		this.userName = userName;
 		this.password = password;
 	}
-
-//	public User getCurrentUser() {
-//		return currentUser;
-//	}
-//
-//	public void setCurrentUser(User currentUser) {
-//		this.currentUser = currentUser;
-//	}
 
 	public Set<User> getFriends() {
 		return friends;

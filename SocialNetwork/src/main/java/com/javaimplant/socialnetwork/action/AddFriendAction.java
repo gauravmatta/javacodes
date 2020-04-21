@@ -22,9 +22,9 @@ public class AddFriendAction  extends ActionSupport implements SessionAware{
 		UserDAO dao=new UserDAO();
 		List<User> users=dao.getUserByName(name);
 		User currentUser=(User)userSession.get("currentUser");
-		Set<User> friends=currentUser.getFriends();
-		friends.add(users.get(0));
-		currentUser.setFriends(friends);
+//		Set<User> friends=currentUser.getFriends();
+//		friends.add(users.get(0));
+//		currentUser.setFriends(friends);
 		dao.update(currentUser);
 		dao.close();
 		return SUCCESS;
@@ -60,14 +60,14 @@ public class AddFriendAction  extends ActionSupport implements SessionAware{
 		}
 		dao.close();
 		
-		for(User u:currentUser.getFriends())
-		{
-			if(u.getUserName().equals(users.get(0).getUserName()))
-			{
-				addFieldError("name","Already your Friend");
-				return;
-			}
-		}
+//		for(User u:currentUser.getFriends())
+//		{
+//			if(u.getUserName().equals(users.get(0).getUserName()))
+//			{
+//				addFieldError("name","Already your Friend");
+//				return;
+//			}
+//		}
 	}
 
 	public Map<String, Object> getUserSession() {
