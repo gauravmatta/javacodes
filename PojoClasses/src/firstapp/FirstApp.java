@@ -13,9 +13,11 @@ public class FirstApp {
 
     /**
      * @param args the command line arguments
+     * Multiline comments
      */
     public static void main(String[] args) {
-        System.out.println("This is just a Beginning");
+    	//Single Line comment
+        System.out.println("This is just a Beginning"); // Inline Comment
     }
     
 }
