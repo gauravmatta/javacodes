@@ -5,6 +5,8 @@
  */
 package java8.lambda;
 
+import java.util.function.BiConsumer;
+
 /**
  *
  * @author Gaurav Matta
@@ -30,5 +32,11 @@ public class Basics {
         basics.greet(hello);
         basics.greet(greetingFunction);
         basics.greet(innerClass);
+        BiConsumer<Integer,Integer> biConsumer = (a,b) -> System.out.println(a+b);
+        biConsumer.accept(5, 10);
+    }
+    
+    public void add(int a,int b) {
+    	System.out.println(a+b);
     }
 }
