@@ -26,6 +26,11 @@ public class EmployeeClass {
 	}
 
 	@Override
+	public String toString() {
+		return "EmployeeClass [employeeName=" + employeeName + ", employeeNumber=" + employeeNumber + "]";
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
