@@ -1,5 +1,3 @@
 package javaimplant.records;
 
-public record Employee(String name,int employeeNumber) {
-
-}
+public record Employee(String name,int employeeNumber) {}
