@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -37,6 +38,38 @@ public class SerialDemo {
 			Save objSave2 = (Save) objectInputStream.readObject();
 			System.out.println("Value og obj"+ objSave2.i);
 		}
+		
+		
+		/*
+		 * Try below with and without adding Serial Version UID in Employee Class
+		 * comment deserializeObject method and run file
+		 * now add a field to Employee class(change class)
+		 * comment serializeObject method and uncomment deserializeObject method you will get Exception 
+		 */
+		String fileNameString = "employee.ser";
+//		serializeObject(fileNameString);
+		deserializeObject(fileNameString);
+	}
+	
+	private static void deserializeObject(String fileName) throws FileNotFoundException, IOException, ClassNotFoundException {
+		ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File(fileName)));
+		Object object = objectInputStream.readObject();
+		Employee employee = (Employee) object;
+		System.out.println("Employee Object is Deserialized");
+		System.out.println("ID:"+employee.getId());
+		System.out.println("Name:"+employee.getName());
+		System.out.println("Email:"+employee.getEmail());
+		System.out.println("Employee Object is Deserialized");
+	}
+	
+	private static void serializeObject(String fileName) throws FileNotFoundException, IOException {
+		Employee employee = new Employee();
+		employee.setId(1001);
+		employee.setName("Java Implant");
+		employee.setEmail("java@implant.com");
+		ObjectOutputStream objectOutputStream =new ObjectOutputStream(new FileOutputStream(new File(fileName)));
+		objectOutputStream.writeObject(employee);
+		System.out.println("Employee Object is Serialized");
 	}
 
 }
