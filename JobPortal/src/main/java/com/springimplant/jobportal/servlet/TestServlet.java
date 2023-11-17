@@ -1,4 +1,4 @@
-package com.springimplant.JobPortal.servlet;
+package com.springimplant.jobportal.servlet;
 
 import java.io.IOException;
 
