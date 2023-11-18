@@ -25,6 +25,18 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-core</artifactId>
+	    <version>6.3.0.1</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+	<dependency>
+	    <groupId>com.mysql</groupId>
+	    <artifactId>mysql-connector-j</artifactId>
+	    <version>8.2.0</version>
+	</dependency>
   </dependencies>
 
   <build>
