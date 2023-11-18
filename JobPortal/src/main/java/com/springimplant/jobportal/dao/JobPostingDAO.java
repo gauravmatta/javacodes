@@ -56,8 +56,8 @@ public class JobPostingDAO {
 		String sep = "','";
 		try {
 			Statement st = conn.createStatement();
-			String sqlQuery="INSERT INTO JobPostings (messageBody,jobName,posterName,contactPhone,jobPostingPassword) VALUES("+
-					posting.getMessageBody()+sep+posting.getJobName()+sep+posting.getJobName()+sep+posting.getPosterName()+sep+posting.getContactPhone()+sep+posting.getJobPostingPassword()+")";
+			String sqlQuery="INSERT INTO JobPostings (messageBody,jobName,posterName,contactPhone,jobPostingPassword) VALUES('"+
+					posting.getMessageBody()+sep+posting.getJobName()+sep+posting.getPosterName()+sep+posting.getContactPhone()+sep+posting.getJobPostingPassword()+"')";
 			System.out.println(sqlQuery);
 			st.executeUpdate(sqlQuery);
 			st.close();

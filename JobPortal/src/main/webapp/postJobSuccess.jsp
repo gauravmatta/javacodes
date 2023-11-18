@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>Successfully Inserted Job</h1>
 </body>
 </html>

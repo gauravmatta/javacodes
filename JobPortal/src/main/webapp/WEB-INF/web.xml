@@ -4,4 +4,34 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>PostJobServlet</servlet-name>
+  	<display-name>PostJobServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.springimplant.jobportal.servlet.PostJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RemoveJobServlet</servlet-name>
+  	<display-name>RemoveJobServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.springimplant.jobportal.servlet.RemoveJobServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ViewJobServlet</servlet-name>
+  	<display-name>ViewJobServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.springimplant.jobportal.servlet.ViewJobServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PostJobServlet</servlet-name>
+  	<url-pattern>/PostJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RemoveJobServlet</servlet-name>
+  	<url-pattern>/RemoveJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewJobServlet</servlet-name>
+  	<url-pattern>/ViewJobServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
