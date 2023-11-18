@@ -22,6 +22,12 @@
   	<description></description>
   	<servlet-class>com.springimplant.jobportal.servlet.ViewJobServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>TestServlet</servlet-name>
+  	<display-name>TestServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.springimplant.jobportal.servlet.TestServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PostJobServlet</servlet-name>
   	<url-pattern>/PostJobServlet</url-pattern>
@@ -33,5 +39,9 @@
   <servlet-mapping>
   	<servlet-name>ViewJobServlet</servlet-name>
   	<url-pattern>/ViewJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TestServlet</servlet-name>
+  	<url-pattern>/TestServlet</url-pattern>
   </servlet-mapping>
 </web-app>
