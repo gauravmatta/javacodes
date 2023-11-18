@@ -1,4 +1,4 @@
-package com.springimplant.SocialNetwork;
+package com.springimplant.socialnetwork;
 
 import static org.junit.Assert.assertTrue;
 
