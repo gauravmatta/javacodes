@@ -1,5 +1,6 @@
 package com.javaimplant.socialnetwork.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -14,7 +15,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="users")
-public class User {
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 3796026304550040415L;
 
 	@Id
 	@Column(name="Id")
