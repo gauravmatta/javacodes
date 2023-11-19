@@ -6,9 +6,9 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3308/socialnetwork</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/socialnetwork</property>
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.connection.password">root@04G</property>
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 		<property name="hibernate.connection.pool_size">3</property>
         <property name="hibernate.current_session_context_class">thread</property>

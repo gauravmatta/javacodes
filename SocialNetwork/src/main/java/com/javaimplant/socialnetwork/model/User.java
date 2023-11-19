@@ -1,20 +1,20 @@
 package com.javaimplant.socialnetwork.model;
 
-import java.util.Set;
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="users")
-public class User {
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 3796026304550040415L;
 
 	@Id
 	@Column(name="Id")
@@ -32,8 +32,8 @@ public class User {
 		super();
 	}
 
-	@OneToMany(fetch=FetchType.EAGER)
-	private Set<User> friends;
+//	@OneToMany(fetch=FetchType.EAGER)
+//	private Set<User> friends;
 
 	public User(String userName, String password) {
 		super();
@@ -41,13 +41,13 @@ public class User {
 		this.password = password;
 	}
 
-	public Set<User> getFriends() {
-		return friends;
-	}
-
-	public void setFriends(Set<User> friends) {
-		this.friends = friends;
-	}
+//	public Set<User> getFriends() {
+//		return friends;
+//	}
+//
+//	public void setFriends(Set<User> friends) {
+//		this.friends = friends;
+//	}
 
 	public Integer getId() {
 		return id;

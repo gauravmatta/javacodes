@@ -1,29 +1,32 @@
 package com.javaimplant.socialnetwork.action;
 
-public class LoginAction {
-//public class LoginAction extends ActionSupport implements SessionAware {
+import org.apache.commons.lang3.StringUtils;
 
-//	@Override
+import com.javaimplant.socialnetwork.dao.UserDAO;
+import com.javaimplant.socialnetwork.model.User;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction extends ActionSupport {
+//public class LoginAction  implements SessionAware {
+
+	private static final long serialVersionUID = 5584598680796678578L;
+	
+	private User user;
+	
+//	private Map<String,Object> userSession;
+	
+	@Override
 	public String execute() {
 		System.out.println("We are executing login action!");
-//		System.out.println(user.getUserName());
-//		System.out.println(user.getPassword());
-		return "success";
+		System.out.println(user.getUserName());
+		System.out.println(user.getPassword());
+		UserDAO dao=new UserDAO();
+		dao.insertUser(user);
+		return SUCCESS;
 	}
-
-//	private User user;
-//	private Map<String,Object> userSession;
-//	
-//	public Map<String, Object> getUserSession() {
-//		return userSession;
-//	}
-//
-//	public void setUserSession(Map<String, Object> userSession) {
-//		this.userSession = userSession;
-//	}
-
-//	@Override
-//	public void validate() {
+	
+	@Override
+	public void validate() {
 //		UserDAO dao=new UserDAO();
 //		if(StringUtils.isEmpty(user.getUserName()))
 //		{
@@ -36,7 +39,7 @@ public class LoginAction {
 //			addFieldError("user.userName","User Not Found");
 //			return;
 //		}
-//		
+		
 //		if(!users.get(0).getPassword().equals(user.getPassword()))
 //		{
 //			addFieldError("user.password","Password mismatch");
@@ -45,22 +48,27 @@ public class LoginAction {
 //		this.user=users.get(0);
 //		userSession.put("currentUser",this.user);
 //		dao.close();
+	}
+	
+	public User getUser() {
+	return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+//	public Map<String, Object> getUserSession() {
+//		return userSession;
 //	}
 //
-//	
+//	public void setUserSession(Map<String, Object> userSession) {
+//		this.userSession = userSession;
+//	}	
 //	public String addUser()
 //	{
 //		return SUCCESS;
 //	}
-//
-//	public User getUser() {
-//		return user;
-//	}
-//
-//	public void setUser(User user) {
-//		this.user = user;
-//	}
-//
 //	@Override
 //	public void setSession(Map<String, Object> session) {
 //		this.userSession=session;
