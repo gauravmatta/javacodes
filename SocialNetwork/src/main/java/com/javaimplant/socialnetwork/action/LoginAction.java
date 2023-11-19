@@ -1,5 +1,8 @@
 package com.javaimplant.socialnetwork.action;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.lang3.StringUtils;
 
 import com.javaimplant.socialnetwork.dao.UserDAO;
@@ -13,7 +16,7 @@ public class LoginAction extends ActionSupport {
 	
 	private User user;
 	
-//	private Map<String,Object> userSession;
+	private Map<String,Object> userSession;
 	
 	@Override
 	public String execute() {
@@ -27,27 +30,27 @@ public class LoginAction extends ActionSupport {
 	
 	@Override
 	public void validate() {
-//		UserDAO dao=new UserDAO();
-//		if(StringUtils.isEmpty(user.getUserName()))
-//		{
-//			addFieldError("user.userName","User Name cannot be blank");
-//			return;
-//		}
-//		List<User> users=dao.getUserByName(user.getUserName());
-//		if(users.isEmpty())
-//		{
-//			addFieldError("user.userName","User Not Found");
-//			return;
-//		}
+		UserDAO dao=new UserDAO();
+		if(StringUtils.isEmpty(user.getUserName()))
+		{
+			addFieldError("user.userName","User Name cannot be blank");
+			return;
+		}
+		List<User> users=dao.getUserByName(user.getUserName());
+		if(users.isEmpty())
+		{
+			addFieldError("user.userName","User Not Found");
+			return;
+		}
 		
-//		if(!users.get(0).getPassword().equals(user.getPassword()))
-//		{
-//			addFieldError("user.password","Password mismatch");
-//			return;			
-//		}
-//		this.user=users.get(0);
-//		userSession.put("currentUser",this.user);
-//		dao.close();
+		if(!users.get(0).getPassword().equals(user.getPassword()))
+		{
+			addFieldError("user.password","Password mismatch");
+			return;			
+		}
+		this.user=users.get(0);
+		userSession.put("currentUser",this.user);
+		dao.close();
 	}
 	
 	public User getUser() {
