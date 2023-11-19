@@ -1,4 +1,4 @@
-	package com.javaimplant.socialnetwork.dao;
+package com.javaimplant.socialnetwork.dao;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.javaimplant.socialnetwork.model.User;
+import com.javaimplant.socialnetwork.utils.Utils;
 
 public class UserDAO {
 	
@@ -28,8 +29,7 @@ public class UserDAO {
 	
 	public List<User> getUserByName(String name)
 	{
-		List<User> users=session.createQuery("from User where userName = :name").setParameter("name",name).list();
-		return users;	
+		return Utils.castList(User.class, session.createQuery("from User where userName = :name").setParameter("name",name).list());	
 	}
 	
 	public void update(User user)

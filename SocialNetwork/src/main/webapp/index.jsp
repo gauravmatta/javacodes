@@ -7,6 +7,7 @@
 <title>Welcome to our Social Network!</title>
 </head>
 <body>
+	<h1>Login</h1>
 	<s:form action="login">
 		<s:textfield key="user.userName" label="User Name"/>
 		<s:password key = "user.password" label="Password"/>
