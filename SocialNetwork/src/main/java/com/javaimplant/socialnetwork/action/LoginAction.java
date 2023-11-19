@@ -23,8 +23,6 @@ public class LoginAction extends ActionSupport {
 		System.out.println("We are executing login action!");
 		System.out.println(user.getUserName());
 		System.out.println(user.getPassword());
-		UserDAO dao=new UserDAO();
-		dao.insertUser(user);
 		return SUCCESS;
 	}
 	
@@ -61,13 +59,14 @@ public class LoginAction extends ActionSupport {
 		this.user = user;
 	}
 	
-//	public Map<String, Object> getUserSession() {
-//		return userSession;
-//	}
-//
-//	public void setUserSession(Map<String, Object> userSession) {
-//		this.userSession = userSession;
-//	}	
+	public Map<String, Object> getUserSession() {
+		return userSession;
+	}
+
+	public void setUserSession(Map<String, Object> userSession) {
+		this.userSession = userSession;
+	}
+	
 //	public String addUser()
 //	{
 //		return SUCCESS;
