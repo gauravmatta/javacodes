@@ -4,13 +4,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.struts2.interceptor.SessionAware;
 
 import com.javaimplant.socialnetwork.dao.UserDAO;
 import com.javaimplant.socialnetwork.model.User;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class LoginAction extends ActionSupport {
-//public class LoginAction  implements SessionAware {
+public class LoginAction extends ActionSupport implements SessionAware {
 
 	private static final long serialVersionUID = 5584598680796678578L;
 	
@@ -71,11 +71,11 @@ public class LoginAction extends ActionSupport {
 //	{
 //		return SUCCESS;
 //	}
-//	@Override
-//	public void setSession(Map<String, Object> session) {
-//		this.userSession=session;
-//		
-//	}
+	
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.userSession=session;
+	}
 //
 //	@Override
 //	public void withSession(Map<String, Object> session) {
