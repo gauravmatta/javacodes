@@ -12,18 +12,20 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport implements SessionAware {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 5584598680796678578L;
+	
 	private User user;
+	
 	private Map<String,Object> userSession;
 	
-	public Map<String, Object> getUserSession() {
-		return userSession;
+	@Override
+	public String execute() {
+		System.out.println("We are executing login action!");
+		System.out.println(user.getUserName());
+		System.out.println(user.getPassword());
+		return SUCCESS;
 	}
-
-	public void setUserSession(Map<String, Object> userSession) {
-		this.userSession = userSession;
-	}
-
+	
 	@Override
 	public void validate() {
 		UserDAO dao=new UserDAO();
@@ -48,32 +50,37 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		userSession.put("currentUser",this.user);
 		dao.close();
 	}
-
-	@Override
-	public String execute() {
-		System.out.println("We are executing login action!");
-		System.out.println(user.getUserName());
-		System.out.println(user.getPassword());
-		return SUCCESS;
-	}
 	
-	public String addUser()
-	{
-		return SUCCESS;
-	}
-
 	public User getUser() {
-		return user;
+	return user;
 	}
 
 	public void setUser(User user) {
 		this.user = user;
 	}
+	
+	public Map<String, Object> getUserSession() {
+		return userSession;
+	}
 
+	public void setUserSession(Map<String, Object> userSession) {
+		this.userSession = userSession;
+	}
+	
+//	public String addUser()
+//	{
+//		return SUCCESS;
+//	}
+	
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.userSession=session;
-		
 	}
-	
+//
+//	@Override
+//	public void withSession(Map<String, Object> session) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//	
 }

@@ -11,31 +11,39 @@ import com.javaimplant.socialnetwork.dao.UserDAO;
 import com.javaimplant.socialnetwork.model.User;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AddFriendAction  extends ActionSupport implements SessionAware{
-	
-	private static final long serialVersionUID = 1L;
+public class AddFriendAction  extends ActionSupport implements SessionAware {	
+
+	private static final long serialVersionUID = -5459970713795868750L;
 	private Map<String,Object> userSession;
 	private String name;
 	
-	@Override
-	public String execute() throws Exception {
-		UserDAO dao=new UserDAO();
-		List<User> users=dao.getUserByName(name);
-		User currentUser=(User)userSession.get("currentUser");
-//		Set<User> friends=currentUser.getFriends();
-//		friends.add(users.get(0));
-//		currentUser.setFriends(friends);
-		dao.update(currentUser);
-		dao.close();
-		return SUCCESS;
-	}
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public Map<String, Object> getUserSession() {
+		return userSession;
+	}
+
+	public void setUserSession(Map<String, Object> userSession) {
+		this.userSession = userSession;
+	}
+
+	@Override
+	public String execute() throws Exception {
+		UserDAO dao=new UserDAO();
+		List<User> users=dao.getUserByName(name);
+		User currentUser=(User)userSession.get("currentUser");
+		Set<User> friends=currentUser.getFriends();
+		friends.add(users.get(0));
+		currentUser.setFriends(friends);
+		dao.update(currentUser);
+		dao.close();
+		return SUCCESS;
 	}
 
 	@Override
@@ -47,10 +55,10 @@ public class AddFriendAction  extends ActionSupport implements SessionAware{
 		UserDAO dao=new UserDAO();
 		List<User> users=dao.getUserByName(name);
 		User currentUser=(User)userSession.get("currentUser");
-//		System.out.println(currentUser);
+		System.out.println(currentUser);
 		if(users.isEmpty())
 		{
-			addFieldError("name","User does not exist");
+			addFieldError("name","User Does Not Exist");
 			return;
 		}
 		if(currentUser.getUserName().equals(users.get(0).getUserName()))
@@ -60,28 +68,18 @@ public class AddFriendAction  extends ActionSupport implements SessionAware{
 		}
 		dao.close();
 		
-//		for(User u:currentUser.getFriends())
-//		{
-//			if(u.getUserName().equals(users.get(0).getUserName()))
-//			{
-//				addFieldError("name","Already your Friend");
-//				return;
-//			}
-//		}
-	}
-
-	public Map<String, Object> getUserSession() {
-		return userSession;
-	}
-
-	public void setUserSession(Map<String, Object> userSession) {
-		this.userSession = userSession;
+		for(User u:currentUser.getFriends())
+		{
+			if(u.getUserName().equals(users.get(0).getUserName()))
+			{
+				addFieldError("name","Already your Friend");
+				return;
+			}
+		}
 	}
 
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.userSession=session;
-	}
-	
- 
+	} 
 }
