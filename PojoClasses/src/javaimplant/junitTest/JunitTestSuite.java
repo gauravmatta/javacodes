@@ -10,7 +10,7 @@ import junit.framework.TestSuite;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({ 
- TestJunit1.class ,TestJunit2.class
+ TestJunit1.class ,TestJunit2.class, SimpleCalculatorTest.class
 })
 
 public class JunitTestSuite {
