@@ -1,6 +1,7 @@
 package com.javaimplant.servletdemo;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -13,7 +14,8 @@ public class MyHttpServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter out = resp.getWriter();
+		out.print("I am in doGet() method of Http Servlet");
 		System.out.println("I am in doGet() method");
-		super.doGet(req, resp);
 	}
 }
