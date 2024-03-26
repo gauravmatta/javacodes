@@ -17,6 +17,7 @@ public class AnnotatedServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		System.out.println("In Service");
 		String name = req.getParameter("name1");
 		String email = req.getParameter("email1");
 		try (PrintWriter writer = resp.getWriter()) {

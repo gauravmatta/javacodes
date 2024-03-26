@@ -18,4 +18,14 @@ public class MyHttpServlet extends HttpServlet {
 		out.print("I am in doGet() method of Http Servlet");
 		System.out.println("I am in doGet() method");
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		System.out.println("In DoPost");
+		try (PrintWriter writer = resp.getWriter()) {
+			writer.write(name+" has email "+email+" caught in dopost");
+		}
+	}
 }
