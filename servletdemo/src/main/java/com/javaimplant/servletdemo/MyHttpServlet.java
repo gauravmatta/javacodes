@@ -27,9 +27,14 @@ public class MyHttpServlet extends HttpServlet {
 		if(name.equals("Gaurav") && email.equals("gtech@gmail.com")) {
 			RequestDispatcher rd = req.getRequestDispatcher("/admin.jsp");
 			rd.forward(req, resp);
-		}else {
+		}
+		else {
 			try (PrintWriter writer = resp.getWriter()) {
-				writer.write(name+" has email "+email+" caught in dopost");
+				resp.setContentType("text/html");
+				writer.println(name+" has email "+email+" caught in dopost");
+				writer.println(name+" try searching");
+				RequestDispatcher rd = req.getRequestDispatcher("/search.html");
+				rd.include(req, resp);
 			}
 		}
 	}
