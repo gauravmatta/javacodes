@@ -3,6 +3,7 @@ package com.javaimplant.servletdemo;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,9 +24,13 @@ public class MyHttpServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name = req.getParameter("name");
 		String email = req.getParameter("email");
-		System.out.println("In DoPost");
-		try (PrintWriter writer = resp.getWriter()) {
-			writer.write(name+" has email "+email+" caught in dopost");
+		if(name.equals("Gaurav") && email.equals("gtech@gmail.com")) {
+			RequestDispatcher rd = req.getRequestDispatcher("/admin.jsp");
+			rd.forward(req, resp);
+		}else {
+			try (PrintWriter writer = resp.getWriter()) {
+				writer.write(name+" has email "+email+" caught in dopost");
+			}
 		}
 	}
 }
