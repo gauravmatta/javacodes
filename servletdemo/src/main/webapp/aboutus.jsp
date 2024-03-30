@@ -13,5 +13,8 @@ String email = (String) session.getAttribute("email_key");
 %>
 <h3>Welcome: <%= myname %></h3>
 <h2>Your are registered with us with email <%= email %></h2>
+<a href="home.jsp">Home</a>
+<a href="aboutus.jsp">About Us</a>
+<a href="logout">Logout</a>
 </body>
 </html>
