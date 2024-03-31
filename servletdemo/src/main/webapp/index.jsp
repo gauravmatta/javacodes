@@ -1,3 +1,4 @@
+<%@page import="java.time.LocalDate"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,5 +20,7 @@ out.println("a :"+a);
 out.println("Name :"+name);
 out.println(square());
 %>
+<%= LocalDate.now() %>
+<%= Math.random() %>
 </body>
 </html>
