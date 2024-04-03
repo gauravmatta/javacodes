@@ -10,13 +10,14 @@
   <packaging>war</packaging>
 
   <name>JobPortal</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <sonar.organization>gauravmatta</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <dependencies>
