@@ -67,8 +67,8 @@ public class SubstringContainingPattern {
 		System.out.println("Output: \""
 				+ findSmallestSubstring(str1, pattern1) + "\"");
 
-		String str2 = "geeksforgeeks";
-		String pattern2 = "ork";
+		String str2 = "javaimplant";
+		String pattern2 = "aimn";
 		System.out.println("Input: string = \"" + str2
 				+ "\", pattern = \"" + pattern2 + "\"");
 		System.out.println("Output: \""
