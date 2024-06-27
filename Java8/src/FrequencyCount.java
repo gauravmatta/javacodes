@@ -8,6 +8,8 @@ public class FrequencyCount {
 	// frequency in order of its occurrence
 	static void printCharWithFreq(String str)
 	{
+		System.out.println(str);
+		
 		// size of the string 'str'
 		int n = str.length();
 
@@ -16,8 +18,12 @@ public class FrequencyCount {
 
 		// accumulate frequency of each character
 		// in 'str'
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i < n; i++) {
+			System.out.println(str.charAt(i));
+			System.out.println(str.charAt(i) - 'a');
 			freq[str.charAt(i) - 'a']++;
+		}
+			
 
 		// traverse 'str' from left to right
 		for (int i = 0; i < n; i++) {
