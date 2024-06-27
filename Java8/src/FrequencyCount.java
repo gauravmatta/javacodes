@@ -52,4 +52,3 @@ public class FrequencyCount {
 		printCharWithFreq(str);
 	}
 }
-// This code is contributed by Sumit Ghosh
