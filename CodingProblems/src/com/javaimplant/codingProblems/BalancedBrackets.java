@@ -1,3 +1,8 @@
+/*
+ * Given an expression string exp, write a program to examine whether the pairs and the orders of 
+ * “{“, “}”, “(“, “)”, “[“, “]” are correct in the given expression.
+ */
+
 package com.javaimplant.codingProblems;
 
 //Java program for checking
