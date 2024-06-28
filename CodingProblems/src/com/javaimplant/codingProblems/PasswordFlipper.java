@@ -18,20 +18,25 @@
  */
 package com.javaimplant.codingProblems;
 
-public class PwdFlip {
+public class PasswordFlipper {
 	
 	static int minFlips(String pwd){
-		
-		int countFlips;
-		
-		
-		
-		return 1;
+		int countFlips = 0;
+		char[] pwdArr = pwd.toCharArray();
+		for(int i=0;i<pwd.length()-1;i+=2) {
+			if(pwdArr[i]!= pwdArr[i+1]) {
+				countFlips++;
+			}
+		}
+		return countFlips;
 	}
 
 	public static void main(String[] args) {
 		String pwd = "101011";
 		int result = minFlips(pwd);
+		System.out.println(result);
+		pwd = "100110";
+		result = minFlips(pwd);
 		System.out.println(result);
 	}
 
