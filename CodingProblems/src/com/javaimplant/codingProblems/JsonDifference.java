@@ -8,9 +8,11 @@
 package com.javaimplant.codingProblems;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class JsonDifference {
 	
@@ -38,17 +40,27 @@ public class JsonDifference {
 		List<String> diff = new ArrayList<>();
 		Map<String,String> map1 = jsonParse(json1);
 		Map<String,String> map2 = jsonParse(json2);
-		Map<String,String> keys = (map1.size()<map2.size()?map1:map2);
+//		Map<String,String> keys = (map1.size()<map2.size()?map1:map2);
+		Set<String> keys = (map1.size()<map2.size())?map1.keySet():map2.keySet();
 		
-		for(Map.Entry<String,String> entry: keys.entrySet()) {
-			String key = entry.getKey();
+		for(String key: keys) {
 			if(map1.containsKey(key) && map2.containsKey(key)) {
 				if(!map1.get(key).equals(map2.get(key))) {
 					diff.add(key);
 				}
 			}
 		}
-		diff.sort(null);
+		
+//		for(Map.Entry<String,String> entry: keys.entrySet()) {
+//			String key = entry.getKey();
+//			if(map1.containsKey(key) && map2.containsKey(key)) {
+//				if(!map1.get(key).equals(map2.get(key))) {
+//					diff.add(key);
+//				}
+//			}
+//		}
+//		diff.sort(null);
+		Collections.sort(diff);
 		return diff;
 	}
 
