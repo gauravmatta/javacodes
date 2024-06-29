@@ -63,7 +63,5 @@ public class RecentRequests {
 		int k =3;
 		Set<String> response = getLatestKRequest(requests,k);
 		response.forEach(l -> System.out.println(l));
-
 	}
-
 }
