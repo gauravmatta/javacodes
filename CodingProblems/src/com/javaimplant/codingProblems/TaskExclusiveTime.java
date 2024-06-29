@@ -13,7 +13,16 @@
  */
 package com.javaimplant.codingProblems;
 
+import java.util.Collections;
+import java.util.List;
+
 public class TaskExclusiveTime {
+	
+	List<Integer> getTotalExecutionTime(int n,List<String> logs){
+		
+		return Collections.emptyList()ull;
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
