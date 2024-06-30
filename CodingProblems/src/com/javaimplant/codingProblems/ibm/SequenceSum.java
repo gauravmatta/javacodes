@@ -13,7 +13,7 @@ public class SequenceSum {
 		for(int l=i;l<=j;++l) {
 			sum +=l;
 		}
-		for(int l=j;l>=k;--l) {
+		for(int l=j-1;l>=k;--l) {
 			sum +=l;
 		}
 		return sum;
@@ -21,6 +21,8 @@ public class SequenceSum {
 	
 	public static void main(String args[]) {
 		int result = seqSum(0,5,-1);
+		System.out.println(result);
+		result = seqSum(5,9,6);
 		System.out.println(result);
 	}
 }
