@@ -9,7 +9,7 @@
  * sellingPrices = [2.89,2.99,3.29,5.97]
  * Output: errors = 2
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.Arrays;
 import java.util.HashMap;

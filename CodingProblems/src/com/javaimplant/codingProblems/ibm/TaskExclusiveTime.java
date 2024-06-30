@@ -11,7 +11,7 @@
  * function call have to be included. The log of the form (function_id):(start): (timestamp) means that the running function is preempted at 
  * the beginning of timestamp second.
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList;
 import java.util.Arrays;

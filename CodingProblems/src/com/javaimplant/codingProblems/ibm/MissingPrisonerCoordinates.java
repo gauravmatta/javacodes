@@ -8,7 +8,7 @@
  * Unfortunately, one prisoner has escaped. Find the coordinates of that prisoner. 
  * write the code in Java
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList;
 import java.util.Arrays;

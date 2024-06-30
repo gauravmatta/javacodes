@@ -7,7 +7,7 @@
  * Then response should be i3,i1,i2
  */
 		
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;

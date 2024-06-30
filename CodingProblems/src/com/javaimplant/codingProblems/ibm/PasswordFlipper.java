@@ -16,7 +16,7 @@
  *  If the parity is even, the minimum number of changes required is the count of the less frequent character divided by 2.
  *  
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 public class PasswordFlipper {
 	

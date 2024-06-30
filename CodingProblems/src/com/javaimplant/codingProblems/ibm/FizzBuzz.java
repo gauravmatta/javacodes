@@ -4,7 +4,7 @@
  * “Fizz” if i is divisible by 3, “Buzz” if i is divisible by 5 or i (as a string) 
  * if none of the conditions are true.
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList; 
 import java.util.List; 

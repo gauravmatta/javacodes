@@ -5,12 +5,13 @@
  * Find the minimum number of moves the students need to perform in order to get a word of minimal length.
  * Example
  * Consider word - "baabacaa":
- * The following moves are optimal: 1. Choose index 0, b, c, then word = baaacaa. Delete the b to its right at index 3. There is no b to its left so the operation is finished.
+ * The following moves are optimal: 1. Choose index 0, b, c, then word = baaacaa. Delete the b to its 
+ * right at index 3. There is no b to its left so the operation is finished.
  * 2.Now, choose index 2, a, then word is bacaa. 
  * 3. Now, choose index 3, a, then word is bca.
  * The word cannot be reduced further. The answer is 3.
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.HashMap;
 import java.util.Map;

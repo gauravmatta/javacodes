@@ -7,7 +7,7 @@
  * Example: [3,4,9],3 ﻿means, the array with integers 3,4,9 ﻿has to undergo transformation 3 times.[3,4,9]=>[6,1,12]=>[3,4,9]=>[6,1,12]
  * So the result is [6,1,12]
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.Arrays;
 import java.util.List;

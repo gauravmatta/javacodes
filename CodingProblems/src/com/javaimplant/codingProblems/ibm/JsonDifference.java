@@ -5,7 +5,7 @@
  * If a key is present in only one of the Json's it should not be considered in result. 
  * The list of keys should be sorted in lexicographically ascending order.
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList;
 import java.util.Collections;

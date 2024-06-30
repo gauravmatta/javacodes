@@ -3,7 +3,7 @@
  * Find if there’s a triplet in the array which divides the given integer X.
  */
 		
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 public class StockTriplets {
 

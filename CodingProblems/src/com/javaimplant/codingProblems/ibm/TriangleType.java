@@ -15,7 +15,7 @@
  * The fourth is not valid.
  * The result is ["Isosceles", "Equilateral", "None of these", "None of these"]
  */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList;
 import java.util.List;

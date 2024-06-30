@@ -11,7 +11,7 @@
 * input = 2,1,3
 * output = 0,-1,3
 */
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList;
 import java.util.List;
