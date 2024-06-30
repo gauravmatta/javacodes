@@ -13,30 +13,24 @@
 package com.javaimplant.codingProblems.ibm;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 
 public class DomainNameSystem {
 
 	static List<Integer> getMinTime(int cache_size,int cache_time,int server_time,List<String> urls){
 		List<Integer> timetaken = new ArrayList<>();
 		Queue<String> queue = new LinkedList<>();
-		Set<String> cacheset = new HashSet<String>();
 		for(String url:urls) {
-			if(cacheset.contains(url)) {
+			if(queue.contains(url)) {
 				timetaken.add(cache_time);
-			} else {
+			}else {
 				if(queue.size()>=cache_size) {
-					String frontUrl = queue.peek();
-					queue.remove();
-					cacheset.remove(frontUrl);
-				}		
+					queue.poll();
+				}
 				timetaken.add(server_time);
 				queue.add(url);
-				cacheset.add(url);
 			}
 		}
 		return timetaken;		
