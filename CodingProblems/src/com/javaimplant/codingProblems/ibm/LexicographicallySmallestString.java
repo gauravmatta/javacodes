@@ -17,10 +17,37 @@
 package com.javaimplant.codingProblems.ibm;
 
 public class LexicographicallySmallestString {
-
+	
+	static String smallest_lexographical_string(String word,String substr) {
+		int lenWord = word.length();
+		int lenSubstr = substr.length();
+		for(int i=0;i<=lenWord-lenSubstr;i++) {
+			boolean matchFound = true;
+			char[] tempWord = word.toCharArray();
+			for(int j=0;j<lenSubstr;j++) {
+				if(tempWord[i+j] !='?' && tempWord[i+j]!= substr.charAt(j)) {
+					matchFound=false;
+					break;
+				}
+				tempWord[i+j]=substr.charAt(j);
+			}
+			if(matchFound) {
+				for(int k=0;k<lenWord;k++) {
+					if(tempWord[k]=='?') {
+						tempWord[k]='a';
+					}
+				}
+				return new String(tempWord);
+			}
+		}
+		return "-1";
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String word = "as?b?e?gf";
+		String substr ="dbk";
+		String result = smallest_lexographical_string(word,substr);
+		System.out.println(result);
 	}
 
 }
