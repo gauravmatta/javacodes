@@ -13,20 +13,50 @@
  */
 package com.javaimplant.codingProblems;
 
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class TaskExclusiveTime {
 	
-	List<Integer> getTotalExecutionTime(int n,List<String> logs){
-		
-		return Collections.emptyList()ull;
-		
+	static List<Integer> getTotalExecutionTime(int n,List<String> logs){
+		int[] resultArray = new int[n] ;
+		List<Integer> result = Arrays.stream(resultArray).boxed().collect(Collectors.toList());
+		Stack<Integer> functionStack = new Stack<>();
+		int prevTime =0;
+		for(String log: logs) {
+			String[] logParts = log.split(":");
+			Integer functionid = Integer.valueOf(logParts[0]);
+			String action = logParts[1];
+			Integer timestamp = Integer.valueOf(logParts[2]);
+			if(action.equals("start")) {
+				if(!functionStack.empty()) {
+					result.set(functionStack.peek(),result.get(functionStack.peek())+timestamp-prevTime);
+				}
+				functionStack.push(functionid);
+				prevTime=timestamp;
+			}else if(action.equals("end")) {
+				result.set(functionStack.peek(),result.get(functionStack.peek())+timestamp-prevTime+1);
+				functionStack.pop();
+				prevTime=timestamp+1;
+			}
+		}		
+		return result;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int n=3;
+		List<String> logs = new ArrayList<>() {{
+			add("0:start:0");
+			add("1:start:2");
+			add("2:start:3");
+			add("2:end:4");
+			add("1:end:5");
+			add("0:end:6");
+		}};
+		List<Integer> result =  getTotalExecutionTime(n,logs);
+		result.forEach(a -> System.out.println(a));
 	}
-
 }
