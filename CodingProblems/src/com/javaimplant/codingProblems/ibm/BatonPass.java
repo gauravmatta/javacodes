@@ -15,11 +15,40 @@
  */
 package com.javaimplant.codingProblems.ibm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BatonPass {
+	
+	static List<Integer> batonPass(int friends,long time){
+		int cycleLength = (friends-1)*2;
+		long effectiveTime = (time-1)%cycleLength+1;
+		int position;
+		if(effectiveTime<=friends) {
+			position= (int)effectiveTime;
+		} else {
+			position = 2*friends-(int)effectiveTime;
+		}
+		int passer,receiver;
+		if(effectiveTime <= friends) {
+			passer = position;
+			receiver = (position < friends)?position + 1:friends;
+		} else {
+			passer = position;
+			receiver = (position>1)?position-1:1;
+		}
+		
+		return new ArrayList<Integer>() {{
+			add(passer);
+			add(receiver);
+		}};
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int friends = 4;
+		long time =5;
+		List<Integer> result = batonPass(friends,time);
+		result.forEach(i->System.out.println(i));
 	}
 
 }
