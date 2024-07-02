@@ -1,3 +1,4 @@
+package com.javaimplant.codingProblems.naggaro;
 
 public class ConvertVariable {
 
