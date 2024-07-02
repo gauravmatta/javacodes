@@ -1,3 +1,4 @@
+package com.javaimplant.codingProblems.naggaro;
 import java.util.*;
 public class SubJect_Marks {
     public static void main(String args[]) {
