@@ -6,10 +6,10 @@ public class Task extends Thread {
 		this.number=number;
 	}
 	public void run() {
-		System.out.println("Task "+number+ "Started");
+		System.out.println(Thread.currentThread().getName()+" Task "+number+ "Started");
 		for(int i=number*100;i<=number*100+99;i++) {
 			System.out.print(i+" ");
 		}
-		System.out.println("Task "+number+ "Done");
+		System.out.println(Thread.currentThread().getName()+ "Task "+number+ "Done");
 	}
 }

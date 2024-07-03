@@ -12,6 +12,7 @@ public class ExecutorServiceSingleThreadRunner {
 		ExecutorService executorService = Executors.newSingleThreadExecutor();
 		executorService.execute(new Task1());
 		executorService.execute(new Thread(new Task2()));
+		executorService.execute(new Task2());
 		System.out.println("Task3 Kicked off");
 		for(int i=301;i<=399;i++) {
 			System.out.print(i+" ");
