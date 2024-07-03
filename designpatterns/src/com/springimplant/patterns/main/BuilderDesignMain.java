@@ -11,7 +11,7 @@ public class BuilderDesignMain {
 				.setBluetoothEnabled(true)
 				.setGraphicsCardEnabled(true).build();
 		
-		System.out.println(comp.toString());
+		System.out.println(comp.getHDD());
 
 	}
 
