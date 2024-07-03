@@ -1,4 +1,4 @@
-package javaimplant.threads;
+package com.javaimplant.deadlock;
 
 public class MyRunnable implements Runnable {
 

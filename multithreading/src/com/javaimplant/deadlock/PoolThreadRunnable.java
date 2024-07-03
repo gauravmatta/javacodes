@@ -1,4 +1,4 @@
-package javaimplant.threads;
+package com.javaimplant.deadlock;
 
 import java.util.concurrent.BlockingQueue;
 

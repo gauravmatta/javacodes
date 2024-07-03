@@ -1,6 +1,4 @@
-package javaimplant.threads;
-
-import static org.junit.Assert.assertFalse;
+package com.javaimplant.deadlock;
 
 import java.util.ArrayList;
 import java.util.List;
