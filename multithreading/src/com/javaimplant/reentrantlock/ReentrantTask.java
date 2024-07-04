@@ -1,9 +1,8 @@
 package com.javaimplant.reentrantlock;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ReentrantTask implements Callable<String> {
+public class ReentrantTask implements Runnable {
 
 	ReentrantLock lock;
 	private int number;
@@ -14,22 +13,26 @@ public class ReentrantTask implements Callable<String> {
 	}
 	
 	@Override
-	public String call() throws Exception {
-		lock.lock();
-		try {
+	public void run()  {
 		System.out.println("Locked :"+lock.isLocked());
 		System.out.println("Held by this thread: "+lock.isHeldByCurrentThread());
 		boolean locked = lock.tryLock();
-		System.out.println("Lock acquired");
+		System.out.println("Lock acquired: "+locked);
+		try {
 		System.out.println(Thread.currentThread().getName()+" Task "+number+ "Started");
 		for(int i=number*100;i<=number*100+99;i++) {
 			System.out.print(i+" ");
 		}
+		if((number%2)!=0) {
+			Thread.sleep(2000);
+		}
 		System.out.println(Thread.currentThread().getName()+ "Task "+number+ "Done");
-		return "Hello" + Thread.currentThread().getName()+"is Finished";
+		} catch (Exception e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
 		} finally {
 			lock.unlock();
+			System.out.println("Unlocked: "+Thread.currentThread().getName());
 		}
 	}
-
 }
