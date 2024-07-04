@@ -23,7 +23,7 @@ public class LatchMain {
 		executorService.execute(new Thread(new CountDownLatchRunnable(countDownLatch,5)));
 		executorService.execute(new Thread(new CountDownLatchRunnable(countDownLatch,6)));
 		executorService.execute(new Thread(new CountDownLatchRunnable(countDownLatch,7)));
-
+		executorService.shutdown();
 	}
 
 }
