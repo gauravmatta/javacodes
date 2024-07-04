@@ -14,9 +14,9 @@ public class ReentrantTask implements Runnable {
 	
 	@Override
 	public void run()  {
-		System.out.println("Locked :"+lock.isLocked());
+		System.out.println(Thread.currentThread().getName()+"Locked :"+lock.isLocked());
 		boolean locked = lock.tryLock();
-		System.out.println("Held by this thread: "+lock.isHeldByCurrentThread());
+		System.out.println("Held by this thread("+Thread.currentThread().getName()+"): "+lock.isHeldByCurrentThread());
 		System.out.println("Lock acquired: "+locked);
 		try {
 		System.out.println(Thread.currentThread().getName()+" Task "+number+ "Started");
@@ -31,8 +31,10 @@ public class ReentrantTask implements Runnable {
 			Thread.currentThread().interrupt();
 			e.printStackTrace();
 		} finally {
+			if(lock.isHeldByCurrentThread()) {
 			lock.unlock();
 			System.out.println("Unlocked: "+Thread.currentThread().getName());
+			}
 		}
 	}
 }

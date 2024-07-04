@@ -9,11 +9,15 @@ public class ReentrantMain {
 
 	public static void main(String[] args) {
 		ReentrantLock lock = new ReentrantLock();
-		ExecutorService executorService = Executors.newSingleThreadExecutor();
-		executorService.execute(new ReentrantTask(lock,1));
+		ExecutorService singleexecutorService = Executors.newSingleThreadExecutor();
+		singleexecutorService.execute(new ReentrantTask(lock,1));
+		singleexecutorService.execute(new ReentrantTask(lock,2));
+		ExecutorService executorService = Executors.newFixedThreadPool(2);
 		executorService.execute(new ReentrantTask(lock,3));
-		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(new ReentrantTask(lock,2), 0, 1, TimeUnit.SECONDS);
-		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(new ReentrantTask(lock,4), 0, 1, TimeUnit.SECONDS);
+		executorService.execute(new ReentrantTask(lock,4));
+		executorService.execute(new ReentrantTask(lock,5));
+		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(new ReentrantTask(lock,6), 0, 1, TimeUnit.SECONDS);
+		Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(new ReentrantTask(lock,7), 0, 1, TimeUnit.SECONDS);
 		executorService.shutdown();
 	}
 
