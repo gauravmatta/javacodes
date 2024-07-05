@@ -1,3 +1,3 @@
 module CodingProblems {
-	exports com.javaimplant.codingProblems;
+	exports com.javaimplant.codingproblems;
 }
