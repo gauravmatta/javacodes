@@ -99,5 +99,6 @@ public class HashTable {
 		System.out.println(table.get(31));
 		System.out.println(table.get(21));
 		System.out.println(table.get(90));
+		System.out.println(table.remove(21));
 	}
 }
