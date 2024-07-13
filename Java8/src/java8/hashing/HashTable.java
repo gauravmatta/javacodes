@@ -64,6 +64,9 @@ public class HashTable {
 	}
 	
 	public String remove(Integer key) {
+		if(key==null) {
+			throw new IllegalArgumentException("Key or Value is null !!!!");
+		}
 		int bucketIndex = getBucketIndex(key);
 		HashNode head = buckets[bucketIndex];
 		HashNode previous = null;
