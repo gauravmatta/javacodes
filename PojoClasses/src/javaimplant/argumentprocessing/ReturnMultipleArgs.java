@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
+import org.apache.commons.lang3.tuple.Triple;
+
 public class ReturnMultipleArgs {
 
 	public static void main(String[] args) {
@@ -18,7 +22,26 @@ public class ReturnMultipleArgs {
 		System.out.println(getMap().toString());
 		
 		System.out.println(getCustomObject());
+		
+		System.out.println(getPair());
+		
+		System.out.println(getTriple());
+		
+		System.out.println(getImmutablePair());
 	}
+	
+	public static Triple<String, Integer, Employee> getTriple(){
+		return Triple.of("Gaurav",123,new Employee("Gaurav","lop",34,50000));
+	}
+	
+	public static Pair<Integer,String> getImmutablePair(){
+		return ImmutablePair.of(130,"Test Data");
+	} 
+	
+	public static Pair<Integer,String> getPair(){
+		return Pair.of(130,"Test Data");
+	}
+	
 	
 	public static Employee getCustomObject(){
 		return new Employee("Gaurav","lop",34,50000);
