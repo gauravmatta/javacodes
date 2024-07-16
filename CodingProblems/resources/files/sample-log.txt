@@ -1,0 +1,22 @@
+2012-09-05 22:19:12 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:19:12 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:20:25 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:20:25 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:20:32 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:20:32 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:24:50 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:24:50 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:25:05 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:25:05 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:25:24 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:25:24 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:25:24 INFO  [main           ] - so.tree.logger.AppTest - null
+2012-09-05 22:25:30 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:25:30 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+2012-09-05 22:35:11 ERROR [main           ] - so.tree.logger.AppTest - testError
+2012-09-05 22:35:11 INFO  [main           ] - so.tree.logger.AppTest - testInfo
+#EVENT# testError
+#·û# testError
+#·û# testError
+#·û# testError
+#·û# testError

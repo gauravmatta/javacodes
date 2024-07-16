@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+import javaimplant.records.Employee;
+
 public class SerialDemo {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
@@ -47,29 +49,32 @@ public class SerialDemo {
 		 * comment serializeObject method and uncomment deserializeObject method you will get Exception 
 		 */
 		String fileNameString = "employee.ser";
-//		serializeObject(fileNameString);
+		serializeObject(fileNameString);
 		deserializeObject(fileNameString);
 	}
 	
-	private static void deserializeObject(String fileName) throws FileNotFoundException, IOException, ClassNotFoundException {
-		ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File(fileName)));
-		Object object = objectInputStream.readObject();
-		Employee employee = (Employee) object;
-		System.out.println("Employee Object is Deserialized");
-		System.out.println("ID:"+employee.getId());
-		System.out.println("Name:"+employee.getName());
-		System.out.println("Email:"+employee.getEmail());
-		System.out.println("Employee Object is Deserialized");
+	private static void deserializeObject(String fileName) throws IOException, ClassNotFoundException {
+		try(ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File(fileName)))){
+			Object object = objectInputStream.readObject();
+			Employee employee = (Employee) object;
+			System.out.println("Employee Object is Deserialized");
+			System.out.println("ID:"+employee.employeeNumber());
+			System.out.println("Name:"+employee.name());
+			System.out.println("Email:"+employee.email());
+			System.out.println("Employee Object is Deserialized");	
+		}
 	}
 	
-	private static void serializeObject(String fileName) throws FileNotFoundException, IOException {
-		Employee employee = new Employee();
-		employee.setId(1001);
-		employee.setName("Java Implant");
-		employee.setEmail("java@implant.com");
-		ObjectOutputStream objectOutputStream =new ObjectOutputStream(new FileOutputStream(new File(fileName)));
-		objectOutputStream.writeObject(employee);
-		System.out.println("Employee Object is Serialized");
+	private static void serializeObject(String fileName) throws IOException {
+		Employee employee = new Employee.EmployeeBuilder()
+				.employeeNumber(1001)
+				.name("Java Implant")
+				.mail("java@implant.com")
+				.build();
+		try(ObjectOutputStream objectOutputStream =new ObjectOutputStream(new FileOutputStream(new File(fileName)))){
+			objectOutputStream.writeObject(employee);
+			System.out.println("Employee Object is Serialized");	
+		}
 	}
 
 }
