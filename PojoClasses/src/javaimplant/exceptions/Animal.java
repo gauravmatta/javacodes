@@ -1,4 +1,4 @@
-package javaimplant.exception;
+package javaimplant.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

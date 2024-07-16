@@ -1,13 +1,13 @@
 package javaimplant.exceptions;
 
-interface Animal {}
-class Dog implements Animal{}
-class Cat implements Animal{}
+interface Animals {}
+class Elephant implements Animals{}
+class Cat implements Animals{}
 public class ClassCastExceptionImpl {
 	public static void main(String[] args) {
-		Animal dog = new Dog();
-		Animal cat = new Cat();
-		Cat morphedCat = (Cat) dog;
+		Animals elephant = new Elephant();
+		Animals cat = new Cat();
+		Cat morphedCat = (Cat) elephant;
 		System.out.println("Tried creating Morphed Cat");
 	}
 }
