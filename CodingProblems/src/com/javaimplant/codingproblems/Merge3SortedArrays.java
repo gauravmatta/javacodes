@@ -1,4 +1,4 @@
-package com.javaimplant.codingProblems;
+package com.javaimplant.codingproblems;
 
 import java.util.*;
 
