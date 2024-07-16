@@ -13,8 +13,9 @@ public class SynchronizedStaticBlock {
 		StaticList.displayList();
 		
 		System.out.println("Display Synchronized List ===>");
-		synchronized (StaticList.class) {
-		StaticList.displayList();
+		while(Thread.activeCount()>1);
+			synchronized (StaticList.class) {
+				StaticList.displayList();
+			}
 		}
-	}
 }
