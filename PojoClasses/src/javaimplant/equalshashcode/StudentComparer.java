@@ -9,9 +9,9 @@ public class StudentComparer {
 		s1.stuSchoolName="CFS";
 		
 		Student s2= new Student();
-		s1.stuRollNo=5;
-		s1.stuName="Gaurav";
-		s1.stuSchoolName="CFS";
+		s2.stuRollNo=5;
+		s2.stuName="Gaurav";
+		s2.stuSchoolName="CFS";
 		
 		System.out.println(s1.equals(s2));
 
