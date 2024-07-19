@@ -1,7 +1,5 @@
 package javaimplant.equalshashcode;
 
-import java.util.Objects;
-
 public class Student {
 	int stuRollNo;
 	String stuName;
