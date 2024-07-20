@@ -14,6 +14,11 @@ public class StudentComparer {
 		s2.stuSchoolName="CFS";
 		
 		System.out.println(s1.equals(s2));
+		
+		Laptop obj = new Laptop();
+		obj.model="HP";
+		obj.price=1000;
+		System.out.println(obj);
 
 	}
 
