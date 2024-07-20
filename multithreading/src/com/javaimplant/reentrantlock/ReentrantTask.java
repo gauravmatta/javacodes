@@ -14,7 +14,7 @@ public class ReentrantTask implements Runnable {
 	
 	@Override
 	public void run()  {
-		System.out.println(Thread.currentThread().getName()+"Locked :"+lock.isLocked());
+		System.out.println(Thread.currentThread().getName()+" Trying Lock Current Lock Status:"+lock.isLocked());
 		boolean locked = lock.tryLock();
 		System.out.println("Held by this thread("+Thread.currentThread().getName()+"): "+lock.isHeldByCurrentThread());
 		System.out.println("Lock acquired: "+locked);

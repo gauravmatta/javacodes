@@ -12,6 +12,7 @@ public class ReentrantMain {
 		ExecutorService singleexecutorService = Executors.newSingleThreadExecutor();
 		singleexecutorService.execute(new ReentrantTask(lock,1));
 		singleexecutorService.execute(new ReentrantTask(lock,2));
+		singleexecutorService.shutdown();
 		ExecutorService executorService = Executors.newFixedThreadPool(2);
 		executorService.execute(new ReentrantTask(lock,3));
 		executorService.execute(new ReentrantTask(lock,4));
