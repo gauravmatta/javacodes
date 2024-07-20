@@ -26,6 +26,7 @@ public class CounterMain {
 			executorService.awaitTermination(1,TimeUnit.SECONDS);
 			System.out.println("Final Counter Value:"+counter.getValue());
 		}catch (Exception e) {
+			Thread.currentThread().interrupt();
 			e.printStackTrace();
 		}finally {
 			if(executorService != null) {
