@@ -19,6 +19,11 @@ public class StudentComparer {
 		obj.model="HP";
 		obj.price=1000;
 		System.out.println(obj);
+		
+		Laptop obj1 = new Laptop();
+		obj1.model="HP";
+		obj1.price=1000;
+		System.out.println(obj.equals(obj1));
 
 	}
 
