@@ -1,5 +1,6 @@
 package com.javaimplant.reentrantlock;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -25,10 +26,18 @@ public class LockExamples {
 	
 	private static void  tryLock() {
 		Lock lock = new ReentrantLock();
+		
 		try {
-		boolean lockSuccessful = lock.tryLock();
-		System.out.println("Lock Successfull: "+lockSuccessful);
-		} finally {
+			boolean lockSuccessful = lock.tryLock();
+			//Allows Fairness
+			boolean lockSuccessfulFairness = lock.tryLock(1000,TimeUnit.MILLISECONDS);
+			System.out.println("Lock Successfull: "+lockSuccessful);
+			System.out.println("Fairness Lock Successfull: "+lockSuccessfulFairness);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		finally {
 			lock.unlock();
 		}
 		
