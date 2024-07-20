@@ -6,7 +6,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public class LockExamples {
 	
 	public static void main(String[] args) {
-	logBasics();	
+	logBasics();
+	lockInterruptibly();
+	tryLock();
 	}
 
 	private static void logBasics() {
@@ -19,6 +21,31 @@ public class LockExamples {
 		thread1.start();
 		thread2.start();
 		thread3.start();
+	}
+	
+	private static void  tryLock() {
+		Lock lock = new ReentrantLock();
+		try {
+		boolean lockSuccessful = lock.tryLock();
+		System.out.println("Lock Successfull: "+lockSuccessful);
+		} finally {
+			lock.unlock();
+		}
+		
+	}
+	
+	private static void lockInterruptibly() {
+		Lock lock = new ReentrantLock();
+		Thread.currentThread().interrupt();
+		try {
+			lock.lockInterruptibly();
+			lock.unlock();
+		} 
+		catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			System.out.println(Thread.currentThread().getName()+" interrupted");
+			e.printStackTrace();
+		}
 	}
 
 	private static void lockSleepUnlock(Lock lock, long timeMillis) {
