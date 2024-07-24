@@ -1,7 +1,9 @@
 package com.javaimplant.codingproblems.naggaro;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeeWithGreaterSalary {
 
@@ -17,6 +19,16 @@ public class EmployeeWithGreaterSalary {
 		employeeMap.values().stream()
          .filter(e -> e.getSalary() > targetSalary)
          .forEach(System.out::println);
+		List<Employee> employee = employeeMap.values().stream()
+				.filter(e -> e.getSalary() > targetSalary)
+				.toList();
+		System.out.println(employee);
+		employeeMap.entrySet()
+		   .stream()
+		   .map(e -> {
+			   System.out.println(e.getKey()+"==>"+e.getValue());
+			   return e.getKey()+" "+e.getValue();
+		   }).collect(Collectors.toList());
 	}
 	
 }
