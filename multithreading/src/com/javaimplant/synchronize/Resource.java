@@ -23,4 +23,20 @@ public class Resource {
 			System.out.println(Thread.currentThread().getName()+" : I could not process because it was not allowed");
 		}
 	}
+	
+	public static synchronized void method1() {
+		System.out.println("Method 1 called");
+	}
+	public static synchronized void method2() {
+		System.out.println("Method 2 called");
+	}
+	public static void method3() {
+		System.out.println("Method 3 called");
+	}
+	public synchronized void method4() {
+		System.out.println("Method 4 called");
+	}
+	public void method5() {
+		System.out.println("Method 5 called");
+	}
 }

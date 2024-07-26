@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class readwritemain {
 
 	public static void main(String[] args) {
-		List<String> list = new ArrayList<String>();
+		List<String> list = new ArrayList<>();
 		ReadWriteLock lock = new ReentrantReadWriteLock();
 		ExecutorService executor = Executors.newFixedThreadPool(2);
 		Runnable writeTask = () ->{
@@ -19,7 +19,6 @@ public class readwritemain {
 				list.add("JavaImplant");
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			 finally {

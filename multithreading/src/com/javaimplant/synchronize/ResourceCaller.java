@@ -16,7 +16,26 @@ public class ResourceCaller {
 			e.printStackTrace();
 		}
 		
+		Thread t3 = new Thread(Resource::method1);
+		Thread t4 = new Thread(Resource::method2);
+		Thread t5 = new Thread(Resource::method3);
+		Thread t6 = new Thread(()->{
+			Resource r =new Resource();
+			r.method4();
+		});
+		Thread t7 = new Thread(()->{
+			Resource r =new Resource();
+			r.method5();
+		});
+		
+		t3.start();
+		t4.start();
+		t5.start();
+		t6.start();
+		t7.start();
 		System.out.println("Program Terminted");
+		
+		
 	}
 
 }
