@@ -24,7 +24,7 @@ public class SingletonMain {
 		enum1.i=5;
 		enum1.show();
 		SingletonEnum enum2 = SingletonEnum.INSTANCE;
-		enum1.i=6;
-		enum1.show();
+		enum2.i=6;
+		enum2.show();
 	}
 }
