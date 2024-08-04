@@ -12,9 +12,9 @@ public class PartitonBy {
 
 	public static void main(String[] args) {
 
-		Student s1 = new Student(8, "fiat", "Dave");
-		Student s2 = new Student(15, "fiat", "MadMax");
-		Student s3 = new Student(14, "ferrari", "Paul");
+		Student s1 = new Student(8, "fiat", "Dave",12000);
+		Student s2 = new Student(15, "fiat", "MadMax",15000);
+		Student s3 = new Student(14, "ferrari", "Paul",4000);
 
 		List<Student> students = new ArrayList<>();
 		students.add(s1);
