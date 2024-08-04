@@ -50,11 +50,7 @@ public static void main(String[] args) {
 	.map(Student::getStipend)
 	.mapToDouble(i->i)
 	.sum();
-	
 	System.out.println(sumStipend);
-	
-	
-	
 }
 public static List<Student> getStudents()
 {
