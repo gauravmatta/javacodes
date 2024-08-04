@@ -40,14 +40,14 @@ public static void main(String[] args) {
 	
 	double avgStipend = getStudents().stream()
 	.filter(student -> student.getGrade()>10)
-	.map(employee -> employee.getStipend())
+	.map(Student::getStipend)
 	.mapToDouble(i->i)
 	.average().getAsDouble();
 	System.out.println(avgStipend);
 	
 	double sumStipend = getStudents().stream()
 	.filter(student -> student.getGrade()>10)
-	.map(employee -> employee.getStipend())
+	.map(Student::getStipend)
 	.mapToDouble(i->i)
 	.sum();
 	
