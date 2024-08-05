@@ -28,6 +28,23 @@ public class CompletableFutureTest {
 			e.printStackTrace();
 		}
 		
+		CompletableFuture<Void> runAsync = runAsync();
+		try {
+			runAsync.get();
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		
+		CompletableFuture<String> supplyAsync = supplyAsync();
+		try {
+			System.out.println(supplyAsync.get());
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		
+		
 		CompletableFuture<String> cancelAsync = cancelAsync();
 		try {
 			String result = cancelAsync.get();
@@ -37,6 +54,31 @@ public class CompletableFutureTest {
 			Thread.currentThread().interrupt();
 			e.printStackTrace();
 		}
+	}
+	
+	
+	private static CompletableFuture<String> supplyAsync(){
+		
+		CompletableFuture<String> supplyAsync = CompletableFuture.supplyAsync(()->"Supplier My task 1 is completed by "+ Thread.currentThread().getName());
+		try {
+			System.out.println(supplyAsync.get());
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		return CompletableFuture.supplyAsync(()->"Supplier My task 2 is completed by "+ Thread.currentThread().getName(),Executors.newFixedThreadPool(2));
+	}
+	
+	
+	private static CompletableFuture<Void> runAsync(){
+		
+		CompletableFuture.runAsync(()->{
+			System.out.println("Runnable My task 1 is completed by "+ Thread.currentThread().getName());
+		});
+		
+		return CompletableFuture.runAsync(()->{
+			System.out.println("Runnable My task 2 is completed by "+ Thread.currentThread().getName());
+		},Executors.newFixedThreadPool(2));
 	}
 
 	private static CompletableFuture<String> calaculateAsync() {
