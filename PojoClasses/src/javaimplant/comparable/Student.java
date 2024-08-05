@@ -10,7 +10,7 @@ public class Student implements  Comparable<Student> {
 		this.name = name;
 	}
 	
-	@Override
+	@Override	
 	public String toString() {
 		return "Student [age=" + age + ", name=" + name + "]";
 	}
@@ -20,7 +20,7 @@ public class Student implements  Comparable<Student> {
 		if(this.age>o.age) {
 			return 1;
 		}else {
-			return -1;
+			return -1;	
 		}
 	}
 	
