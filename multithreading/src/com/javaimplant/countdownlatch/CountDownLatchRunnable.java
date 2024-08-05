@@ -14,12 +14,12 @@ public class CountDownLatchRunnable implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println(Thread.currentThread().getName()+" Task "+number+ "Started");
+		System.out.println("\n"+Thread.currentThread().getName()+" Task "+number+ "Started");
 		for(int i=number*100;i<=number*100+99;i++) {
 			System.out.print(i+" ");
 		}
 		countDownLatch.countDown();
-		System.out.println(Thread.currentThread().getName()+" has reduced latch count to :"+ countDownLatch.getCount());
+		System.out.println("\n"+Thread.currentThread().getName()+" has reduced latch count to :"+ countDownLatch.getCount());
 	}
 	
 }
