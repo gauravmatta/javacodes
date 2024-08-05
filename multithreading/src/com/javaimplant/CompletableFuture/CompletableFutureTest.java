@@ -117,6 +117,20 @@ public class CompletableFutureTest {
 		String collect = Stream.of(future1,future2,future3).map(CompletableFuture::join).collect(Collectors.joining(" "));
 		System.out.println(collect);
 		
+		String name = null;
+		CompletableFuture<String> handle = CompletableFuture.supplyAsync(()->{
+			if(name==null) {
+				throw new RuntimeException("Computation Error!!!");
+			}
+			return "Hello,"+ name;
+		}).handle((s,t)->s!=null?s:"Hello,Stranger");
+		
+		try {
+			System.out.println(handle.get());
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
 		
 		CompletableFuture<String> cancelAsync = cancelAsync();
 		try {
