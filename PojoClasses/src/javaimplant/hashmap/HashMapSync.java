@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class HashMapSync {
 	
 	public static void main(String[] args) {
-		Map<String,String> map1 = new HashMap<String, String>();
+		Map<String,String> map1 = new HashMap<>();
 		map1.put("1","Java");
 		map1.put("2","Implant");
 		map1.put("3","Gaurav");
