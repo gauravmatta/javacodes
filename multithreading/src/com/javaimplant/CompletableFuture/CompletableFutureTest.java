@@ -68,6 +68,20 @@ public class CompletableFutureTest {
 			e.printStackTrace();
 		}
 		
+		CompletableFuture<String> thenCompose = CompletableFuture.supplyAsync(()->"Hello, ")
+		.thenCompose(s->CompletableFuture.supplyAsync(()->s+" World!!!"));
+		
+		try {
+			System.out.println(thenCompose.get());
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		
+		CompletableFuture.supplyAsync(()->"Hello, ").thenCombine(CompletableFuture.supplyAsync(()->" World!!!"),(s1,s2)->s1+s2);
+		
+		CompletableFuture.supplyAsync(()->"Hello, ")
+		.thenAcceptBoth(CompletableFuture.supplyAsync(()->" World!!!"), (s1,s2)->System.out.println(s1+s2));
 		
 		CompletableFuture<String> cancelAsync = cancelAsync();
 		try {
