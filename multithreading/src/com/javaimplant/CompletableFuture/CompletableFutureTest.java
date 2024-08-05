@@ -44,6 +44,30 @@ public class CompletableFutureTest {
 			e.printStackTrace();
 		}
 		
+		CompletableFuture<String> thenApply = thenApply();
+		try {
+			System.out.println(thenApply.get());
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		
+		CompletableFuture<Void> thenAccept = thenAccept();
+		try {
+			System.out.println(thenAccept.get());
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		
+		CompletableFuture<Void> thenRun = thenRun();
+		try {
+			thenRun.get();
+		} catch (InterruptedException | ExecutionException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+		
 		
 		CompletableFuture<String> cancelAsync = cancelAsync();
 		try {
@@ -56,6 +80,20 @@ public class CompletableFutureTest {
 		}
 	}
 	
+	private static CompletableFuture<Void> thenRun(){
+		CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()->"Following are the results of Then Run ");
+		return completableFuture.thenRun(()->System.out.println(" ThenRun My task 1 is completed by "+ Thread.currentThread().getName()));
+	}
+	
+	private static CompletableFuture<Void> thenAccept(){
+		CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()->"Then Accept My task 1 is completed by ");
+		return completableFuture.thenAccept(s->System.out.println(s + Thread.currentThread().getName()));
+	}
+	
+	private static CompletableFuture<String> thenApply(){
+		CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(()->"Then Apply My task 1 is completed by ");
+		return completableFuture.thenApply(s->s + Thread.currentThread().getName());
+	}
 	
 	private static CompletableFuture<String> supplyAsync(){
 		
@@ -68,7 +106,6 @@ public class CompletableFutureTest {
 		}
 		return CompletableFuture.supplyAsync(()->"Supplier My task 2 is completed by "+ Thread.currentThread().getName(),Executors.newFixedThreadPool(2));
 	}
-	
 	
 	private static CompletableFuture<Void> runAsync(){
 		
