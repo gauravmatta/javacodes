@@ -19,5 +19,4 @@ public class TestStaticMemoryLeaks {
 		new TestStaticMemoryLeaks().populateList();
 		System.out.println("Check Point 3");
 	}
-
 }
