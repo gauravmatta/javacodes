@@ -8,7 +8,8 @@ public class SquareTransform extends RecursiveAction {
 	
 	static final int THRESHOLD=10;
 	int[] data;
-	int start, end;
+	int start;
+	int end;
 	
 	public SquareTransform(int[] data, int start, int end) {
 		super();
