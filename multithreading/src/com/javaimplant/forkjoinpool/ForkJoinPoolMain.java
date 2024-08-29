@@ -15,7 +15,10 @@ public class ForkJoinPoolMain {
 			System.out.print(nums[i]+" ");
 		}
 		SquareTransform task = new SquareTransform(nums,0,nums.length);
+		long startTime = System.currentTimeMillis();
 		pool.invoke(task);
+		long endTime = System.currentTimeMillis();
+		System.out.println("Total Time Taken : "+(endTime-startTime)+"ms");
 		System.out.println();
 		System.out.println("Squared Array ::");
 		for(int i=0;i<nums.length;i++) {
