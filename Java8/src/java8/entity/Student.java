@@ -1,4 +1,4 @@
-package java8.streams;
+package java8.entity;
 
 public class Student {
 	private int grade;

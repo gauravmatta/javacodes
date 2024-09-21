@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import java8.entity.Student;
+
 public class PartitonBy {
 
 	public static void main(String[] args) {
