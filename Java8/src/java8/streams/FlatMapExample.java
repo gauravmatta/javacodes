@@ -19,9 +19,11 @@ public class FlatMapExample {
 		System.out.println(flattenedList);
 		List<Integer> flattenedListUpdated = combinedList.stream().flatMap(x->x.stream()).map(n->n+10).collect(Collectors.toList());
 		System.out.println(flattenedListUpdated);
+		
 		List<String> teamA = Arrays.asList("Scott","David","John");
 		List<String> teamB = Arrays.asList("Mary","Luna","Tom");
 		List<String> teamC = Arrays.asList("Ken","Jony","Kitty");
-		
+		List<List<String>> playersInWorldCup=Arrays.asList(teamA,teamB,teamC);
+		playersInWorldCup.stream().flatMap(x->x.stream()).forEach(System.out::println);
 	}
 }
