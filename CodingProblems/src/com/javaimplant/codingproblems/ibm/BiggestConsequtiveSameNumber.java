@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public class BiggestConsequtiveSameNumber {
 	
-	 public static String largestGoodInteger(String num) {
+	 public static String largestConsecutiveInteger(String num) {
 		 List<Character> charList = num.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
 		 Stack<Character> charStack = new Stack<>();
 		 charStack.addAll(charList);
@@ -48,7 +48,7 @@ public class BiggestConsequtiveSameNumber {
 	 }
 
 	public static void main(String[] args) {
-		String largestGoodInteger = largestGoodInteger("8555166699");
+		String largestGoodInteger = largestConsecutiveInteger("8555166699");
 		System.out.println(largestGoodInteger);
 	}
 
