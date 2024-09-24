@@ -47,7 +47,7 @@ public class ReverseString {
 		Optional<String> reduce = charList.stream().reduce((value,combinevalue)->{
 			return combinevalue+value;
 		});
-		return reduce.get();
+		return reduce.orElse(null);
 	}
 
 	public static void main(String[] args) {
