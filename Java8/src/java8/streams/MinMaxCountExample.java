@@ -19,6 +19,7 @@ public class MinMaxCountExample {
 			return val1.compareTo(val2);
 				});
 		System.out.println(max.get());
+		
 	}
 
 }
