@@ -28,6 +28,11 @@ public class ParallelStreamExample {
 				stu->{
 					System.out.println(stu.getName()+" "+stu.getGrade()); 
 				});
+		System.out.println("Using Parallel Method ====>");
+		studentList.stream().parallel().filter(s->s.getGrade()>80).limit(3).forEach(
+				stu->{
+					System.out.println(stu.getName()+" "+stu.getGrade()); 
+				});
 	}
 
 }
