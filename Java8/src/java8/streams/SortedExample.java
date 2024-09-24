@@ -20,10 +20,7 @@ public class SortedExample {
 		System.out.println(sortedRoomList);
 		List<String> reverseSortedRoomList = listRoom.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 		System.out.println(reverseSortedRoomList);
-		
-		
-		
-		
+
 	}
 
 }
