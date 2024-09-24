@@ -25,8 +25,6 @@ public class SortVowel {
 	                vowels.add(c);
 	            }
 	        }
-	        
-	        
 	        Collections.sort(vowels);
 	        int vowelIndex = 0;
 	        for (int i = 0; i < chars.length; ++i) {

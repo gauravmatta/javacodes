@@ -1,8 +1,20 @@
+/*Reverse the string
+ * Ex.
+ * String name = “rajesh”
+ * Output – “hsejar”
+ * Please don’t use loop , in built functions. Try to solve this optimize way and find out which data structure
+ * is suitable to reversing order and apply that.
+*/
+
 package com.javaimplant.codingproblems.ibm;
+
+import java.util.List;
+import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class ReverseString {
 	
-	static String reverse(String str) {
+	static String reverseWithLoop(String str) {
 		int i=0;
 		int j=str.length()-1;
 		char[] ch = str.toCharArray();
@@ -15,13 +27,26 @@ public class ReverseString {
 		}
 		return String.valueOf(ch);
 	}
+	
+	static String reverseWithoutLoop(String str) {
+		List<Character> charList = str.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+		Stack<Character> charStack = new Stack<>();
+		charStack.addAll(charList);
+		StringBuilder builder = new StringBuilder();
+		while(!charStack.empty()) {
+			 builder.append(charStack.pop());
+		 }
+		return builder.toString();
+	}
 
 	public static void main(String[] args) {
         StringBuilder str = new StringBuilder("JavaImplant");
         System.out.println("String = "+ str.toString());
         StringBuilder reverseStr = str.reverse();
         System.out.println("Reverse String = " + reverseStr.toString());
-        System.out.println(reverse(str.toString()));
+        System.out.println(reverseWithLoop(str.toString()));
+        StringBuilder str1 = new StringBuilder("JavaImplant");
+        System.out.println(reverseWithoutLoop(str1.toString()));
 	}
 
 }
