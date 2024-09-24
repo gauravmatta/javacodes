@@ -8,7 +8,10 @@
 
 package com.javaimplant.codingproblems.ibm;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
@@ -38,6 +41,14 @@ public class ReverseString {
 		 }
 		return builder.toString();
 	}
+	
+	static String reverseUsingStreams(String str) {
+		List<String> charList = new ArrayList<>(Arrays.asList(str.split("")));
+		Optional<String> reduce = charList.stream().reduce((value,combinevalue)->{
+			return combinevalue+value;
+		});
+		return reduce.get();
+	}
 
 	public static void main(String[] args) {
         StringBuilder str = new StringBuilder("JavaImplant");
@@ -47,6 +58,7 @@ public class ReverseString {
         System.out.println(reverseWithLoop(str.toString()));
         StringBuilder str1 = new StringBuilder("JavaImplant");
         System.out.println(reverseWithoutLoop(str1.toString()));
+        System.out.println(reverseUsingStreams(str1.toString()));
 	}
 
 }
