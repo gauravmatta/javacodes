@@ -9,10 +9,7 @@ Replace any character from the string with any other character
 		
 package com.javaimplant.codingproblems.gfg;
 
-//{ Driver Code Starts
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 class MinimumOperationsEquateString {
   public static void main(String[] args) throws IOException {
