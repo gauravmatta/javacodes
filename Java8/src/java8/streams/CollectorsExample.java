@@ -1,6 +1,7 @@
 package java8.streams;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -30,5 +31,9 @@ public class CollectorsExample {
 		System.out.println(joinedStream2);
 		String joinedStream3 = list.stream().collect(Collectors.joining(",","<",">"));
 		System.out.println(joinedStream3);
+		
+		int[] arr = {1,2,3,4,5,6};
+		IntSummaryStatistics collect = Arrays.stream(arr).boxed().collect(Collectors.summarizingInt(no->no));
+		System.out.println(collect.getMin()+"==>"+collect.getMax()+"==>"+collect.getCount()+"==>"+collect.getSum()+"==>"+collect.getAverage());
 	}
 }

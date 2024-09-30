@@ -42,6 +42,22 @@ public class PartitonBy {
 	            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
 	        }
 		 System.out.println(frequencyMap);
+		 
+		 List<String> numbers = Arrays.asList("one","two","three","four","five","six","seven","eight","nine","ten","twenty");
+		 Map<Boolean, List<String>> collect = numbers.stream()
+			.collect(Collectors.partitioningBy(s->s.length()>3));
+		 System.out.println(collect);
+		 Map<Boolean, Long> collectCount = numbers.stream()
+					.collect(Collectors.partitioningBy(s->s.length()>3,Collectors.counting()));
+		 System.out.println(collectCount);
+		 
+		 Map<Integer, List<String>> groupLength = numbers.stream().collect(Collectors.groupingBy(s->s.length()));
+		 System.out.println(groupLength);
+		 
+		 Map<Integer, String> groupJoin = numbers.stream().collect(Collectors.groupingBy(s->s.length(),Collectors.joining("=>")));
+		 System.out.println(groupJoin);
+		 
+		 Map<Integer, List<String>> collecttoUpperCase = numbers.stream().collect(Collectors.groupingBy(s->s.length(),Collectors.mapping(s->s.toUpperCase(),Collectors.toList())));
+		 System.out.println(collecttoUpperCase);
 	}
-
 }
