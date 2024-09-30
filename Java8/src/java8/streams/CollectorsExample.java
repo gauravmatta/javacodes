@@ -1,9 +1,11 @@
 package java8.streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Function;
@@ -35,5 +37,14 @@ public class CollectorsExample {
 		int[] arr = {1,2,3,4,5,6};
 		IntSummaryStatistics collect = Arrays.stream(arr).boxed().collect(Collectors.summarizingInt(no->no));
 		System.out.println(collect.getMin()+"==>"+collect.getMax()+"==>"+collect.getCount()+"==>"+collect.getSum()+"==>"+collect.getAverage());
+		
+		Optional<Integer> getMinimumBy = Arrays.stream(arr).boxed().collect(Collectors.minBy(Comparator.comparingInt(no->no)));
+		System.out.println(getMinimumBy.orElse(null));
+		Optional<Integer> getMaximumBy = Arrays.stream(arr).boxed().collect(Collectors.maxBy(Comparator.comparingInt(no->no)));
+		System.out.println(getMaximumBy.orElse(null));
+		Integer summingInt = Arrays.stream(arr).boxed().collect(Collectors.summingInt(no->no));
+		System.out.println(summingInt);
+		Double avergingInt = Arrays.stream(arr).boxed().collect(Collectors.averagingInt(no->no));
+		System.out.println(avergingInt);
 	}
 }
