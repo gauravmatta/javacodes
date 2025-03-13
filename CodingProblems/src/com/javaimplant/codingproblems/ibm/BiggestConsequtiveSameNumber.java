@@ -8,6 +8,8 @@ package com.javaimplant.codingproblems.ibm;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -117,9 +119,44 @@ public class BiggestConsequtiveSameNumber {
 		Collections.sort(strList, (s1, s2) -> Integer.parseInt(s2) - Integer.parseInt(s1));
 		return strList.get(0);
 	}
+	
+	public static String largestConsecutiveIntegerDeque(String num) {
+		List<Character> charList = num.chars().mapToObj(c -> (char) c).collect(Collectors.toList());
+		Deque<Character> charQueue = new LinkedList<>();
+		charQueue.addAll(charList);
+		System.out.println(charQueue);
+		StringBuilder str = new StringBuilder();
+		Character previous = null;
+		List<String> strList = new ArrayList<>();
+		while (!charQueue.isEmpty()) {
+			if (previous == null) {
+				previous = charQueue.pop();
+				str.append(previous);
+			} else {
+				Character next = charQueue.pop();
+				if (Objects.equals(previous, next)) {
+					str.append(next);
+					if (charQueue.isEmpty() && str.length()>1)
+						strList.add(str.toString());
+				} else {
+					if(str.length()>1) {
+					strList.add(str.toString());
+					}
+					str.delete(0, str.length());
+					previous = next;
+					str.append(next);
+				}
+			}
+		}
+		System.out.println(strList);
+		Collections.sort(strList, (s1, s2) -> Integer.parseInt(s2) - Integer.parseInt(s1));
+		return strList.get(0);
+	}
 
 	public static void main(String[] args) {
-		String largestGoodInteger = largestConsecutiveInteger("8555166699");
+		String largestGoodInteger = largestConsecutiveIntegerDeque("85551666992");
+		System.out.println(largestGoodInteger);
+		largestGoodInteger = largestConsecutiveInteger("8555166699");
 		System.out.println(largestGoodInteger);
 		System.out.println(findBiggestSameDigitString("122233333"));
 		System.out.println(findBiggestSameDigitString("8555166699"));
