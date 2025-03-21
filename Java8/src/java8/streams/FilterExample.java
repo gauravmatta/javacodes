@@ -3,6 +3,7 @@ package java8.streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import java8.entity.Product;
 
@@ -44,6 +45,11 @@ public class FilterExample {
 		List<Product> filteredList = productsList.stream()
 				.filter(p->p.getPrice()>25000).toList();
 		System.out.println(filteredList);
+
+		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,4322,9,5,44,23,433);
+		List<Integer> filteredList1 = list.stream().filter(x -> x % 2 == 0).toList();
+		System.out.println(filteredList1);
+
 	}
 
 }
