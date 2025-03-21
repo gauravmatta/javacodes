@@ -6,6 +6,8 @@
 
 package com.javaimplant.codingproblems.ibm;
 
+import java.util.HashSet;
+
 public class RepeatedCharSplit {
 	
 	public static String longestSubString(String str) {
@@ -21,10 +23,41 @@ public class RepeatedCharSplit {
 		}	
 		return result;
 	}
+	
+	
+	 public static void printLongestSubstring(String s)
+	  {
+	    int n = s.length();
+	    int l = 0;
+	    int r = 0;
+	    HashSet<Character> visited = new HashSet<>();
+	    int maxStr = 0;
+	    int maxL = 0, maxR = 0;
+	    while (r < n) {
+	      if (!visited.contains(s.charAt(r))) {
+	        visited.add(s.charAt(r));
+	        if (r - l + 1 > maxStr) {
+	          maxStr = r - l + 1;
+	          maxL = l;
+	          maxR = r;
+	        }
+	        r++;
+	      }
+	      else {
+	        visited.remove(s.charAt(l));
+	        l++;
+	      }
+	    }
+	    for (int i = maxL; i <= maxR; i++) {
+	      System.out.print(s.charAt(i));
+	    }
+	    System.out.println();
+	  }
 
 	public static void main(String[] args) {
 		String longestSubString = longestSubString("aslkjfddterr");
 		System.out.println(longestSubString);
+		printLongestSubstring("aslkjfddterr");
 	}
 
 }
