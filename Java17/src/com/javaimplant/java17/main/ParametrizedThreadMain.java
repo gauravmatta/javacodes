@@ -11,7 +11,6 @@ public class ParametrizedThreadMain extends Thread {
 
     @Override
     public void run() {
-        this.setVal(10);
         for(int j=0;j<this.val;j++){
             System.out.println(" !!!!!!"+Math.log(j));
         }
