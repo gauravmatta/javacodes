@@ -1,5 +1,9 @@
 package com.javaimplant.java17.main;
 
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
 public class ThreadsMain extends Thread{
     public static void main(String[] args) {
         threadsDefinations();
@@ -27,6 +31,10 @@ public class ThreadsMain extends Thread{
         var threadGroup = new Runnable[] {runa,threadb};
         for(Runnable r:threadGroup){
             r.run();
+        }
+        List<Runnable> lir = Arrays.asList(runa,threadb);
+        for (Runnable aa : lir) {
+            aa.run();
         }
     }
 
