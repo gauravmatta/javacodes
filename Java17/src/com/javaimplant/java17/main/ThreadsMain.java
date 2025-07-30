@@ -32,6 +32,7 @@ public class ThreadsMain extends Thread{
         for(Runnable r:threadGroup){
             r.run();
         }
+        System.out.println("*".repeat(50));
         List<Runnable> lir = Arrays.asList(runa,threadb);
         for (Runnable aa : lir) {
             aa.run();
