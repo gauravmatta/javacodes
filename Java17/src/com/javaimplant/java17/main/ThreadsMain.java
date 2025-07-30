@@ -8,6 +8,30 @@ public class ThreadsMain extends Thread{
     public static void main(String[] args) {
         threadsDefinations();
         lambdaThreadDefinations();
+        parameterizedThreads();
+    }
+
+    private static void parameterizedThreads() {
+        Runnable runc = new Runnable() {
+            private int i;
+
+            public int getI() {
+                return i;
+            }
+
+            public void setI(int i) {
+                this.i = i;
+            }
+
+            @Override
+            public void run() {
+                this.setI(20);
+                for(int j=0;j<=i;j++){
+                    System.out.println("!!!!!!"+Math.log(j));
+                }
+            }
+        };
+        runc.run();
     }
 
     private static void lambdaThreadDefinations() {
