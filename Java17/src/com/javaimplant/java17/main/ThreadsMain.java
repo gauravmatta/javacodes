@@ -24,7 +24,10 @@ public class ThreadsMain extends Thread{
                 System.out.println(Thread.currentThread().getName()+" @@@@@Running "+(i+1));
             }
         }).start();
-
+        var threadGroup = new Runnable[] {runa,threadb};
+        for(Runnable r:threadGroup){
+            r.run();
+        }
     }
 
     private static void threadsDefinations() {
