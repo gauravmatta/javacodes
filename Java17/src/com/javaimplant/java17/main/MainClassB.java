@@ -1,5 +1,7 @@
 package com.javaimplant.java17.main;
 
+import java.util.ArrayList;
+
 interface interf{
     public void methodOne();
 }
@@ -22,7 +24,9 @@ public class MainClassB implements interf {
         System.out.println(g.getClass().getName());
         g.sum(21,22);
         interfg ga=(var a,var b)->{
+            var p=100;
             System.out.println(a+b);
+            System.out.println(p);
         };
         ga.sum(21,22);
         var a="This is a string";
