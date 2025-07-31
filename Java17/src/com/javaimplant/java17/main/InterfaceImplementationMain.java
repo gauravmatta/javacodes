@@ -13,7 +13,7 @@ interface IFaceA{
     }
 }
 
-public class Main implements IFaceA, IFaceC {
+public class InterfaceImplementationMain implements IFaceA, IFaceC {
     public static void main(String[] args) {
         firstMethod();
         secondMethod();
@@ -79,7 +79,7 @@ public class Main implements IFaceA, IFaceC {
     }
 
     private static void fourthMethod() {
-        Main a = new Main();
+        InterfaceImplementationMain a = new InterfaceImplementationMain();
         a.prn10Logs();
     }
 
@@ -100,7 +100,7 @@ public class Main implements IFaceA, IFaceC {
     }
 
     private static void firstMethod() {
-        Main a = new Main();
+        InterfaceImplementationMain a = new InterfaceImplementationMain();
         a.selMe();
         a.selMeA();
         a.prn10Logs();

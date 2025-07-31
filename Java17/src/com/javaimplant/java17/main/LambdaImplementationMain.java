@@ -1,7 +1,5 @@
 package com.javaimplant.java17.main;
 
-import java.util.ArrayList;
-
 interface interf{
     public void methodOne();
 }
@@ -10,7 +8,7 @@ interface interfg{
     public void sum(int a,int b);
 }
 
-public class MainClassB implements interf {
+public class LambdaImplementationMain implements interf {
 
     public static void main(String[] args) {
         MethodOne();
@@ -42,7 +40,7 @@ public class MainClassB implements interf {
     }
 
     private static void MethodOne() {
-        interf f = new MainClassB();
+        interf f = new LambdaImplementationMain();
         f.methodOne();
     }
 
