@@ -31,7 +31,7 @@ public class BookUtils {
 
     public void prnStatus(Predicate<Books> pre, Books b){
         if(pre.test(b)){
-            System.out.println("The books satisfying your condition is "+b.getName());
+            System.out.println("The books satisfying your condition is "+b);
         }
     }
 }
