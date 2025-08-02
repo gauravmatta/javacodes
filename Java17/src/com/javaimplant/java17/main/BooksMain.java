@@ -19,6 +19,7 @@ public class BooksMain implements BooksInterface {
         bu.drawLine();
         predictesTest4(libo);
         bu.drawLine();
+        predictesTest5(libo);
     }
 
     private static void predictesTest(List<Books> libo) {
@@ -42,5 +43,10 @@ public class BooksMain implements BooksInterface {
         for(Books b: libo){
             bu.prnStatus(predBookc,b);
         }
+    }
+
+    private static void predictesTest5(List<Books> libo) {
+        boolean d = predBooke.test(libo);
+        System.out.println("The collection is empty: " + d);
     }
 }

@@ -10,5 +10,6 @@ public interface BooksInterface {
     Predicate<Books> predBookb=(a)->(a.getAuthor().startsWith("V")||a.getAuthor().startsWith("J"));
     Predicate<Books> predBookc=(a)->a.getId()%2==0;
     Predicate<Books> predBookd=(a)->a.equals(null);
+    Predicate<Collection<Books>> predBooke=(a)->a.isEmpty();
 
 }
