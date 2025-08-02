@@ -9,8 +9,46 @@ import java.util.function.Predicate;
 
 public class BooksMain implements BooksInterface {
     private static final BookUtils bu = new BookUtils();
+    List<Books> libo=bu.retBooks();
+
     public static void main(String[] args) {
-        List<Books> libo=bu.retBooks();
+        BooksMain bm = new BooksMain();
+        bm.predicatesCall();
+        predicatesJoin();
+    }
+
+    private static void predicatesJoin() {
+        int[] arr = {0,5,10,15,20,25,30,35,40,45,50};
+        for(int i: arr){
+            bu.prnStatus(predFirst, i);
+        }
+        bu.drawLine();
+        for(int i: arr){
+            bu.prnStatus(predSecond, i);
+        }
+        bu.drawLine();
+        for(int i: arr){
+            bu.prnStatus(predFirst.and(predSecond), i);
+        }
+        bu.drawLine();
+        for(int i: arr){
+            bu.prnStatus(predFirst.or(predSecond), i);
+        }
+        bu.drawLine();
+        for(int i: arr){
+            bu.prnStatus(predFirst.negate(), i);
+        }
+        bu.drawLine();
+        for(int i: arr){
+            bu.prnStatus(predSecond.negate(), i);
+        }
+        bu.drawLine();
+        boolean predicateStringResult = predThird.test("Gaurav is Implanting Java 17");
+        System.out.println("Predicate String Result: " + predicateStringResult);
+        bu.drawLine();
+    }
+
+    private void predicatesCall() {
         predictesTest(libo);
         bu.drawLine();
         predictesTest2(libo);

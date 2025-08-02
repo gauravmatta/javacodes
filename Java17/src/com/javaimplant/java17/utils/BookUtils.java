@@ -34,4 +34,11 @@ public class BookUtils {
             System.out.println("The books satisfying your condition is "+b);
         }
     }
+    public void prnStatus(Predicate<Integer> pre, Integer i){
+        if(pre.test(i)){
+            System.out.println("The number satisfying your condition is "+i);
+        } else {
+            System.out.println("The number does not satisfy your condition: " + i);
+        }
+    }
 }
