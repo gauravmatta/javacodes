@@ -19,4 +19,7 @@ public interface CarsInterface {
         }
         return li;
     };
+    default String funCarC(Cars car) {
+        return car.toString();
+    }
 }
