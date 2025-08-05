@@ -14,6 +14,21 @@ public class CarsMain implements CarsInterface {
         CarsUtils carsUtil = new CarsUtils();
         bifCarTest(carsUtil);
         listTestCars(carsUtil);
+        carListExample(carsUtil);
+        staticAndNonStaticRun(carsUtil);
+    }
+
+    private static void staticAndNonStaticRun(CarsUtils carsUtil) {
+//        Runnable ra =CarsUtils::myRunStatic;
+//        Thread t = new Thread(ra);
+//        t.start();
+        Runnable rb = carsUtil::myRunNonStatic;
+        Thread t1 = new Thread(rb);
+//        t1.setDaemon(true);
+        t1.start();
+    }
+
+    private static void carListExample(CarsUtils carsUtil) {
         ListIterator<Cars> carsListIterator = carsUtil.retListCars().listIterator();
         while(carsListIterator.hasNext()){
             System.out.println(funCarA.apply(carsListIterator.next()));

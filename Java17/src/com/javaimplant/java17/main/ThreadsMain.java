@@ -9,6 +9,23 @@ public class ThreadsMain extends Thread{
         threadsDefinations();
         lambdaThreadDefinations();
         parameterizedThreads();
+        maxPriorityThread();
+
+
+    }
+
+    private static void maxPriorityThread() {
+        Runnable r=()->{
+            for(int i=0;i<5;i++){
+                System.out.println("Running Threads "+Thread.currentThread().getName()+" "+(i+1));
+            }
+        };
+        Thread t= new Thread(r);
+        t.setPriority(Thread.MAX_PRIORITY);
+        t.start();
+        for(int i=0;i<5;i++){
+            System.out.println("Running Main Thread "+(i+1));
+        }
     }
 
     private static void parameterizedThreads() {
