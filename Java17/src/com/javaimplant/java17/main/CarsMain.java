@@ -19,10 +19,10 @@ public class CarsMain implements CarsInterface {
     }
 
     private static void staticAndNonStaticRun(CarsUtils carsUtil) {
-//        Runnable ra =CarsUtils::myRunStatic;
-//        Thread t = new Thread(ra);
-//        t.start();
-        Runnable rb = carsUtil::myRunNonStatic;
+        Runnable ra =CarsUtils::myRunStatic;
+        Thread t = new Thread(ra);
+        t.start();
+        Runnable rb = new CarsUtils()::myRunNonStatic;
         Thread t1 = new Thread(rb);
 //        t1.setDaemon(true);
         t1.start();
