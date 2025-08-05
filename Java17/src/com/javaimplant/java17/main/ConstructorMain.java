@@ -1,9 +1,9 @@
 package com.javaimplant.java17.main;
 
+import com.javaimplant.java17.interfaces.InteMyClassB;
+
 public class ConstructorMain {
-    private String s;
     public ConstructorMain(String s) {
-        this.s = s;
         System.out.println("Constructor called with value: " + s);
     }
     public ConstructorMain() {
@@ -18,6 +18,18 @@ public class ConstructorMain {
     public static void main(String[] args) {
         usingLambda();
         usingMethodReference();
+        usingLambdaTwoParams();
+        usingMethodReferenceTwoParams();
+    }
+
+    private static void usingMethodReferenceTwoParams() {
+        InteMyClassB clsb = MyClassB::new;
+        clsb.getClassB("Gaurav", "Java Implant");
+    }
+
+    private static void usingLambdaTwoParams() {
+        InteMyClassB clsb=(s,t)-> new MyClassB(s,t);
+        clsb.getClassB("Gaurav", "Java Implant");
     }
 
     private static void usingMethodReference() {
