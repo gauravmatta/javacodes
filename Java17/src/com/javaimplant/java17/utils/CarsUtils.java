@@ -31,11 +31,12 @@ public class CarsUtils{
 
     }
 
+    private int j = 0;
     public void myRunNonStatic() {
-        int j=0;
         for(int i = 0; i < 100; i++) {
             Thread t = new Thread(() -> {
-                System.out.println(Thread.currentThread().getName()+" CarsUtils is running from spawned Thread. "+ (j + 1));
+                System.out.println(Thread.currentThread().getName()+" CarsUtils is running from spawned Thread. "+ j);
+                j++;
             });
         }
     }
