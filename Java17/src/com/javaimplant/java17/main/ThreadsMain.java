@@ -11,8 +11,6 @@ public class ThreadsMain extends Thread{
         lambdaThreadDefinitions();
         parameterizedThreads();
         maxPriorityThread();
-
-
     }
 
     private static void maxPriorityThread() {
