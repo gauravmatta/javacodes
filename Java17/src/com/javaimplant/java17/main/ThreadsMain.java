@@ -3,11 +3,12 @@ package com.javaimplant.java17.main;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ThreadsMain extends Thread{
     public static void main(String[] args) {
-        threadsDefinations();
-        lambdaThreadDefinations();
+        threadsDefinitions();
+        lambdaThreadDefinitions();
         parameterizedThreads();
         maxPriorityThread();
 
@@ -51,7 +52,7 @@ public class ThreadsMain extends Thread{
         runc.run();
     }
 
-    private static void lambdaThreadDefinations() {
+    private static void lambdaThreadDefinitions() {
         Runnable runa=()->{
             for(int i = 0; i< 10; i++){
                 System.out.println(Thread.currentThread().getName()+" Running "+(i+1));
@@ -78,9 +79,19 @@ public class ThreadsMain extends Thread{
         for (Runnable aa : lir) {
             aa.run();
         }
+        ListIterator<Runnable> itr = lir.listIterator();
+        while(itr.hasNext()){
+            itr.next().run();
+            }
+        System.out.println("*".repeat(50));
+        while(itr.hasPrevious()){
+            itr.previous().run();
+        }
     }
 
-    private static void threadsDefinations() {
+
+
+    private static void threadsDefinitions() {
         var thread = new ThreadsMain();
         thread.start();
         var runnableThread = new MyThread();
