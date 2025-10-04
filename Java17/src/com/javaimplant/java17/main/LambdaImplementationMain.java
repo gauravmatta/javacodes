@@ -1,11 +1,11 @@
 package com.javaimplant.java17.main;
 
 interface interf{
-    public void methodOne();
+    void methodOne();
 }
 
 interface interfg{
-    public void sum(int a,int b);
+    void sum(int a, int b);
 }
 
 public class LambdaImplementationMain implements interf {
