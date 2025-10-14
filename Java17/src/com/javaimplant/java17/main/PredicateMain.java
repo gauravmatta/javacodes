@@ -57,10 +57,6 @@ public class PredicateMain {
     }
 
     private static boolean test(Integer t) {
-        if(t>10){
-            return true;
-        } else {
-            return false;
-        }
+        return t > 10;
     }
 }
