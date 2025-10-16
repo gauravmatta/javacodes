@@ -13,13 +13,47 @@ public class CreateStream {
         List<String> lia = listProducer();
         System.out.println(lia);
         stringStream();
+        drawLine();
         integerStream();
+        drawLine();
+        floatStream();
+        drawLine();
+        doubleStream();
+        drawLine();
+        booleanStream();
+    }
+
+    private static void booleanStream() {
+        Stream.of(true,false,true,false,true).forEach(new Consumer<Boolean>() {
+            @Override
+            public void accept(Boolean aBoolean) {
+                System.out.println("Value: "+aBoolean);
+                System.out.println("Negation: "+!aBoolean);
+            }
+        });
+    }
+
+    private static void doubleStream() {
+        Stream.of(2.2224242424,7.77373737,8.757575775,99.8748747747,45.545454545).forEach(new Consumer<Double>() {
+            @Override
+            public void accept(Double aDouble) {
+                System.out.println("Rounding("+aDouble+")="+Math.round(aDouble));
+                System.out.println("Log("+aDouble+")="+Math.log(aDouble));
+                System.out.println("Log10("+aDouble+")="+Math.log10(aDouble));
+            }
+        });
+    }
+
+    private static void floatStream() {
+        Stream<Float> stria=liaFloatProducer().stream();
+        stria.forEach(System.out::println);
+        Stream.of(liaFloatProducer().toArray()).forEach(System.out::println);
     }
 
     private static List<Float> liaFloatProducer() {
         List<Float> lia = new ArrayList<>();
-        for(int i=1;i<=10;i++){
-            lia.add((float)(i+1)+0.11f);
+        for(int i=1;i<=100;i++){
+            lia.add((i+1.66336f));
         }
         return lia;
     }
