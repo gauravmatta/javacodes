@@ -2,8 +2,8 @@ package com.javaimplant.java17.streams;
 
 import com.javaimplant.java17.streams.consumers.MyConsumer;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Stream;
@@ -21,6 +21,87 @@ public class CreateStream {
         doubleStream();
         drawLine();
         booleanStream();
+        drawLine();
+        nonTransientStreams();
+        drawLine();
+        hashSetStream();
+        drawLine();
+        hashmapStream();
+        drawLine();
+        hashTableStream();
+        drawLine();
+        doubleArrayStream();
+        drawLine();
+        booleanArrayStream();
+        drawLine();
+        byteArrayStream();
+
+    }
+
+    private static void doubleArrayStream() {
+        Double[] arrD={12.33,45.67,78.89,90.12,34.56,67.89,23.45,89.01,11.22,44.55};
+        Arrays.asList(arrD).stream().forEach(System.out::println);
+    }
+
+    private static void booleanArrayStream() {
+        Boolean[] arrB={true,false,true,false,true,false,true,false,true,false};
+        Arrays.asList(arrB).stream().forEach(System.out::println);
+    }
+
+    private static void byteArrayStream() {
+        String str="This is a string to be converted to stream";
+        byte[] bArr=str.getBytes();
+        Arrays.asList(bArr).stream().forEach(System.out::println);
+        drawLine();
+    }
+
+    private static void hashTableStream() {
+        Hashtable<Integer,Character> ht=new Hashtable<>();
+        for(int i=0;i<10;i++) {
+            ht.put(i+1, (char) ('K'+i));
+        }
+        ht.forEach(new BiConsumer<Integer, Character>() {
+            @Override
+            public void accept(Integer integer, Character character) {
+                System.out.println("Hashtable Key: "+integer+" Value: "+character);
+            }
+        });
+    }
+
+    private static void hashmapStream() {
+        HashMap<Integer,Character> hm=new HashMap<>();
+        Integer[] arr1={1,2,3,4,5,6,7,8,9,10};
+        Character[] arr2={'A','B','C','D','E','F','G','H','I','J'};
+        for(int i=0;i<arr1.length;i++) {
+            hm.put(arr1[i], arr2[i]);
+        }
+        BiConsumer<Integer,Character> biConsumer=new BiConsumer<Integer, Character>() {
+            @Override
+            public void accept(Integer integer, Character character) {
+                System.out.println("Key: "+integer+" Value: "+character);
+            }
+        };
+        hm.forEach(biConsumer);
+        hm.forEach((k,v)->{;
+            System.out.println("Key in lambda: "+k+" Value in lambda: "+v);
+        });
+    }
+
+    private static void hashSetStream() {
+        Integer[] arr={12,12,12,12,12,12,12,12,34,45,56,56,67,78,89,90,91,92,92,93,94,95,96,97,97,97,97,98,99,100};
+        HashSet<Integer> hs=new HashSet<Integer>();
+        Arrays.asList(arr).stream().forEach(n->hs.add(n));
+        System.out.println("Unique values in the array: "+hs);
+        hs.stream().forEach(System.out::println);
+    }
+
+    private static void nonTransientStreams() {
+        Stream<Double> strc = Stream.of(2.2224242424,7.77373737,8.757575775,99.8748747747,45.545454545);
+        var arr = strc.toArray();
+        for(var v:arr){
+            Double d=(Double)v;
+            System.out.println("Sqrt("+d+")="+Math.sqrt(d));
+        }
     }
 
     private static void booleanStream() {
