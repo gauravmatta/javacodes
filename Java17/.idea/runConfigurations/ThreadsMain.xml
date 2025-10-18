@@ -4,7 +4,7 @@
     <module name="Java17" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.javaimplant.java17.main.*" />
+        <option name="PATTERN" value="com.javaimplant.java17.streams.interfaces.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
