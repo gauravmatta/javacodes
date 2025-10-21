@@ -26,8 +26,12 @@ public class LoginMain {
         lu.stream().map(n->n.username().length()).forEach(System.out::println);
         lu.stream().sorted((a,b)->a.username().compareTo(b.username())).forEach(System.out::println);
         lu.stream().sorted((a,b)->b.username().compareTo(a.username())).forEach(System.out::println);
-
+        System.out.println(" Count of Objects"+lu.stream().count());
+        //Find Length of distinct Usernames
+        lu.stream().map(n->n.username().length()).distinct().forEach(System.out::println);
+        lu.stream().map(n->n.username().length()+" "+n.password().length()).forEach(System.out::println);
         Function<Integer, String> drawLine=(s)->"*".repeat(s);
+        System.out.println(drawLine.apply(50));
         Consumer<Logins> cl=new Consumer<Logins>() {
             @Override
             public void accept(Logins t) {
