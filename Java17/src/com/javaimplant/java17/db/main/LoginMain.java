@@ -25,6 +25,7 @@ public class LoginMain {
         lu.stream().map(n->n.username().toUpperCase()+" "+n.password().toLowerCase()).forEach(System.out::println);
         lu.stream().map(n->n.username().length()).forEach(System.out::println);
         lu.stream().sorted((a,b)->a.username().compareTo(b.username())).forEach(System.out::println);
+        lu.stream().sorted((a,b)->b.username().compareTo(a.username())).forEach(System.out::println);
 
         Function<Integer, String> drawLine=(s)->"*".repeat(s);
         Consumer<Logins> cl=new Consumer<Logins>() {
