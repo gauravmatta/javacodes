@@ -31,6 +31,7 @@ public class LoginMain {
         lu.stream().map(n->n.username().length()).distinct().forEach(System.out::println);
         lu.stream().map(n->n.username().length()+" "+n.password().length()).forEach(System.out::println);
         Function<Integer, String> drawLine=(s)->"*".repeat(s);
+
         System.out.println(drawLine.apply(50));
         Consumer<Logins> cl=new Consumer<Logins>() {
             @Override
