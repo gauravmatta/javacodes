@@ -36,9 +36,12 @@ public class RecordsMain {
 
     private static void personBooks() throws SQLException {
         List<PersonBooks> lp=pbhelper.retViewList();
-        for(PersonBooks p:lp) {
-            System.out.println(p.toString());
-        }
+        lp.stream().forEach(new Consumer<PersonBooks>() {
+            @Override
+            public void accept(PersonBooks personBooks) {
+                System.out.println(personBooks.toString());
+            }
+        });
     }
 
     private static void viewPersons() throws SQLException {
