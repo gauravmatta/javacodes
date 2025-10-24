@@ -7,6 +7,7 @@ public interface DbConsts {
     String dbConn="jdbc:mysql://localhost:3306/deltajavad";
     String queryBooks="select * from Books";
     String queryBooksa="select * from Books where id=?";
-    String queryPera="select * from perview";
+    String queryPera="select * from Persons";
+    String queryPerb="select * from perview";
     String queryProds="select * from tblproducts";
 }
