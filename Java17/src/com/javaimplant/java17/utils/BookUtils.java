@@ -1,13 +1,16 @@
 package com.javaimplant.java17.utils;
 
+import com.javaimplant.java17.db.utils.SharedConnection;
 import com.javaimplant.java17.models.Books;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class BookUtils {
-    private List<Books> liBooks = new ArrayList<Books>();
+public class BookUtils extends SharedConnection {
+    private List<Books> liBooks = new ArrayList<>();
 
     /**
      * Utility Function to generate test data for books
@@ -24,6 +27,30 @@ public class BookUtils {
         }
         return liBooks;
     }
+
+    public List<com.javaimplant.java17.records.Books> retBookRecords() throws SQLException {
+        List<com.javaimplant.java17.records.Books> lib= new ArrayList<>();
+        PreparedStatement ps=conn.prepareStatement(queryBooks);
+        var rs=ps.executeQuery();
+        while(rs.next()) {
+            var book=new com.javaimplant.java17.records.Books(rs.getInt(1), rs.getString(2), rs.getString(3));
+            lib.add(book);
+        }
+        return lib;
+    }
+
+    public List<com.javaimplant.java17.records.Books> retBookRecord(int a) throws SQLException{
+        List<com.javaimplant.java17.records.Books> lib= new ArrayList<>();
+        PreparedStatement ps=conn.prepareStatement(queryBooksa);
+        ps.setInt(1, a);
+        var rs=ps.executeQuery();
+        while(rs.next()) {
+            var book=new com.javaimplant.java17.records.Books(rs.getInt(1), rs.getString(2), rs.getString(3));
+            lib.add(book);
+        }
+        return lib;
+    }
+
 
     public void drawLine() {
         System.out.println("*".repeat(50));

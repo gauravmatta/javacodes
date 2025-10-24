@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SharedConnection implements DbConsts {
-    static Connection conn=null;
+    public static Connection conn=null;
     static {
         try {
             Class.forName(className);
