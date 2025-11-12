@@ -55,7 +55,7 @@ public class ProductsMain {
         System.out.println("Total bill amount assuming one item each is "+totPriceB+" ₹");
     }
     private static void firstWay(List<Products> lp) {
-        var totPrice=lp.stream().map(n->n.ucost()).reduce(0,Integer::sum);
+        var totPrice=lp.stream().map(Products::ucost).reduce(0,Integer::sum);
         System.out.println("Total bill amount is "+totPrice+"₹");
     }
 
