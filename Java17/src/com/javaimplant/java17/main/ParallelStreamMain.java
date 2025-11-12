@@ -47,15 +47,11 @@ public class ParallelStreamMain {
     }
 
     private static void parStreamLogins() throws SQLException {
-        lhelper.retLogins().parallelStream().forEach(n->{
-            System.out.println(n);
-        });
+        lhelper.retLogins().parallelStream().forEach(System.out::println);
     }
 
     private static void strLogins() throws SQLException {
-        lhelper.retLogins().stream().forEach(n->{
-            System.out.println(n);
-        });
+        lhelper.retLogins().stream().forEach(System.out::println);
     }
 
     private static void parStreamsBooks(List<Books> lb) {
@@ -65,16 +61,14 @@ public class ParallelStreamMain {
     }
 
     private static void norBookStr(List<Books> lb) {
-        lb.stream().forEach(n->{
+        lb.forEach(n->{
             System.out.println(n.toString());
         });
     }
 
 
     private static void strPStreams(Stream<String> strd) {
-        strd.forEach(n->{
-            System.out.println(n);
-        });
+        strd.forEach(System.out::println);
     }
 
     private static void strStreams(Stream<String> strc) {

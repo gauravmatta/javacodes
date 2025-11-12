@@ -9,5 +9,5 @@ public interface DbConsts {
     String queryBooksa="select * from Books where id=?";
     String queryPera="select * from Persons";
     String queryPerb="select * from perview";
-    String queryProds="select * from tblproducts";
+    String queryProds="select * from Products";
 }
