@@ -1,4 +1,6 @@
-package com.javaimplant.java17.models;
+package com.javaimplant.java17.utils;
+
+import com.javaimplant.java17.models.BaseShape;
 
 import java.util.List;
 

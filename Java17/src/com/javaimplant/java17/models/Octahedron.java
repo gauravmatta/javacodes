@@ -3,7 +3,7 @@ package com.javaimplant.java17.models;
 public class Octahedron extends BaseShape{
     private int side;
     @Override
-    void paintMe() {
+    public void paintMe() {
         System.out.println("Iam about to start drawing a octahedron with eight faces with side length of "+side);
         try {
             Thread.sleep(5000);

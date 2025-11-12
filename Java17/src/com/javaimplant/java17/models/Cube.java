@@ -3,7 +3,7 @@ package com.javaimplant.java17.models;
 public class Cube extends BaseShape{
     private int side;
     @Override
-    void paintMe() {
+    public void paintMe() {
         System.out.println("Iam about to start drawing a cube with side "+side);
         try {
             Thread.sleep(5000);

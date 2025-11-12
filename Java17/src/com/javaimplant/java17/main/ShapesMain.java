@@ -2,7 +2,7 @@ package com.javaimplant.java17.main;
 
 import com.javaimplant.java17.models.Cube;
 import com.javaimplant.java17.models.Cuboid;
-import com.javaimplant.java17.models.GenClassShaped;
+import com.javaimplant.java17.utils.GenClassShaped;
 import com.javaimplant.java17.models.Octahedron;
 
 import java.util.ArrayList;

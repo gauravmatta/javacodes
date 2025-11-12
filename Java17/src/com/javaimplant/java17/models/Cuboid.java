@@ -4,7 +4,7 @@ public class Cuboid extends BaseShape{
     private int len;
     private int hght;
     @Override
-    void paintMe() {
+    public void paintMe() {
         System.out.println("Iam about to start drawing a cuboid len"+len+" height"+hght);
         try {
             Thread.sleep(5000);
