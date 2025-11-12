@@ -10,7 +10,7 @@ import java.util.List;
 
 public class LoginsSpHelper extends SharedConnection {
     public List<Logins> retLogins() throws SQLException {
-        List<Logins> ll=new ArrayList<Logins>();
+        List<Logins> ll= new ArrayList<>();
         CallableStatement cs=conn.prepareCall("CALL splogins()");
         ResultSet rs=cs.executeQuery();
         while(rs.next()) {
