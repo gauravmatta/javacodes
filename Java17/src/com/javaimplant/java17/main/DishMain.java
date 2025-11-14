@@ -29,7 +29,6 @@ public class DishMain {
 		System.out.println(ds.sum());
         DoubleStream dl= Arrays.stream(dd).mapToDouble(n->n);
         System.out.println(dl.summaryStatistics());
-//        //Concurrent
     }
     private static void dishwashTester() {
         List<Dish> ld= DishWasher.retDList();
