@@ -1,9 +1,6 @@
 package com.javaimplant.java17.concurrency.hashmap;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 
@@ -41,6 +38,13 @@ public class ConcurHashMapMain {
 //        while(itr.hasNext()) {
 //            hm.put(23, "Quantum Electro Dynamics");
 //            System.out.println(itr.next());
+//        }
+        List<String> ls = new ArrayList<>();
+        ls.add("123");
+        ls.add("234");
+//        for (String l : ls) {
+//            ls.add("678");
+//            System.out.println(l);
 //        }
     }
 }
