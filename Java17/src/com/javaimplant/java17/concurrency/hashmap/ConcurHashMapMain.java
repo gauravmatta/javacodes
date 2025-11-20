@@ -30,7 +30,7 @@ public class ConcurHashMapMain {
     }
 
     private static void methA() {
-        HashMap<Integer, String> hm=new HashMap<Integer, String>();
+        HashMap<Integer, String> hm= new HashMap<>();
         hm.put(21, "Physics");
         hm.put(22, "Nuclear Physics");
         var itr=hm.entrySet().iterator();
