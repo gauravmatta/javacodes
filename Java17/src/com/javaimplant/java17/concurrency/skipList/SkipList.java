@@ -1,5 +1,9 @@
 package com.javaimplant.java17.concurrency.skipList;
 
+import com.javaimplant.java17.records.Books;
+
+import javax.swing.*;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.NavigableSet;
 import java.util.concurrent.ConcurrentNavigableMap;
@@ -26,13 +30,23 @@ public class SkipList {
         System.out.println(cnm.firstEntry());
         System.out.println(cnm.pollLastEntry());
         System.out.println(cnm.lastEntry());
-//        var dt=new Date();
-//        Books b=null;
-//        StringBuffer buf=new StringBuffer();
-//        for (int i = 0; i < 10000000; i++) {
-//            b=new Books(i+1, "Random Book "+i, "Random Author "+i);
-//            buf.append(b.toString());
-//        }
-//        System.out.println(buf.toString());
+        var dt=new Date();
+        JOptionPane.showMessageDialog(null,dt.getMinutes());
+        Books b;
+        StringBuffer buf=new StringBuffer();
+        for (int i=0; i<10000000;i++){
+            b = new Books(i + 1, "Book-" + (i + 1), "Author-" + (i + 1));
+            buf.append(b.toString());
+            int finalI = i;
+            new Thread("Thread-"+(finalI +1)){
+                @Override
+                public void run() {
+                    cnm.put(finalI +100, "Book-"+(finalI +100));
+                    System.out.println("Added: "+cnm.get(finalI +100)+" by "+Thread.currentThread().getName());
+                }
+            }.start();
+        }
+        System.out.println(buf);
+        JOptionPane.showMessageDialog(null,dt.getMinutes());
     }
 }
