@@ -15,6 +15,43 @@ public class TryWithBlockMain implements IConstants {
         System.out.println("User Home: " + USER_HOME);
         oldWay();
         newWay();
+        customResourceJDK7();
+        customResourceJDK9();
+        MultipleResourceJDK9();
+    }
+
+    private static void MultipleResourceJDK9() {
+        MyResource r1=new MyResource();
+        MyResource r2=new MyResource();
+        MyResource r3=new MyResource();
+        MyResource r4=new MyResource();
+        MyResource r5=new MyResource();
+        try(r1;r2;r3;r4;r5){
+            r1.doSomething();
+            r2.doSomething();
+            r3.doSomething();
+            r4.doSomething();
+            r5.doSomething();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void customResourceJDK9() {
+        MyResource r=new MyResource();
+        try(r){
+            r.doSomething();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void customResourceJDK7() {
+        try(MyResource r=new MyResource()){
+            r.doSomething();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private static void newWay() {
