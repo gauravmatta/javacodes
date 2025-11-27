@@ -1,0 +1,3 @@
+module amod{
+    requires mymodule;
+}
