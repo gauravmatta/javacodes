@@ -1,0 +1,671 @@
+[0.012s][debug][gc,heap] Minimum heap 8388608  Initial heap 262144000  Maximum heap 4167041024
+[0.012s][info ][gc,init] Initializing The Z Garbage Collector
+[0.012s][info ][gc,init] Version: 25.0.1+8 (release)
+[0.012s][info ][gc,init] NUMA Support: Disabled
+[0.012s][info ][gc,init] CPUs: 4 total, 4 available
+[0.012s][info ][gc,init] Memory: 15893M
+[0.012s][info ][gc,init] Large Page Support: Disabled
+[0.012s][info ][gc,init] Address Space Size: unlimited
+[0.012s][debug][gc,init] Reserved Space: limit 4096G, desired 63584M, requested 63584M
+[0.012s][info ][gc,init] Reserved Space Type: Contiguous/Unrestricted/Complete
+[0.012s][info ][gc,init] Reserved Space Size: 63584M
+[0.013s][info ][gc,init] Heap Backing File: /memfd:java_heap
+[0.013s][info ][gc,init] Heap Backing Filesystem: tmpfs (0x1021994)
+[0.015s][info ][gc,init] Min Capacity: 8M
+[0.015s][info ][gc,init] Initial Capacity: 250M
+[0.015s][info ][gc,init] Max Capacity: 3974M
+[0.015s][info ][gc,init] Soft Max Capacity: 3576M
+[0.015s][info ][gc,init] Page Size Medium: Range [4M, 32M]
+[0.015s][info ][gc,init] Pre-touch: Disabled
+[0.015s][info ][gc,init] Available space on backing filesystem: N/A
+[0.018s][info ][gc,init] Uncommit: Enabled
+[0.018s][info ][gc,init] Uncommit Delay: 300s
+[0.018s][info ][gc,init] GC Workers for Old Generation: 1 (dynamic)
+[0.020s][info ][gc,init] GC Workers for Young Generation: 1 (dynamic)
+[0.171s][info ][gc,init] GC Workers Max: 1 (dynamic)
+[0.175s][info ][gc,init] Runtime Workers: 3
+[0.178s][info ][gc     ] Using The Z Garbage Collector
+[0.412s][info ][gc,metaspace] CDS archive(s) mapped at: [0x0000000028000000-0x0000000028d8d000-0x0000000028d8d000), size 14209024, SharedBaseAddress: 0x0000000028000000, ArchiveRelocationMode: 1.
+[0.413s][info ][gc,metaspace] Compressed class space mapped at: 0x0000000029000000-0x0000000069000000, reserved size: 1073741824
+[0.414s][info ][gc,metaspace] UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+[0.420s][info ][gc,metaspace] Narrow klass pointer bits 32, Max shift 3
+[0.420s][info ][gc,metaspace] Narrow klass base: 0x0000000028000000, Narrow klass shift: 0
+[0.420s][info ][gc,metaspace] Encoding Range: [0x0000000028000000 - 0x0000000128000000), (4294967296 bytes)
+[0.420s][info ][gc,metaspace] Klass Range:    [0x0000000028001000 - 0x0000000069000000), (1090514944 bytes)
+[0.420s][info ][gc,metaspace] Klass ID Range:  [4096 - 1090519033) (1090514937)
+[0.420s][info ][gc,metaspace] Protection zone: [0x0000000028000000 - 0x0000000028001000), (4096 bytes)
+[0.445s][debug][gc,heap     ] Uncommitter (0) Timeout: 300000ms
+[0.450s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ArraysSupport.unsignedHashCode (0x00007f3240400008) [0x00007f3240400100, 0x00007f3240400310] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.450s][debug][gc,nmethod  ] Rebuilding NMethod Table: 0->1024 entries, 0(0%->0%) registered, 0(0%->0%) unregistered
+[0.450s][debug][gc,nmethod  ] Register NMethod: java.lang.Object.<init> (0x00007f3240400388) [0x00007f3240400480, 0x00007f3240400580] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.450s][debug][gc,nmethod  ] Register NMethod: java.lang.Byte.toUnsignedInt (0x00007f3240400688) [0x00007f3240400780, 0x00007f3240400868] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.455s][debug][gc,director ] Rule Major: Warmup 10%, Used: 4MB, UsedThreshold: 357MB
+[0.456s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getReferenceVolatile (0x00007f3247ec7008) [0x00007f3247ec7100, 0x00007f3247ec7430] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.458s][debug][gc,nmethod  ] Register NMethod: java.lang.String.hashCode (0x00007f3240400988) [0x00007f3240400a80, 0x00007f3240400ee8] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.464s][debug][gc,nmethod  ] Register NMethod: java.lang.Math.floorMod (0x00007f3240400f08) [0x00007f3240401000, 0x00007f3240401190] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.465s][debug][gc,director ] Rule Major: Warmup 10%, Used: 4MB, UsedThreshold: 357MB
+[0.465s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN.probe (0x00007f3240401208) [0x00007f3240401300, 0x00007f32404018a8] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.466s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ArraysSupport.vectorizedHashCode (0x00007f3240401908) [0x00007f3240401a00, 0x00007f3240402ae8] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.466s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.equals (0x00007f3240402b08) [0x00007f3240402c00, 0x00007f3240402e68] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.467s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ArraysSupport.hashCodeOfUnsigned (0x00007f3240402e88) [0x00007f3240402f80, 0x00007f32404031f8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.467s][debug][gc,nmethod  ] Register NMethod: java.lang.String.equals (0x00007f3240403208) [0x00007f3240403300, 0x00007f3240403750] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.467s][debug][gc,nmethod  ] Register NMethod: java.util.Objects.requireNonNull (0x00007f3240403788) [0x00007f3240403880, 0x00007f3240403a58] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.469s][debug][gc,nmethod  ] Register NMethod: java.util.Objects.equals (0x00007f3240403a88) [0x00007f3240403b80, 0x00007f3240403dc8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.472s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.modsHashCode (0x00007f3240403e08) [0x00007f3240403f00, 0x00007f3240404538] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.472s][debug][gc,nmethod  ] Register NMethod: java.util.Set.of (0x00007f3240404588) [0x00007f3240404680, 0x00007f3240404768] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.472s][debug][gc,nmethod  ] Register NMethod: java.util.AbstractCollection.<init> (0x00007f3240404888) [0x00007f3240404980, 0x00007f3240404ad8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.472s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$AbstractImmutableCollection.<init> (0x00007f3240404b88) [0x00007f3240404c80, 0x00007f3240404e38] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.473s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$AbstractImmutableSet.<init> (0x00007f3240404e88) [0x00007f3240404f80, 0x00007f3240405198] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.474s][debug][gc,nmethod  ] Register NMethod: java.util.Set.of (0x00007f3240405208) [0x00007f3240405300, 0x00007f3240405b98] Compiler: c1, Barriers: 9, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.474s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN.iterator (0x00007f3240405c08) [0x00007f3240405d00, 0x00007f3240405ea8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.475s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.476s][debug][gc,nmethod  ] Register NMethod: java.lang.System.arraycopy (0x00007f3247ec7488) [0x00007f3247ec7580, 0x00007f3247ec7700] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.476s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ArraysSupport.unsignedHashCode (0x00007f3247ec7788) [0x00007f3247ec7880, 0x00007f3247ec7a28] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.477s][debug][gc,nmethod  ] Register NMethod: java.lang.Object.<init> (0x00007f3247ec7a88) [0x00007f3247ec7b80, 0x00007f3247ec7bf8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.477s][debug][gc,nmethod  ] Register NMethod: java.lang.String.coder (0x00007f3240405f08) [0x00007f3240406000, 0x00007f3240406128] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.477s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.name (0x00007f3247ec7d88) [0x00007f3247ec7e80, 0x00007f3247ec7f68] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.478s][debug][gc,nmethod  ] Register NMethod: java.lang.String.isLatin1 (0x00007f3240406208) [0x00007f3240406300, 0x00007f3240406460] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.478s][debug][gc,nmethod  ] Register NMethod: java.lang.String.length (0x00007f3240406508) [0x00007f3240406600, 0x00007f3240406840] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.478s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleReference.descriptor (0x00007f3247ec8088) [0x00007f3247ec8180, 0x00007f3247ec8268] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.479s][debug][gc,nmethod  ] Register NMethod: java.net.URI.hash (0x00007f3240406888) [0x00007f3240406980, 0x00007f3240406cc0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.479s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Exports.<init> (0x00007f3240406d08) [0x00007f3240406e00, 0x00007f32404070c0] Compiler: c1, Barriers: 9, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.480s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN$SetNIterator.<init> (0x00007f3240407108) [0x00007f3240407200, 0x00007f3240407588] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.480s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN$SetNIterator.hasNext (0x00007f3240407608) [0x00007f3240407700, 0x00007f3240407850] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.480s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Exports.hashCode (0x00007f3240407908) [0x00007f3240407a00, 0x00007f3240407d98] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.481s][debug][gc,nmethod  ] Register NMethod: java.lang.String.charAt (0x00007f3240407e08) [0x00007f3240407f00, 0x00007f3240408350] Compiler: c1, Barriers: 2, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.481s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.charAt (0x00007f3240408388) [0x00007f3240408480, 0x00007f3240408640] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.482s][debug][gc,nmethod  ] Register NMethod: java.lang.String.checkIndex (0x00007f3240408688) [0x00007f3240408780, 0x00007f32404088a8] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.482s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.Preconditions.checkIndex (0x00007f3240408988) [0x00007f3240408a80, 0x00007f3240408c08] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.482s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.compareAndSetLong (0x00007f3247ec8388) [0x00007f3247ec8480, 0x00007f3247ec85f0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.482s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.compareAndSetReference (0x00007f3247ec8688) [0x00007f3247ec8780, 0x00007f3247ec8918] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.483s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.tabAt (0x00007f3240408c88) [0x00007f3240408d80, 0x00007f3240409098] Compiler: c1, Barriers: 1, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.484s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN$SetNIterator.next (0x00007f3240409108) [0x00007f3240409200, 0x00007f3240409568] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.484s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getReferenceAcquire (0x00007f3240409588) [0x00007f3240409680, 0x00007f32404097b0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.484s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.spread (0x00007f3240409888) [0x00007f3240409980, 0x00007f3240409a70] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.486s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.487s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.addCount (0x00007f3240409b88) [0x00007f3240409c80, 0x00007f324040a6a0] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.491s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.putVal (0x00007f324040a708) [0x00007f324040a800, 0x00007f324040c468] Compiler: c1, Barriers: 28, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.491s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap$Node.<init> (0x00007f324040c488) [0x00007f324040c580, 0x00007f324040c7d0] Compiler: c1, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.492s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ec8988) [0x00007f3247ec8a80, 0x00007f3247ec8b70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.495s][debug][gc,nmethod  ] Register NMethod: java.lang.Enum.ordinal (0x00007f3247ec8c88) [0x00007f3247ec8d80, 0x00007f3247ec8e40] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.495s][debug][gc,nmethod  ] Register NMethod: java.lang.Object.hashCode (0x00007f3247ec8f88) [0x00007f3247ec9080, 0x00007f3247ec91f0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.496s][debug][gc,nmethod  ] Register NMethod: java.lang.Class.isPrimitive (0x00007f3247ec9288) [0x00007f3247ec9380, 0x00007f3247ec9440] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.496s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.497s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ec9588) [0x00007f3247ec9680, 0x00007f3247ec9770] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.498s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ec9888) [0x00007f3247ec9980, 0x00007f3247ec9a70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.500s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247ec9b88) [0x00007f3247ec9c80, 0x00007f3247ec9f18] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.501s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247ec9f88) [0x00007f3247eca080, 0x00007f3247eca178] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.505s][debug][gc,nmethod  ] Register NMethod: java.lang.Enum.<init> (0x00007f324040c808) [0x00007f324040c900, 0x00007f324040cad8] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.506s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.511s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247eca288) [0x00007f3247eca380, 0x00007f3247eca618] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.511s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.StrongReferenceKey.get (0x00007f3247eca688) [0x00007f3247eca780, 0x00007f3247eca868] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.511s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247eca988) [0x00007f3247ecaa80, 0x00007f3247ecab78] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.512s][debug][gc,nmethod  ] Register NMethod: java.lang.Object.getClass (0x00007f3247ecac88) [0x00007f3247ecad80, 0x00007f3247ecb0a0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.512s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ecb108) [0x00007f3247ecb200, 0x00007f3247ecb2f8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.513s][debug][gc,nmethod  ] Register NMethod: java.lang.Object.clone (0x00007f3247ecb408) [0x00007f3247ecb500, 0x00007f3247ecb820] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.513s][debug][gc,nmethod  ] Register NMethod: java.lang.Class.getClassLoader (0x00007f3247ecb888) [0x00007f3247ecb980, 0x00007f3247ecba68] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.514s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ecbb88) [0x00007f3247ecbc80, 0x00007f3247ecbd70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.514s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.returnType (0x00007f3247ecbe88) [0x00007f3247ecbf80, 0x00007f3247ecc068] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.515s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247ecc188) [0x00007f3247ecc280, 0x00007f3247ecc518] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.516s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.AbstractPoolEntry.index (0x00007f3247ecc588) [0x00007f3247ecc680, 0x00007f3247ecc740] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.516s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.516s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.putIfAbsent (0x00007f324040cb08) [0x00007f324040cc00, 0x00007f324040cdc0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.517s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247ecc888) [0x00007f3247ecc980, 0x00007f3247ecca78] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.518s][debug][gc,nmethod  ] Register NMethod: java.util.Objects.hashCode (0x00007f324040ce08) [0x00007f324040cf00, 0x00007f324040d110] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.519s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247eccb88) [0x00007f3247eccc80, 0x00007f3247eccd70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.519s][debug][gc,nmethod  ] Register NMethod: java.lang.ref.ReferenceQueue.poll (0x00007f324040d188) [0x00007f324040d280, 0x00007f324040d6a0] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.520s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ReferencedKeyMap.removeStaleReferences (0x00007f324040d708) [0x00007f324040d800, 0x00007f324040dba0] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.520s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247ecce88) [0x00007f3247eccf80, 0x00007f3247ecd078] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.521s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MemberName.getDeclaringClass (0x00007f3247ecd188) [0x00007f3247ecd280, 0x00007f3247ecd368] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.522s][debug][gc,nmethod  ] Register NMethod: java.lang.String.getBytes (0x00007f324040dc08) [0x00007f324040dd00, 0x00007f324040e0c0] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.522s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.hashCode (0x00007f324040e108) [0x00007f324040e200, 0x00007f324040e5f8] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.524s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.get (0x00007f324040e608) [0x00007f324040e700, 0x00007f324040f210] Compiler: c1, Barriers: 7, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.524s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToInterface (0x00007f3247ecd488) [0x00007f3247ecd580, 0x00007f3247ecd6c0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.524s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MemberName.isInvocable (0x00007f324040f288) [0x00007f324040f380, 0x00007f324040f538] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.524s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ReferencedKeyMap.lookupKey (0x00007f324040f588) [0x00007f324040f680, 0x00007f324040f910] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.525s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.StrongReferenceKey.<init> (0x00007f324040f988) [0x00007f324040fa80, 0x00007f324040fc50] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.525s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.StrongReferenceKey.hashCode (0x00007f324040fc88) [0x00007f324040fd80, 0x00007f3240410008] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.525s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MemberName.anyFlagSet (0x00007f3240410088) [0x00007f3240410180, 0x00007f32404102d0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.526s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.indexOfChar (0x00007f3240410388) [0x00007f3240410480, 0x00007f3240410680] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.526s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ecd788) [0x00007f3247ecd880, 0x00007f3247ecd970] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.526s][debug][gc,nmethod  ] Register NMethod: java.lang.Class.isArray (0x00007f3240410688) [0x00007f3240410780, 0x00007f3240410900] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.526s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.527s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.form (0x00007f3247ecda88) [0x00007f3247ecdb80, 0x00007f3247ecdc68] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.528s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247ecdd88) [0x00007f3247ecde80, 0x00007f3247ecdf78] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.528s][debug][gc,nmethod  ] Register NMethod: java.util.Objects.requireNonNull (0x00007f3240410988) [0x00007f3240410a80, 0x00007f3240410c60] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.530s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ReferencedKeyMap.get (0x00007f3240410c88) [0x00007f3240410d80, 0x00007f32404116b8] Compiler: c1, Barriers: 6, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.531s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ReferencedKeyMap.getNoCheckStale (0x00007f3240411708) [0x00007f3240411800, 0x00007f3240411d50] Compiler: c1, Barriers: 4, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.531s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.hash (0x00007f3240411d88) [0x00007f3240411e80, 0x00007f3240412078] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.531s][debug][gc,nmethod  ] Register NMethod: java.util.stream.FindOps$FindSink.cancellationRequested (0x00007f3247ece088) [0x00007f3247ece180, 0x00007f3247ece240] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.534s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.putVal (0x00007f3240412088) [0x00007f3240412180, 0x00007f3240413328] Compiler: c1, Barriers: 15, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.535s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$MapN.probe (0x00007f3240413388) [0x00007f3240413480, 0x00007f3240413a30] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.536s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$HashIterator.nextNode (0x00007f3240413a88) [0x00007f3240413b80, 0x00007f3240414198] Compiler: c1, Barriers: 14, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.537s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.541s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.putVal (0x00007f3240414208) [0x00007f3240414300, 0x00007f3240415668] Compiler: c1, Barriers: 15, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.541s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$HashIterator.<init> (0x00007f3240415688) [0x00007f3240415780, 0x00007f3240415dd8] Compiler: c1, Barriers: 14, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.543s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.getNode (0x00007f3240415e08) [0x00007f3240415f00, 0x00007f3240416a98] Compiler: c1, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.543s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$Node.<init> (0x00007f3240416b08) [0x00007f3240416c00, 0x00007f3240416ec0] Compiler: c1, Barriers: 9, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.545s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.resize (0x00007f3240416f08) [0x00007f3240417020, 0x00007f32404184a0] Compiler: c1, Barriers: 31, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.545s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.afterNodeInsertion (0x00007f3240418508) [0x00007f3240418600, 0x00007f3240418700] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.545s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.newNode (0x00007f3240418808) [0x00007f3240418900, 0x00007f3240418c88] Compiler: c1, Barriers: 9, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.546s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Exports.isQualified (0x00007f3240418d08) [0x00007f3240418e00, 0x00007f3240419048] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.546s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN.isEmpty (0x00007f3240419088) [0x00007f3240419180, 0x00007f32404192d0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.547s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.get (0x00007f3240419388) [0x00007f3240419480, 0x00007f32404196d8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.547s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.547s][debug][gc,nmethod  ] Register NMethod: jdk.internal.module.ModuleReferenceImpl.hashCode (0x00007f3240419708) [0x00007f3240419800, 0x00007f3240419db8] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.548s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.putIfAbsent (0x00007f3240419e08) [0x00007f3240419f00, 0x00007f324041a268] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.548s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Exports.source (0x00007f3247ece388) [0x00007f3247ece480, 0x00007f3247ece568] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.548s][debug][gc,nmethod  ] Register NMethod: java.lang.String.hashCode (0x00007f3247ece688) [0x00007f3247ece780, 0x00007f3247eceab0] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.548s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Exports.targets (0x00007f3247eceb08) [0x00007f3247ecec00, 0x00007f3247ecece8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.549s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$Set12.contains (0x00007f324041a288) [0x00007f324041a380, 0x00007f324041a700] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.549s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.afterNodeInsertion (0x00007f3247ecee08) [0x00007f3247ecef00, 0x00007f3247ecef78] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.549s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$Set12.isEmpty (0x00007f3247ecf108) [0x00007f3247ecf200, 0x00007f3247ecf2c0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.549s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ResolvedModule.hashCode (0x00007f324041a708) [0x00007f324041a800, 0x00007f324041aa80] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.551s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.hashCode (0x00007f324041aa88) [0x00007f324041ab80, 0x00007f324041b9c0] Compiler: c1, Barriers: 12, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.551s][debug][gc,nmethod  ] Register NMethod: java.lang.Object.equals (0x00007f324041ba08) [0x00007f324041bb00, 0x00007f324041bc50] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.551s][debug][gc,nmethod  ] Register NMethod: java.util.Objects.requireNonNull (0x00007f3247ecf408) [0x00007f3247ecf500, 0x00007f3247ecf580] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.552s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN.contains (0x00007f324041bd08) [0x00007f324041be00, 0x00007f324041c108] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.552s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.put (0x00007f324041c188) [0x00007f324041c280, 0x00007f324041c5e8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.552s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$HashIterator.hasNext (0x00007f324041c608) [0x00007f324041c700, 0x00007f324041c880] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.553s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Requires.name (0x00007f3247ecf708) [0x00007f3247ecf800, 0x00007f3247ecf8e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.553s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN$SetNIterator.hasNext (0x00007f3247ecfa08) [0x00007f3247ecfb00, 0x00007f3247ecfb88] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.553s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$Set12$1.hasNext (0x00007f324041c908) [0x00007f324041ca00, 0x00007f324041cb50] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.553s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$KeyIterator.next (0x00007f324041cc08) [0x00007f324041cd00, 0x00007f324041cef0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.553s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Requires.modifiers (0x00007f3247ecfd08) [0x00007f3247ecfe00, 0x00007f3247ecfee8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.553s][debug][gc,nmethod  ] Register NMethod: java.util.Optional.<init> (0x00007f324041cf08) [0x00007f324041d000, 0x00007f324041d1d0] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.554s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.requires (0x00007f3247ed0008) [0x00007f3247ed0100, 0x00007f3247ed01e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.554s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.containsKey (0x00007f324041d208) [0x00007f324041d300, 0x00007f324041d500] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.554s][debug][gc,nmethod  ] Register NMethod: java.util.HashSet.add (0x00007f324041d508) [0x00007f324041d600, 0x00007f324041d848] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.555s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.isAutomatic (0x00007f3247ed0308) [0x00007f3247ed0400, 0x00007f3247ed04c0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.555s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$Set12$1.next (0x00007f324041d888) [0x00007f324041d980, 0x00007f324041dd28] Compiler: c1, Barriers: 5, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.555s][debug][gc,nmethod  ] Register NMethod: java.util.AbstractMap.<init> (0x00007f324041dd88) [0x00007f324041de80, 0x00007f324041dfd8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.555s][debug][gc,nmethod  ] Register NMethod: jdk.internal.module.ModuleReferenceImpl.moduleResolution (0x00007f3247ed0608) [0x00007f3247ed0700, 0x00007f3247ed07e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.556s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$Set12.iterator (0x00007f324041e088) [0x00007f324041e180, 0x00007f324041e328] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.556s][debug][gc,nmethod  ] Register NMethod: java.util.AbstractSet.<init> (0x00007f324041e388) [0x00007f324041e480, 0x00007f324041e638] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.557s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.keySet (0x00007f324041e688) [0x00007f324041e780, 0x00007f324041ec10] Compiler: c1, Barriers: 7, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.557s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$KeySet.iterator (0x00007f324041ec88) [0x00007f324041ed80, 0x00007f324041f110] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.557s][debug][gc,nmethod  ] Register NMethod: java.lang.String.<init> (0x00007f324041f188) [0x00007f324041f280, 0x00007f324041f458] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.558s][debug][gc,nmethod  ] Register NMethod: java.lang.Math.min (0x00007f324041f488) [0x00007f324041f580, 0x00007f324041f6a8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.558s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$KeyIterator.<init> (0x00007f324041f788) [0x00007f324041f880, 0x00007f324041fb08] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.558s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ResolvedModule.descriptor (0x00007f324041fb88) [0x00007f324041fc80, 0x00007f324041fe80] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.559s][debug][gc,nmethod  ] Register NMethod: java.util.HashSet.iterator (0x00007f324041fe88) [0x00007f324041ff80, 0x00007f3240420240] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.559s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.559s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.lastIndexOf (0x00007f3240420288) [0x00007f3240420380, 0x00007f32404207a0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.559s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.exports (0x00007f3247ed0908) [0x00007f3247ed0a00, 0x00007f3247ed0ae8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.560s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$Set12$1.<init> (0x00007f3240420808) [0x00007f3240420900, 0x00007f3240420cb8] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.560s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.<init> (0x00007f3240420d08) [0x00007f3240420e00, 0x00007f3240420fc0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.560s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$Node.getKey (0x00007f3247ed0c08) [0x00007f3247ed0d00, 0x00007f3247ed0de8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.560s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$Node.getValue (0x00007f3247ed0f08) [0x00007f3247ed1000, 0x00007f3247ed10e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.561s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$SetN$SetNIterator.next (0x00007f3247ed1208) [0x00007f3247ed1300, 0x00007f3247ed1528] Compiler: c2, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.561s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.provides (0x00007f3247ed1588) [0x00007f3247ed1680, 0x00007f3247ed1768] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.561s][debug][gc,nmethod  ] Register NMethod: java.util.ImmutableCollections$MapN.get (0x00007f3240421008) [0x00007f3240421100, 0x00007f32404214e0] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.561s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.uses (0x00007f3247ed1888) [0x00007f3247ed1980, 0x00007f3247ed1a68] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.562s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Exports.isQualified (0x00007f3247ed1b88) [0x00007f3247ed1c80, 0x00007f3247ed1d88] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.563s][debug][gc,nmethod  ] Register NMethod: java.util.KeyValueHolder.getKey (0x00007f3247ed1e88) [0x00007f3247ed1f80, 0x00007f3247ed2068] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.563s][debug][gc,nmethod  ] Register NMethod: java.util.KeyValueHolder.getValue (0x00007f3247ed2188) [0x00007f3247ed2280, 0x00007f3247ed2368] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.564s][debug][gc,nmethod  ] Register NMethod: java.util.Optional.ofNullable (0x00007f3240421508) [0x00007f3240421600, 0x00007f32404218c0] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.564s][debug][gc,nmethod  ] Register NMethod: java.util.concurrent.ConcurrentHashMap.casTabAt (0x00007f3240421908) [0x00007f3240421a00, 0x00007f3240421b70] Compiler: c1, Barriers: 5, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.564s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor.packages (0x00007f3247ed2488) [0x00007f3247ed2580, 0x00007f3247ed2668] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.565s][debug][gc,nmethod  ] Register NMethod: java.util.Optional.orElse (0x00007f3240421c08) [0x00007f3240421d00, 0x00007f3240421e98] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.568s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ResolvedModule.name (0x00007f3240421f08) [0x00007f3240422000, 0x00007f32404222c8] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.569s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.569s][debug][gc,nmethod  ] Register NMethod: java.lang.Module.addExportsToAll0 (0x00007f3247ed2788) [0x00007f3247ed2880, 0x00007f3247ed29f0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.569s][debug][gc,nmethod  ] Register NMethod: java.util.Arrays.copyOfRange (0x00007f3240422308) [0x00007f3240422400, 0x00007f32404230b8] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.570s][debug][gc,nmethod  ] Register NMethod: java.lang.Module.addExports0 (0x00007f3247ed2a88) [0x00007f3247ed2b80, 0x00007f3247ed2d00] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.571s][debug][gc,nmethod  ] Register NMethod: java.lang.Double.doubleToRawLongBits (0x00007f3247ed2d88) [0x00007f3247ed2e80, 0x00007f3247ed2fd8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.571s][debug][gc,nmethod  ] Register NMethod: java.lang.Module.addReads0 (0x00007f3247ed3088) [0x00007f3247ed3180, 0x00007f3247ed32f0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.572s][debug][gc,nmethod  ] Register NMethod: jdk.internal.vm.Continuation.enterSpecial (0x00007f3247ed3388) [0x00007f3247ed3480, 0x00007f3247ed3678] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.573s][debug][gc,nmethod  ] Register NMethod: jdk.internal.vm.Continuation.doYield (0x00007f3247ed3688) [0x00007f3247ed3780, 0x00007f3247ed3848] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.573s][debug][gc,nmethod  ] Register NMethod: java.util.HashSet.<init> (0x00007f3240423108) [0x00007f3240423200, 0x00007f3240423618] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.573s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ResolvedModule.reference (0x00007f3247ed3988) [0x00007f3247ed3a80, 0x00007f3247ed3b68] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.574s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ResolvedModule.configuration (0x00007f3247ed3c88) [0x00007f3247ed3d80, 0x00007f3247ed3e68] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.574s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Provides.service (0x00007f3247ed3f88) [0x00007f3247ed4080, 0x00007f3247ed4168] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.574s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.isEmpty (0x00007f3240423688) [0x00007f3240423780, 0x00007f32404238d0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.574s][debug][gc,nmethod  ] Register NMethod: java.lang.AbstractStringBuilder.length (0x00007f3247ed4288) [0x00007f3247ed4380, 0x00007f3247ed4440] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.574s][debug][gc,nmethod  ] Register NMethod: java.lang.module.ModuleDescriptor$Version.toString (0x00007f3247ed4588) [0x00007f3247ed4680, 0x00007f3247ed4768] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.579s][debug][gc,director ] Rule Major: Warmup 10%, Used: 6MB, UsedThreshold: 357MB
+[0.585s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getByte (0x00007f3247ed4888) [0x00007f3247ed4980, 0x00007f3247ed4ae8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.585s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getShort (0x00007f3247ed4b88) [0x00007f3247ed4c80, 0x00007f3247ed4de8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.586s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.pickPos (0x00007f3240423988) [0x00007f3240423a80, 0x00007f3240423b70] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.586s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.toUnsignedInt (0x00007f3240423c88) [0x00007f3240423d80, 0x00007f3240423e68] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.587s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.get16 (0x00007f3240423f88) [0x00007f3240424080, 0x00007f3240424340] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.587s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getShortUnaligned (0x00007f3240424388) [0x00007f3240424480, 0x00007f32404246a8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.587s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getInt (0x00007f3247ed4e88) [0x00007f3247ed4f80, 0x00007f3247ed50e8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.588s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getShortUnaligned (0x00007f3240424708) [0x00007f3240424800, 0x00007f3240424b90] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.589s][debug][gc,nmethod  ] Register NMethod: java.lang.StringCoding.countPositives (0x00007f3240424c08) [0x00007f3240424d00, 0x00007f3240424f08] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.589s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.convEndian (0x00007f3240424f88) [0x00007f3240425080, 0x00007f3240425220] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.589s][debug][gc,director ] Rule Major: Warmup 10%, Used: 8MB, UsedThreshold: 357MB
+[0.591s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getIntUnaligned (0x00007f3240425288) [0x00007f3240425380, 0x00007f32404257d0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.592s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.convEndian (0x00007f3240425808) [0x00007f3240425900, 0x00007f3240425aa8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.592s][debug][gc,nmethod  ] Register NMethod: java.lang.Integer.toUnsignedLong (0x00007f3240425b08) [0x00007f3240425c00, 0x00007f3240425cf0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.592s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.toUnsignedInt (0x00007f3240425e08) [0x00007f3240425f00, 0x00007f3240425fe8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.592s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENCOM (0x00007f3240426108) [0x00007f3240426200, 0x00007f3240426310] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.592s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENEXT (0x00007f3240426408) [0x00007f3240426500, 0x00007f3240426610] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.593s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.makeShort (0x00007f3240426708) [0x00007f3240426800, 0x00007f3240426a88] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.593s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.makeInt (0x00007f3240426b08) [0x00007f3240426c00, 0x00007f3240427020] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.593s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.makeInt (0x00007f3240427088) [0x00007f3240427180, 0x00007f3240427400] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.597s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipFile.zipCoderFor (0x00007f3240427408) [0x00007f3240427500, 0x00007f3240427808] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.597s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipCoder$UTF8ZipCoder.isUTF8 (0x00007f3247ed5188) [0x00007f3247ed5280, 0x00007f3247ed5340] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.598s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.putVal (0x00007f3247ed5488) [0x00007f3247ed5580, 0x00007f3247ed61d0] Compiler: c2, Barriers: 31, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.598s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENHOW (0x00007f3240427888) [0x00007f3240427980, 0x00007f3240427a90] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.599s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENFLG (0x00007f3240427b88) [0x00007f3240427c80, 0x00007f3240427d90] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.599s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.Preconditions.checkIndex (0x00007f3247ed6208) [0x00007f3247ed6300, 0x00007f3247ed63b0] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.599s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.toUnsignedInt (0x00007f3247ed6508) [0x00007f3247ed6600, 0x00007f3247ed6668] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.600s][debug][gc,director ] Rule Major: Warmup 10%, Used: 8MB, UsedThreshold: 357MB
+[0.601s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENNAM (0x00007f3240427e88) [0x00007f3240427f80, 0x00007f3240428090] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.602s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipCoder$UTF8ZipCoder.checkedHash (0x00007f3240428188) [0x00007f3240428280, 0x00007f3240428690] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.602s][debug][gc,nmethod  ] Register NMethod: java.lang.System$1.uncheckedCountPositives (0x00007f3240428708) [0x00007f3240428800, 0x00007f3240428a58] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.603s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipFile$Source.isMetaName (0x00007f3240428a88) [0x00007f3240428b80, 0x00007f3240428fe0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.603s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipFile$Source.nextEntryPos (0x00007f3240429008) [0x00007f3240429100, 0x00007f32404293b8] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.603s][debug][gc,nmethod  ] Register NMethod: java.lang.Math.max (0x00007f3240429408) [0x00007f3240429500, 0x00007f3240429628] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.604s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENSIZ (0x00007f3240429708) [0x00007f3240429800, 0x00007f3240429910] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.604s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap.newNode (0x00007f3247ed6808) [0x00007f3247ed6900, 0x00007f3247ed6a28] Compiler: c2, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.607s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENLEN (0x00007f3240429a08) [0x00007f3240429b00, 0x00007f3240429c10] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.610s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipFile$Source.checkAndAddEntry (0x00007f3240429d08) [0x00007f3240429e00, 0x00007f324042b848] Compiler: c1, Barriers: 3, Oops: 7, ImmediateOops: 8, NonImmediateOops: No
+[0.610s][debug][gc,director ] Rule Major: Warmup 10%, Used: 8MB, UsedThreshold: 357MB
+[0.610s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENOFF (0x00007f324042b888) [0x00007f324042b980, 0x00007f324042ba90] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.610s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENDSK (0x00007f324042bb88) [0x00007f324042bc80, 0x00007f324042bd90] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.610s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.CENSIG (0x00007f324042be88) [0x00007f324042bf80, 0x00007f324042c090] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.610s][debug][gc,nmethod  ] Register NMethod: java.lang.Short.toUnsignedInt (0x00007f324042c188) [0x00007f324042c280, 0x00007f324042c360] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.611s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.get32 (0x00007f324042c488) [0x00007f324042c580, 0x00007f324042c738] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.611s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getIntUnaligned (0x00007f324042c788) [0x00007f324042c880, 0x00007f324042c9b0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.611s][debug][gc,nmethod  ] Register NMethod: sun.nio.fs.UnixPath.checkNotNul (0x00007f324042ca88) [0x00007f324042cb80, 0x00007f324042cd20] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.611s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.canEncode (0x00007f324042cd88) [0x00007f324042ce80, 0x00007f324042cfe0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.612s][debug][gc,nmethod  ] Register NMethod: java.lang.AbstractStringBuilder.needsNewBuffer (0x00007f324042d088) [0x00007f324042d180, 0x00007f324042d320] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.612s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$EntryIterator.next (0x00007f324042d388) [0x00007f324042d480, 0x00007f324042d708] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.612s][debug][gc,nmethod  ] Register NMethod: java.util.HashMap$EntryIterator.next (0x00007f324042d788) [0x00007f324042d880, 0x00007f324042da38] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.613s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.Preconditions.checkFromToIndex (0x00007f324042da88) [0x00007f324042db80, 0x00007f324042dd38] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.613s][debug][gc,nmethod  ] Register NMethod: java.lang.String.checkBoundsBeginEnd (0x00007f324042dd88) [0x00007f324042de80, 0x00007f324042e098] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.613s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ed6b08) [0x00007f3247ed6c00, 0x00007f3247ed6cf0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.614s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.AbstractPoolEntry.width (0x00007f3247ed6e08) [0x00007f3247ed6f00, 0x00007f3247ed6fc0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.615s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.size (0x00007f3247ed7108) [0x00007f3247ed7200, 0x00007f3247ed72c0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.615s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247ed7408) [0x00007f3247ed7500, 0x00007f3247ed7798] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.615s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247ed7808) [0x00007f3247ed7900, 0x00007f3247ed79f8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.616s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodTypeForm.canonicalize (0x00007f324042e108) [0x00007f324042e200, 0x00007f324042e958] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.616s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.ptypes (0x00007f3247ed7b08) [0x00007f3247ed7c00, 0x00007f3247ed7ce8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.617s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.checkSlotCount (0x00007f324042e988) [0x00007f324042ea80, 0x00007f324042f2d0] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.617s][debug][gc,nmethod  ] Register NMethod: java.lang.StringCoding.countPositives (0x00007f3247ed7e08) [0x00007f3247ed7f00, 0x00007f3247ed80a8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.618s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247ed8108) [0x00007f3247ed8200, 0x00007f3247ed8498] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.618s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247ed8508) [0x00007f3247ed8600, 0x00007f3247ed86f8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.618s][debug][gc,nmethod  ] Register NMethod: java.lang.Byte.toUnsignedInt (0x00007f3247ed8808) [0x00007f3247ed8900, 0x00007f3247ed8968] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.618s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.map (0x00007f324042f308) [0x00007f324042f420, 0x00007f3240430128] Compiler: c1, Barriers: 9, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.618s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ed8b08) [0x00007f3247ed8c00, 0x00007f3247ed8cf0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.619s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.BufWriterImpl.reserveSpace (0x00007f3240430188) [0x00007f3240430280, 0x00007f3240430598] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.619s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.RawBytecodeHelper.bci (0x00007f3247ed8e08) [0x00007f3247ed8f00, 0x00007f3247ed8fc0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.619s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247ed9108) [0x00007f3247ed9200, 0x00007f3247ed9498] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.620s][debug][gc,nmethod  ] Register NMethod: java.lang.StringBuilder.append (0x00007f3240430608) [0x00007f3240430700, 0x00007f3240430848] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.620s][debug][gc,director ] Rule Major: Warmup 10%, Used: 8MB, UsedThreshold: 357MB
+[0.621s][debug][gc,nmethod  ] Register NMethod: java.lang.AbstractStringBuilder.append (0x00007f3240430908) [0x00007f3240430a00, 0x00007f3240431148] Compiler: c1, Barriers: 5, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.621s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.AbstractPoolEntry.constantPool (0x00007f3247ed9508) [0x00007f3247ed9600, 0x00007f3247ed96e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.621s][debug][gc,nmethod  ] Register NMethod: java.util.zip.ZipUtils.get16 (0x00007f3247ed9808) [0x00007f3247ed9900, 0x00007f3247ed99d0] Compiler: c2, Barriers: 0, Oops: 1, ImmediateOops: 0, NonImmediateOops: No
+[0.622s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.parameterType (0x00007f3240431188) [0x00007f3240431280, 0x00007f3240431408] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.622s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.AbstractPoolEntry.hashString (0x00007f3240431488) [0x00007f3240431580, 0x00007f3240431668] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.622s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MemberName.allFlagsSet (0x00007f3240431788) [0x00007f3240431880, 0x00007f32404319d0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.622s][debug][gc,nmethod  ] Register NMethod: jdk.internal.constant.ClassOrInterfaceDescImpl.descriptorString (0x00007f3247ed9b08) [0x00007f3247ed9c00, 0x00007f3247ed9ce8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.623s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247ed9e08) [0x00007f3247ed9f00, 0x00007f3247ed9ff0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.624s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247eda108) [0x00007f3247eda200, 0x00007f3247eda498] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.624s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getShortUnaligned (0x00007f3247eda508) [0x00007f3247eda600, 0x00007f3247eda6b8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.625s][debug][gc,nmethod  ] Register NMethod: java.lang.Integer.toUnsignedLong (0x00007f3247eda808) [0x00007f3247eda900, 0x00007f3247eda968] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.626s][debug][gc,nmethod  ] Register NMethod: java.lang.Class.isInstance (0x00007f3247edab08) [0x00007f3247edac00, 0x00007f3247edad70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.628s][debug][gc,nmethod  ] Register NMethod: java.lang.Class.isAssignableFrom (0x00007f3247edae08) [0x00007f3247edaf00, 0x00007f3247edb070] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.629s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.entryByIndex (0x00007f3240431a88) [0x00007f3240431b80, 0x00007f3240432e88] Compiler: c1, Barriers: 3, Oops: 2, ImmediateOops: 5, NonImmediateOops: No
+[0.629s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247edb108) [0x00007f3247edb200, 0x00007f3247edb498] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.629s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247edb508) [0x00007f3247edb600, 0x00007f3247edb6f8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.630s][debug][gc,director ] Rule Major: Warmup 10%, Used: 8MB, UsedThreshold: 357MB
+[0.630s][debug][gc,nmethod  ] Register NMethod: java.lang.StringCoding.countNonZeroAsciiLatin1 (0x00007f3240432f08) [0x00007f3240433000, 0x00007f3240433208] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.631s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.RawBytecodeHelper.opcode (0x00007f3240433288) [0x00007f3240433380, 0x00007f3240433488] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.631s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.RawBytecodeHelper.getU1Unchecked (0x00007f3240433588) [0x00007f3240433680, 0x00007f3240433870] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.632s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.EntryMap.firstToken (0x00007f3240433888) [0x00007f3240433980, 0x00007f3240433d38] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.632s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.AbstractPoolEntry.<init> (0x00007f3240433d88) [0x00007f3240433e80, 0x00007f3240434058] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.633s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.RawBytecodeHelper.next (0x00007f3240434088) [0x00007f3240434180, 0x00007f3240434670] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.635s][debug][gc,nmethod  ] Register NMethod: java.lang.String.coder (0x00007f3247edb808) [0x00007f3247edb900, 0x00007f3247edb978] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.635s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.RawBytecodeHelper.endBci (0x00007f3240434688) [0x00007f3240434780, 0x00007f32404348b8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.635s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.LambdaForm$Name.withIndex (0x00007f3240434988) [0x00007f3240434a80, 0x00007f3240434d70] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.636s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.AbstractPoolEntry.maybeClone (0x00007f3240434d88) [0x00007f3240434e80, 0x00007f32404352f0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.636s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.canWriteDirect (0x00007f3240435308) [0x00007f3240435400, 0x00007f3240435700] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.637s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.getLong (0x00007f3247edbb08) [0x00007f3247edbc00, 0x00007f3247edbd68] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.637s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.LambdaForm$Name.<init> (0x00007f3240435708) [0x00007f3240435800, 0x00007f3240435b68] Compiler: c1, Barriers: 12, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.638s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.internalAdd (0x00007f3240435b88) [0x00007f3240435c80, 0x00007f3240436440] Compiler: c1, Barriers: 8, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.639s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.EntryMap.put (0x00007f3240436488) [0x00007f3240436580, 0x00007f3240436c58] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.639s][debug][gc,nmethod  ] Register NMethod: java.lang.String.isEmpty (0x00007f3240436c88) [0x00007f3240436d80, 0x00007f3240436f08] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.639s][debug][gc,nmethod  ] Register NMethod: java.lang.StringBuilder.length (0x00007f3240436f88) [0x00007f3240437080, 0x00007f3240437198] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.640s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.indexOf (0x00007f3240437288) [0x00007f3240437380, 0x00007f32404376d8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.640s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.internalAdd (0x00007f3240437708) [0x00007f3240437800, 0x00007f3240437a18] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.640s][debug][gc,director ] Rule Major: Warmup 10%, Used: 8MB, UsedThreshold: 357MB
+[0.641s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandleNatives.resolve (0x00007f3247edbe08) [0x00007f3247edbf00, 0x00007f3247edc250] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.641s][debug][gc,nmethod  ] Register NMethod: java.lang.String.substring (0x00007f3240437a88) [0x00007f3240437b80, 0x00007f32404382e0] Compiler: c1, Barriers: 1, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.642s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.newString (0x00007f3240438308) [0x00007f3240438400, 0x00007f3240438728] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.642s][debug][gc,nmethod  ] Register NMethod: java.lang.AbstractStringBuilder.isLatin1 (0x00007f3240438788) [0x00007f3240438880, 0x00007f32404389c0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.642s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.parameterCount (0x00007f3240438a88) [0x00007f3240438b80, 0x00007f3240438cb8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.643s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MemberName.initResolved (0x00007f3240438d88) [0x00007f3240438e80, 0x00007f3240439040] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.643s][debug][gc,nmethod  ] Register NMethod: java.lang.AbstractStringBuilder.getValue (0x00007f3247edc288) [0x00007f3247edc380, 0x00007f3247edc468] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.643s][debug][gc,nmethod  ] Register NMethod: java.lang.String.value (0x00007f3247edc588) [0x00007f3247edc680, 0x00007f3247edc768] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.643s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.BufWriterImpl.size (0x00007f3247edc888) [0x00007f3247edc980, 0x00007f3247edca40] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.644s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247edcb88) [0x00007f3247edcc80, 0x00007f3247edcd78] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.646s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247edce88) [0x00007f3247edcf80, 0x00007f3247edd078] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.648s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.LambdaForm$BasicType.basicType (0x00007f3240439088) [0x00007f3240439180, 0x00007f3240439e60] Compiler: c1, Barriers: 0, Oops: 2, ImmediateOops: 10, NonImmediateOops: No
+[0.648s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247edd188) [0x00007f3247edd280, 0x00007f3247edd518] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.648s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToSpecial (0x00007f3247edd588) [0x00007f3247edd680, 0x00007f3247edd778] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.648s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.LambdaForm$BasicType.basicType (0x00007f3240439e88) [0x00007f3240439f80, 0x00007f324043a298] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.649s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.<init> (0x00007f324043a308) [0x00007f324043a400, 0x00007f324043a648] Compiler: c1, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.649s][debug][gc,nmethod  ] Register NMethod: sun.invoke.util.Wrapper.basicTypeChar (0x00007f324043a688) [0x00007f324043a780, 0x00007f324043aa30] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.650s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.invokeBasic (0x00007f3247edd888) [0x00007f3247edd980, 0x00007f3247eddc18] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.650s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.652s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodType.makeImpl (0x00007f324043aa88) [0x00007f324043ab80, 0x00007f324043c480] Compiler: c1, Barriers: 23, Oops: 2, ImmediateOops: 3, NonImmediateOops: No
+[0.653s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.SplitConstantPool.tryFindUtf8 (0x00007f324043c508) [0x00007f324043c600, 0x00007f324043d1c8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.654s][debug][gc,nmethod  ] Register NMethod: java.lang.Record.<init> (0x00007f324043d208) [0x00007f324043d300, 0x00007f324043d458] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.656s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.putReferenceVolatile (0x00007f3247eddc88) [0x00007f3247eddd80, 0x00007f3247eddef0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.657s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.ReferencedKeySet.get (0x00007f324043d508) [0x00007f324043d600, 0x00007f324043e250] Compiler: c1, Barriers: 7, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.658s][debug][gc,nmethod  ] Register NMethod: java.lang.String.checkBoundsOffCount (0x00007f324043e288) [0x00007f324043e380, 0x00007f324043e578] Compiler: c1, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.659s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.Preconditions.checkFromIndexSize (0x00007f324043e588) [0x00007f324043e680, 0x00007f324043e818] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.659s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.position (0x00007f3247eddf88) [0x00007f3247ede080, 0x00007f3247ede140] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.659s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.limit (0x00007f3247ede288) [0x00007f3247ede380, 0x00007f3247ede440] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.659s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper.newArray (0x00007f324043e888) [0x00007f324043e980, 0x00007f324043ece8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 3, NonImmediateOops: No
+[0.660s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.putByte (0x00007f3247ede588) [0x00007f3247ede680, 0x00007f3247ede7d8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.660s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.662s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.allocateUninitializedArray (0x00007f324043ed08) [0x00007f324043ee00, 0x00007f324043f298] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 3, NonImmediateOops: No
+[0.666s][debug][gc,nmethod  ] Register NMethod: java.lang.Class.desiredAssertionStatus0 (0x00007f3247ede888) [0x00007f3247ede980, 0x00007f3247edeaf0] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.667s][debug][gc,nmethod  ] Register NMethod: java.lang.Float.floatToRawIntBits (0x00007f3247edeb88) [0x00007f3247edec80, 0x00007f3247ededd8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.670s][debug][gc,nmethod  ] Register NMethod: java.io.FileOutputStream.writeBytes (0x00007f3247edee88) [0x00007f3247edef80, 0x00007f3247edf0d8] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.671s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.671s][debug][gc,nmethod  ] Register NMethod: java.util.Properties$LineReader.readLine (0x00007f324043f308) [0x00007f324043f400, 0x00007f3240442008] Compiler: c1, Barriers: 14, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.673s][debug][gc,nmethod  ] Register NMethod: java.lang.String.isLatin1 (0x00007f3247edf188) [0x00007f3247edf280, 0x00007f3247edf318] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.674s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.inflate (0x00007f3240442088) [0x00007f3240442180, 0x00007f3240442370] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.675s][debug][gc,nmethod  ] Register NMethod: java.lang.StringCoding.implEncodeAsciiArray (0x00007f3240442388) [0x00007f3240442480, 0x00007f32404426a8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.676s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.write (0x00007f3240442708) [0x00007f3240442800, 0x00007f3240442f70] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.677s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.arrayOffset (0x00007f3240442f88) [0x00007f3240443080, 0x00007f3240443310] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.678s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247edf488) [0x00007f3247edf580, 0x00007f3247edf670] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.681s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.position (0x00007f3240443388) [0x00007f3240443480, 0x00007f32404436c0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.681s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.ensureOpen (0x00007f3240443708) [0x00007f3240443800, 0x00007f32404439e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.681s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.681s][debug][gc,nmethod  ] Register NMethod: java.lang.String.length (0x00007f3247edf788) [0x00007f3247edf880, 0x00007f3247edf950] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.682s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.arrayOffset (0x00007f3240443a08) [0x00007f3240443b00, 0x00007f3240443d90] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.683s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.stringSize (0x00007f3240443e08) [0x00007f3240443f00, 0x00007f3240444128] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.683s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.uncheckedGetCharsLatin1 (0x00007f3240444188) [0x00007f3240444280, 0x00007f3240444640] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.684s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.uncheckedPutCharLatin1 (0x00007f3240444688) [0x00007f3240444780, 0x00007f3240444880] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.687s][debug][gc,nmethod  ] Register NMethod: jdk.internal.classfile.impl.BufWriterImpl.cpIndex (0x00007f3240444988) [0x00007f3240444a80, 0x00007f3240445b80] Compiler: c1, Barriers: 1, Oops: 1, ImmediateOops: 3, NonImmediateOops: No
+[0.691s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247edfa88) [0x00007f3247edfb80, 0x00007f3247edfc70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.691s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.692s][debug][gc,nmethod  ] Register NMethod: java.util.Properties$LineReader.readLine (0x00007f3240445c08) [0x00007f3240445d00, 0x00007f32404483d8] Compiler: c1, Barriers: 14, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.692s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.remaining (0x00007f3240448408) [0x00007f3240448500, 0x00007f3240448670] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.693s][debug][gc,nmethod  ] Register NMethod: java.io.Writer.write (0x00007f3240448708) [0x00007f3240448800, 0x00007f3240448bf0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.693s][debug][gc,nmethod  ] Register NMethod: java.io.OutputStream.flush (0x00007f3240448c08) [0x00007f3240448d00, 0x00007f3240448e00] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.694s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.ensureOpen (0x00007f3240448f08) [0x00007f3240449000, 0x00007f32404491e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.694s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.growIfNeeded (0x00007f3240449208) [0x00007f3240449300, 0x00007f3240449618] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.695s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.min (0x00007f3240449688) [0x00007f3240449780, 0x00007f32404498d8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.695s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.MethodHandle.linkToStatic (0x00007f3247edfd88) [0x00007f3247edfe80, 0x00007f3247edff70] Compiler: , Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.696s][debug][gc,nmethod  ] Register NMethod: java.lang.String.getChars (0x00007f3240449988) [0x00007f3240449a80, 0x00007f324044a300] Compiler: c1, Barriers: 1, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.696s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.getChars (0x00007f324044a388) [0x00007f324044a480, 0x00007f324044a5a0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.697s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.flush (0x00007f324044a688) [0x00007f324044a780, 0x00007f324044ac98] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.697s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.VM.isBooted (0x00007f324044ad08) [0x00007f324044ae00, 0x00007f324044af40] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.698s][debug][gc,nmethod  ] Register NMethod: java.nio.charset.CoderResult.isUnderflow (0x00007f324044b008) [0x00007f324044b100, 0x00007f324044b250] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.698s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.flip (0x00007f324044b308) [0x00007f324044b400, 0x00007f324044b578] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.698s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.array (0x00007f324044b608) [0x00007f324044b700, 0x00007f324044b990] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.699s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.position (0x00007f324044ba08) [0x00007f324044bb00, 0x00007f324044bc48] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.700s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.position (0x00007f324044bd08) [0x00007f324044be00, 0x00007f324044c020] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.700s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.flushBuffer (0x00007f324044c088) [0x00007f324044c180, 0x00007f324044c3f8] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.701s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.allocateUninitializedArray0 (0x00007f324044c408) [0x00007f324044c500, 0x00007f324044cd68] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 8, NonImmediateOops: No
+[0.701s][debug][gc,nmethod  ] Register NMethod: java.lang.String.toString (0x00007f324044cd88) [0x00007f324044ce80, 0x00007f324044cf80] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.701s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.701s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper.checkOverflow (0x00007f324044d088) [0x00007f324044d180, 0x00007f324044d360] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.703s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper.newArrayWithSuffix (0x00007f324044d388) [0x00007f324044d480, 0x00007f324044dc58] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 3, NonImmediateOops: No
+[0.703s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.position (0x00007f324044dc88) [0x00007f324044dd80, 0x00007f324044dec8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.704s][debug][gc,nmethod  ] Register NMethod: java.lang.Thread.isVirtual (0x00007f324044df88) [0x00007f324044e080, 0x00007f324044e250] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.704s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.limit (0x00007f324044e288) [0x00007f324044e380, 0x00007f324044e5f0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.704s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.capacity (0x00007f3247ee0088) [0x00007f3247ee0180, 0x00007f3247ee0240] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.705s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.DirectMethodHandle.internalMemberName (0x00007f324044e608) [0x00007f324044e700, 0x00007f324044e8e8] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.707s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.<init> (0x00007f324044e908) [0x00007f324044ea00, 0x00007f324044f8d0] Compiler: c1, Barriers: 3, Oops: 3, ImmediateOops: 4, NonImmediateOops: No
+[0.707s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.hasArray (0x00007f324044f908) [0x00007f324044fa00, 0x00007f324044fbb0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.707s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.hasArray (0x00007f324044fc08) [0x00007f324044fd00, 0x00007f324044feb0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.708s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.array (0x00007f324044ff08) [0x00007f3240450000, 0x00007f3240450290] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.709s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.hasRemaining (0x00007f3240450308) [0x00007f3240450400, 0x00007f3240450550] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.709s][debug][gc,nmethod  ] Register NMethod: java.nio.charset.CoderResult.isOverflow (0x00007f3240450608) [0x00007f3240450700, 0x00007f3240450850] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.709s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.flip (0x00007f3240450908) [0x00007f3240450a00, 0x00007f3240450b18] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.710s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Blocker.end (0x00007f3240450c08) [0x00007f3240450d00, 0x00007f3240451068] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.710s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.position (0x00007f3240451088) [0x00007f3240451180, 0x00007f3240451340] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.711s][debug][gc,nmethod  ] Register NMethod: java.io.OutputStream.flush (0x00007f3247ee0388) [0x00007f3247ee0480, 0x00007f3247ee04f8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.711s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.712s][debug][gc,nmethod  ] Register NMethod: java.lang.String.valueOf (0x00007f3240451388) [0x00007f3240451480, 0x00007f3240451678] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.713s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.println (0x00007f3240451688) [0x00007f3240451780, 0x00007f3240451e70] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 3, NonImmediateOops: No
+[0.714s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.wrap (0x00007f3240451e88) [0x00007f3240451f80, 0x00007f3240452200] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.717s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.writeln (0x00007f3240452208) [0x00007f3240452300, 0x00007f3240453420] Compiler: c1, Barriers: 11, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.717s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.uncheckedPutPairLatin1 (0x00007f3240453488) [0x00007f3240453580, 0x00007f3240453708] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.717s][debug][gc,nmethod  ] Register NMethod: java.nio.charset.CharsetEncoder.maxBytesPerChar (0x00007f3247ee0688) [0x00007f3247ee0780, 0x00007f3247ee0840] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.718s][debug][gc,nmethod  ] Register NMethod: java.nio.HeapCharBuffer.<init> (0x00007f3240453788) [0x00007f3240453880, 0x00007f32404539f8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.722s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.723s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.writeBytes (0x00007f3240453a88) [0x00007f3240453b80, 0x00007f3240454650] Compiler: c1, Barriers: 5, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.724s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.<init> (0x00007f3240454688) [0x00007f3240454780, 0x00007f3240454950] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.724s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.limit (0x00007f3240454988) [0x00007f3240454a80, 0x00007f3240454ca0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.725s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.limit (0x00007f3240454d08) [0x00007f3240454e00, 0x00007f3240454f48] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.731s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.implWrite (0x00007f3240455008) [0x00007f3240455100, 0x00007f3240455fd8] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.732s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.732s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.newLine (0x00007f3240456008) [0x00007f3240456100, 0x00007f32404565e0] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.733s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.growByteBufferIfNeeded (0x00007f3240456608) [0x00007f3240456700, 0x00007f3240456da0] Compiler: c1, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.735s][debug][gc,nmethod  ] Register NMethod: java.lang.System.lineSeparator (0x00007f3240456e08) [0x00007f3240456f00, 0x00007f3240457028] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.738s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.flushBuffer (0x00007f3240457108) [0x00007f3240457200, 0x00007f32404577f0] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.738s][debug][gc,nmethod  ] Register NMethod: java.io.OutputStreamWriter.write (0x00007f3240457808) [0x00007f3240457900, 0x00007f3240457af0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.742s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.742s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.write (0x00007f3240457b08) [0x00007f3240457c00, 0x00007f3240458438] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.742s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.ensureOpen (0x00007f3240458488) [0x00007f3240458580, 0x00007f3240458738] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.743s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.implWrite (0x00007f3240458788) [0x00007f3240458880, 0x00007f3240458a78] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.744s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.inflate (0x00007f3247ee0988) [0x00007f3247ee0a80, 0x00007f3247ee0c88] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.748s][debug][gc,nmethod  ] Register NMethod: java.lang.Math.round (0x00007f3240458a88) [0x00007f3240458b80, 0x00007f3240458d48] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.752s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.757s][debug][gc,nmethod  ] Register NMethod: java.nio.charset.CharsetEncoder.encode (0x00007f3240458d88) [0x00007f3240458e80, 0x00007f324045a930] Compiler: c1, Barriers: 5, Oops: 0, ImmediateOops: 5, NonImmediateOops: No
+[0.758s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.UTF_8$Encoder.encodeLoop (0x00007f324045a988) [0x00007f324045aa80, 0x00007f324045af80] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.761s][debug][gc,nmethod  ] Register NMethod: java.lang.StringCoding.implEncodeAsciiArray (0x00007f3247ee0d08) [0x00007f3247ee0e00, 0x00007f3247ee1078] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.761s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.UTF_8$Encoder.encodeArrayLoop (0x00007f324045af88) [0x00007f324045b080, 0x00007f324045c918] Compiler: c1, Barriers: 2, Oops: 1, ImmediateOops: 2, NonImmediateOops: No
+[0.761s][debug][gc,nmethod  ] Register NMethod: java.lang.System$1.uncheckedEncodeASCII (0x00007f324045c988) [0x00007f324045ca80, 0x00007f324045cbc0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.762s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.UTF_8.updatePositions (0x00007f324045cc88) [0x00007f324045cd80, 0x00007f324045d198] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.762s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.762s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.arrayOffset (0x00007f3247ee1088) [0x00007f3247ee1180, 0x00007f3247ee1268] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.763s][debug][gc,nmethod  ] Register NMethod: java.io.OutputStreamWriter.flushBuffer (0x00007f324045d208) [0x00007f324045d300, 0x00007f324045d4f0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.763s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.flushBuffer (0x00007f324045d508) [0x00007f324045d600, 0x00007f324045dc38] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.764s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.isOpen (0x00007f324045dc88) [0x00007f324045dd80, 0x00007f324045ded0] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.764s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.uncheckedPutCharLatin1 (0x00007f3247ee1388) [0x00007f3247ee1480, 0x00007f3247ee1510] Compiler: c2, Barriers: 0, Oops: 1, ImmediateOops: 0, NonImmediateOops: No
+[0.765s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.implFlushBuffer (0x00007f324045df88) [0x00007f324045e080, 0x00007f324045e2b0] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.765s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.write (0x00007f324045e308) [0x00007f324045e400, 0x00007f324045eb98] Compiler: c1, Barriers: 3, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.766s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.write (0x00007f324045ec08) [0x00007f324045ed00, 0x00007f324045f658] Compiler: c1, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.767s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.growIfNeeded (0x00007f324045f688) [0x00007f324045f780, 0x00007f324045faa8] Compiler: c1, Barriers: 4, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.767s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.position (0x00007f3247ee1688) [0x00007f3247ee1780, 0x00007f3247ee1868] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.768s][debug][gc,nmethod  ] Register NMethod: java.lang.System$Out.write (0x00007f324045fb08) [0x00007f324045fc00, 0x00007f32404603a8] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.768s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.arrayOffset (0x00007f3247ee1988) [0x00007f3247ee1a80, 0x00007f3247ee1b68] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.769s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Blocker.begin (0x00007f3240460408) [0x00007f3240460500, 0x00007f3240460ca8] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.770s][debug][gc,nmethod  ] Register NMethod: java.io.FileOutputStream.write (0x00007f3240460d08) [0x00007f3240460e00, 0x00007f3240461108] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.770s][debug][gc,nmethod  ] Register NMethod: java.io.FileDescriptor$1.getAppend (0x00007f3240461188) [0x00007f3240461280, 0x00007f3240461390] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.770s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.uncheckedPutPairLatin1 (0x00007f3247ee1c88) [0x00007f3247ee1d80, 0x00007f3247ee1e30] Compiler: c2, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.771s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.clear (0x00007f3240461488) [0x00007f3240461580, 0x00007f32404616f8] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.772s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.clear (0x00007f3240461788) [0x00007f3240461880, 0x00007f3240461998] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.772s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.Invokers$Holder.linkToTargetMethod (0x00007f3240461a88) [0x00007f3240461b80, 0x00007f3240461e88] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.772s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.772s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.LambdaForm$MH/0x0000000029043000.invoke (0x00007f3240461f08) [0x00007f3240462000, 0x00007f3240462498] Compiler: c1, Barriers: 2, Oops: 1, ImmediateOops: 0, NonImmediateOops: No
+[0.773s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial (0x00007f3240462508) [0x00007f3240462600, 0x00007f3240462a18] Compiler: c1, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.775s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper$Concat1.concat (0x00007f3240462a88) [0x00007f3240462b80, 0x00007f3240463b00] Compiler: c1, Barriers: 8, Oops: 0, ImmediateOops: 4, NonImmediateOops: No
+[0.775s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper.stringSize (0x00007f3240463b08) [0x00007f3240463c00, 0x00007f3240463e70] Compiler: c1, Barriers: 0, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[0.776s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper.prepend (0x00007f3240463e88) [0x00007f3240463f80, 0x00007f3240464728] Compiler: c1, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.782s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.793s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.799s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.write (0x00007f3247ee1f88) [0x00007f3247ee2080, 0x00007f3247ee2918] Compiler: c2, Barriers: 4, Oops: 1, ImmediateOops: 0, NonImmediateOops: No
+[0.803s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.804s][debug][gc,nmethod  ] Register NMethod: java.lang.String.getBytes (0x00007f3247ee2988) [0x00007f3247ee2a80, 0x00007f3247ee2c28] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.813s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.813s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.stringSize (0x00007f3247ee2c88) [0x00007f3247ee2d80, 0x00007f3247ee2e70] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.817s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.position (0x00007f3247ee2f88) [0x00007f3247ee3080, 0x00007f3247ee3168] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.823s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.823s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.flush (0x00007f3247ee3288) [0x00007f3247ee3380, 0x00007f3247ee3890] Compiler: c2, Barriers: 5, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[0.825s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.growIfNeeded (0x00007f3247ee3908) [0x00007f3247ee3a00, 0x00007f3247ee3ab8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.830s][debug][gc,nmethod  ] Register NMethod: java.lang.String.getChars (0x00007f3247ee3c08) [0x00007f3247ee3d00, 0x00007f3247ee40c0] Compiler: c2, Barriers: 1, Oops: 1, ImmediateOops: 0, NonImmediateOops: No
+[0.833s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.837s][debug][gc,nmethod  ] Register NMethod: jdk.internal.util.DecimalDigits.uncheckedGetCharsLatin1 (0x00007f3247ee4108) [0x00007f3247ee4200, 0x00007f3247ee43c0] Compiler: c2, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.839s][debug][gc,nmethod  ] Register NMethod: java.lang.StringLatin1.getChars (0x00007f3247ee4408) [0x00007f3247ee4500, 0x00007f3247ee4698] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.842s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.allocateUninitializedArray (0x00007f3247ee4708) [0x00007f3247ee4800, 0x00007f3247ee49a8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.844s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.844s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.allocateUninitializedArray0 (0x00007f3247ee4a08) [0x00007f3247ee4b00, 0x00007f3247ee4cb8] Compiler: c2, Barriers: 0, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[0.847s][debug][gc,nmethod  ] Register NMethod: jdk.internal.misc.Unsafe.allocateUninitializedArray (0x00007f3247ee4d08) [0x00007f3247ee4e00, 0x00007f3247ee4f98] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.848s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.position (0x00007f3247ee5008) [0x00007f3247ee5100, 0x00007f3247ee51e8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.850s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.limit (0x00007f3247ee5308) [0x00007f3247ee5400, 0x00007f3247ee5508] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.854s][debug][gc,director ] Rule Major: Warmup 10%, Used: 10MB, UsedThreshold: 357MB
+[0.854s][debug][gc,nmethod  ] Register NMethod: java.nio.Buffer.<init> (0x00007f3247ee5608) [0x00007f3247ee5700, 0x00007f3247ee5a00] Compiler: c2, Barriers: 3, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.855s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.flip (0x00007f3247ee5a08) [0x00007f3247ee5b00, 0x00007f3247ee5b90] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.857s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.position (0x00007f3247ee5d08) [0x00007f3247ee5e00, 0x00007f3247ee5f08] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.862s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.wrap (0x00007f3247ee6008) [0x00007f3247ee6100, 0x00007f3247ee6380] Compiler: c2, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[0.864s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.874s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.884s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.892s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedWriter.flushBuffer (0x00007f3247ee6388) [0x00007f3247ee6480, 0x00007f3247ee75a8] Compiler: c2, Barriers: 8, Oops: 2, ImmediateOops: 1, NonImmediateOops: No
+[0.894s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.904s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.915s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.925s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.935s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.945s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.955s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.965s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.975s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.986s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[0.995s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.println (0x00007f3247ee7608) [0x00007f3247ee7700, 0x00007f3247eea2e0] Compiler: c2, Barriers: 35, Oops: 1, ImmediateOops: 5, NonImmediateOops: No
+[0.996s][debug][gc,director ] Rule Major: Warmup 10%, Used: 12MB, UsedThreshold: 357MB
+[1.006s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.016s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.026s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.036s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.047s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.057s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.067s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.070s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.writeln (0x00007f3247eea308) [0x00007f3247eea400, 0x00007f3247eecfc8] Compiler: c2, Barriers: 35, Oops: 1, ImmediateOops: 5, NonImmediateOops: No
+[1.071s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.Invokers$Holder.linkToTargetMethod (0x00007f3247eed008) [0x00007f3247eed100, 0x00007f3247eed1e8] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.073s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.LambdaForm$MH/0x0000000029043000.invoke (0x00007f3247eed308) [0x00007f3247eed400, 0x00007f3247eed5b8] Compiler: c2, Barriers: 2, Oops: 1, ImmediateOops: 0, NonImmediateOops: No
+[1.075s][debug][gc,nmethod  ] Register NMethod: java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial (0x00007f3247eed608) [0x00007f3247eed700, 0x00007f3247eed830] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.077s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.087s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.095s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper$Concat1.concat (0x00007f3247eed908) [0x00007f3247eeda00, 0x00007f3247eee350] Compiler: c2, Barriers: 8, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[1.097s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.104s][debug][gc,nmethod  ] Register NMethod: com.javaimplant.java17.garbagecollectors.AJava.main (0x00007f3240464788) [0x00007f3240464880, 0x00007f3240465938] Compiler: c1, Barriers: 5, Oops: 6, ImmediateOops: 12, NonImmediateOops: No
+[1.108s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.109s][debug][gc,nmethod  ] Register NMethod: com.javaimplant.java17.garbagecollectors.AJava.main (0x00007f3240465988) [0x00007f3240465a80, 0x00007f3240466ad8] Compiler: c1, Barriers: 5, Oops: 6, ImmediateOops: 12, NonImmediateOops: No
+[1.118s][debug][gc,director ] Rule Major: Warmup 10%, Used: 14MB, UsedThreshold: 357MB
+[1.123s][debug][gc,nmethod  ] Register NMethod: java.lang.StringConcatHelper.prepend (0x00007f3247eee388) [0x00007f3247eee480, 0x00007f3247eee7e8] Compiler: c2, Barriers: 1, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[1.128s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.138s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.148s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.158s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.162s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.flushBuffer (0x00007f3247eee808) [0x00007f3247eee900, 0x00007f3247eefb28] Compiler: c2, Barriers: 13, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[1.168s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.179s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.188s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.writeBytes (0x00007f3247eefb88) [0x00007f3247eefc80, 0x00007f3247ef0bf0] Compiler: c2, Barriers: 12, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[1.189s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.200s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.206s][debug][gc,nmethod  ] Register NMethod: java.io.PrintStream.write (0x00007f3247ef0c08) [0x00007f3247ef0d00, 0x00007f3247ef1988] Compiler: c2, Barriers: 8, Oops: 0, ImmediateOops: 2, NonImmediateOops: No
+[1.210s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.215s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.write (0x00007f3247ef1a08) [0x00007f3247ef1b00, 0x00007f3247ef1ef0] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.218s][debug][gc,nmethod  ] Register NMethod: java.io.BufferedOutputStream.growIfNeeded (0x00007f3247ef1f08) [0x00007f3247ef2000, 0x00007f3247ef2118] Compiler: c2, Barriers: 1, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.220s][debug][gc,nmethod  ] Register NMethod: java.nio.ByteBuffer.clear (0x00007f3247ef2208) [0x00007f3247ef2300, 0x00007f3247ef2390] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.220s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.231s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.241s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.248s][debug][gc,nmethod  ] Register NMethod: java.io.OutputStreamWriter.write (0x00007f3247ef2508) [0x00007f3247ef2600, 0x00007f3247ef3400] Compiler: c2, Barriers: 5, Oops: 2, ImmediateOops: 1, NonImmediateOops: No
+[1.251s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.261s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.271s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.278s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.write (0x00007f3247ef3488) [0x00007f3247ef3580, 0x00007f3247ef42e0] Compiler: c2, Barriers: 4, Oops: 2, ImmediateOops: 1, NonImmediateOops: No
+[1.281s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.291s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.294s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.implWrite (0x00007f3247ef4308) [0x00007f3247ef4400, 0x00007f3247ef4d68] Compiler: c2, Barriers: 4, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[1.296s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.StreamEncoder.growByteBufferIfNeeded (0x00007f3247ef4d88) [0x00007f3247ef4e80, 0x00007f3247ef5080] Compiler: c2, Barriers: 2, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.297s][debug][gc,nmethod  ] Register NMethod: java.lang.Math.round (0x00007f3247ef5088) [0x00007f3247ef5180, 0x00007f3247ef5258] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.302s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.308s][debug][gc,nmethod  ] Register NMethod: java.nio.charset.CharsetEncoder.encode (0x00007f3247ef5388) [0x00007f3247ef5480, 0x00007f3247ef5b40] Compiler: c2, Barriers: 2, Oops: 1, ImmediateOops: 1, NonImmediateOops: No
+[1.312s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.316s][debug][gc,nmethod  ] Register NMethod: sun.nio.cs.UTF_8$Encoder.encodeArrayLoop (0x00007f3247ef5b88) [0x00007f3247ef5c80, 0x00007f3247ef61c0] Compiler: c2, Barriers: 2, Oops: 0, ImmediateOops: 1, NonImmediateOops: No
+[1.317s][debug][gc,nmethod  ] Register NMethod: java.lang.System$1.uncheckedEncodeASCII (0x00007f3247ef6208) [0x00007f3247ef6300, 0x00007f3247ef6460] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.321s][debug][gc,nmethod  ] Register NMethod: java.nio.HeapCharBuffer.<init> (0x00007f3247ef6508) [0x00007f3247ef6600, 0x00007f3247ef6910] Compiler: c2, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.322s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.326s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.<init> (0x00007f3247ef6988) [0x00007f3247ef6a80, 0x00007f3247ef6e18] Compiler: c2, Barriers: 6, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.328s][debug][gc,nmethod  ] Register NMethod: java.nio.CharBuffer.limit (0x00007f3247ef6e88) [0x00007f3247ef6f80, 0x00007f3247ef7090] Compiler: c2, Barriers: 0, Oops: 0, ImmediateOops: 0, NonImmediateOops: No
+[1.333s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.343s][debug][gc,director ] Rule Major: Warmup 10%, Used: 16MB, UsedThreshold: 357MB
+[1.353s][debug][gc,director ] Rule Major: Warmup 10%, Used: 18MB, UsedThreshold: 357MB
+[1.353s][info ][gc,exit     ] Stopping ZGC
+[1.356s][debug][gc,director ] Rule Major: Warmup 10%, Used: 18MB, UsedThreshold: 357MB
+[1.356s][info ][gc,stats    ] === Garbage Collection Statistics =======================================================================================================================
+[1.356s][info ][gc,stats    ]                                                              Last 10s              Last 10m              Last 10h                Total
+[1.356s][info ][gc,stats    ]                                                              Avg / Max             Avg / Max             Avg / Max             Avg / Max
+[1.356s][info ][gc,stats    ]        Contention: Mark Segment Reset Contention                     0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]        Contention: Mark SeqNum Reset Contention                      0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]          Critical: Allocation Stall                                  0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]          Critical: Allocation Stall                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]          Critical: JNI Critical Stall                                0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]          Critical: JNI Critical Stall                            0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]          Critical: Relocation Stall                                  0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]          Critical: Relocation Stall                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]  Major Collection: Major Collection                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]            Memory: Allocation Rate                                   0 / 0                 0 / 0                 0 / 0                 0 / 0           MB/s
+[1.356s][info ][gc,stats    ]            Memory: Defragment                                        0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]            Memory: Mapped Cache Harvest                              0 / 0                 0 / 0                 0 / 0                 0 / 0           MB/s
+[1.356s][info ][gc,stats    ]            Memory: Out Of Memory                                     0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]            Memory: Uncommit                                          0 / 0                 0 / 0                 0 / 0                 0 / 0           MB/s
+[1.356s][info ][gc,stats    ]            Memory: Undo Object Allocation Failed                     0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]            Memory: Undo Object Allocation Succeeded                  0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]            Memory: Undo Page Allocation                              0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[1.356s][info ][gc,stats    ]  Minor Collection: Minor Collection                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]    Old Generation: Old Generation                                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]         Old Pause: Pause Mark End                                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]         Old Pause: Pause Relocate Start                          0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]         Old Phase: Concurrent Mark                               0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.356s][info ][gc,stats    ]         Old Phase: Concurrent Mark Continue                      0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]         Old Phase: Concurrent Mark Free                          0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]         Old Phase: Concurrent Process Non-Strong                 0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]         Old Phase: Concurrent Relocate                           0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]         Old Phase: Concurrent Remap Roots                        0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]         Old Phase: Concurrent Reset Relocation Set               0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]         Old Phase: Concurrent Select Relocation Set              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Classes Purge                      0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Classes Unlink                     0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Mark Follow                        0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Mark Root Colored                  0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Mark Root Uncolored                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Mark Roots                         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent References Enqueue                 0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent References Process                 0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.357s][info ][gc,stats    ]      Old Subphase: Concurrent Remap Remembered                   0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Remap Roots Colored                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Remap Roots Uncolored              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Roots ClassLoaderDataGraph         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Roots CodeCache                    0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Roots JavaThreads                  0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Roots OopStorageSet                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]      Old Subphase: Concurrent Weak Roots OopStorageSet           0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]            System: Java Threads                                      0 / 0                 0 / 0                 0 / 0                 0 / 0           threads
+[1.358s][info ][gc,stats    ]  Young Generation: Young Generation                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]  Young Generation: Young Generation                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]  Young Generation: Young Generation (Collect Roots)              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]  Young Generation: Young Generation (Promote All)                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Pause: Pause Mark End                                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Pause: Pause Mark Start                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Pause: Pause Mark Start (Major)                      0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Pause: Pause Relocate Start                          0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Phase: Concurrent Mark                               0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Phase: Concurrent Mark Continue                      0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Phase: Concurrent Mark Free                          0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Phase: Concurrent Relocate                           0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Phase: Concurrent Reset Relocation Set               0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]       Young Phase: Concurrent Select Relocation Set              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Mark Follow                        0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Mark Root Colored                  0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Mark Root Uncolored                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Mark Roots                         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Relocate Remset FP                 0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Roots ClassLoaderDataGraph         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Roots CodeCache                    0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Roots JavaThreads                  0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.358s][info ][gc,stats    ]    Young Subphase: Concurrent Roots OopStorageSet                0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.359s][info ][gc,stats    ]    Young Subphase: Concurrent Weak Roots OopStorageSet           0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[1.359s][info ][gc,stats    ] =========================================================================================================================================================
+[1.359s][info ][gc,exit     ] Heap
+[1.359s][info ][gc,exit     ]  ZHeap           used 18M, capacity 250M, max capacity 3974M
+[1.359s][info ][gc,exit     ]   Cache          232M (1)
+[1.359s][info ][gc,exit     ]    size classes  128M (1)
+[1.359s][info ][gc,exit     ]  Metaspace       used 915K, committed 1088K, reserved 1114112K
+[1.359s][info ][gc,exit     ]   class space    used 49K, committed 128K, reserved 1048576K
+[1.359s][debug][gc,reloc    ] Synchronize all workers 1 _nworkers: 0 _nsynchronized: 0
+[1.359s][debug][gc,reloc    ] Synchronize all workers 1 _nworkers: 0 _nsynchronized: 0

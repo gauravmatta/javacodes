@@ -1,0 +1,15 @@
+digraph "summary" {
+  "Java17.jar"                                       -> "java.base (java.base)";
+  "Java17.jar"                                       -> "java.desktop (java.desktop)";
+  "Java17.jar"                                       -> "java.logging (java.logging)";
+  "Java17.jar"                                       -> "java.management (java.management)";
+  "Java17.jar"                                       -> "java.naming (java.naming)";
+  "Java17.jar"                                       -> "java.net.http (java.net.http)";
+  "Java17.jar"                                       -> "java.security.sasl (java.security.sasl)";
+  "Java17.jar"                                       -> "java.sql (java.sql)";
+  "Java17.jar"                                       -> "java.transaction.xa (java.transaction.xa)";
+  "Java17.jar"                                       -> "java.xml (java.xml)";
+  "Java17.jar"                                       -> "jdk.httpserver (jdk.httpserver)";
+  "Java17.jar"                                       -> "jdk.unsupported (jdk.unsupported)";
+  "Java17.jar"                                       -> "not found";
+}
