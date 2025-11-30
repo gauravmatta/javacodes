@@ -7,8 +7,8 @@ import java.util.List;
 public class ClassB extends ClassA {
 
     public ClassB() {
-        System.out.println("ClassB: Constructor called");
         super();
+        System.out.println("ClassB: Constructor called");
     }
 
     public List<String> getData() {
